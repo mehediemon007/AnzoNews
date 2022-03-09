@@ -1,10 +1,14 @@
 import './App.css';
-import CategoryGridThree from './pages/CategoryGridThree';
+import "./Responsive.css";
+import {BrowserRouter as Router} from "react-router-dom";
+import Routes from "./router/Router";
 
 function App() {
   return (
     <div className="App">
-        <CategoryGridThree/>
+      <Router>
+        <Routes/>
+      </Router>
     </div>
   );
 }
