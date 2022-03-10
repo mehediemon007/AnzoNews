@@ -5,7 +5,7 @@ import Toolbar from './Toolbar';
 function Header() {
   return (
     <>
-        <header classNameName="an-header">
+        <header className="an-header">
             <Toolbar/>
             <div className="haeder-ads py-3">
                 <div className="container">

@@ -7,6 +7,7 @@ function GridBlogs() {
     const [noOfBlog, setBlogNum] = useState(18);
 
     function loadMore(e){
+        e.preventDefault();
         setBlogNum(noOfBlog + 3);
     }
 
@@ -19,7 +20,7 @@ function GridBlogs() {
                 {slice.map(blog => <SingleBlog blog={blog} key={blog.id}/>)}
             </div>
             <div className="text-center">
-                <button className="view-more-btn" onClick={loadMore}>View More <i className="uil uil-arrow-circle-right"></i></button>
+                <a href='#' className="view-more-btn" onClick={loadMore}>View More <i className="uil uil-arrow-circle-right"></i></a>
             </div>
         </>
     )
