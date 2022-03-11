@@ -1,8 +1,8 @@
 import React from 'react'
 
-function SingleBlog(blog) {
+function SingleBlog(props) {
 
-    const {image , title , name , date , description } = blog.blog;
+    const {image , title , name , date , description } = props.blog;
 
     return (
         <div className="single-blog">

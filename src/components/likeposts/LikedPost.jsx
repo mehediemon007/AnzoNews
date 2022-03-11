@@ -18,18 +18,18 @@ function LikedPost() {
             <div className="container">
                 <div className="sec-heading d-flex justify-content-between align-items-center mb-4">
                     <h4>YOU MAY LIKE</h4>
-                    <a href="#" className="more-link">More <i class="uil uil-angle-right-b"></i></a>
+                    <a href="#" className="more-link">More <i className="uil uil-angle-right-b"></i></a>
                 </div>
                 <div className="row recommended-blog">
-                    {data.slice(0,noOfBlog).map(blog => (
-                        <div class="col-lg-4 col-md-6">
-                            <div class="single-blog">
-                                <div class="blog-image">
+                    {data.slice(0,noOfBlog).map((blog,index) => (
+                        <div className="col-lg-4 col-md-6" key={index}>
+                            <div className="single-blog">
+                                <div className="blog-image">
                                     <a href="#"><img src={`images/blogs/${blog.image}`} alt={blog.alt}/></a>
                                 </div>
-                                <div class="blog-content bg-white">
-                                    <a href="blog-details.html"><h3 class="blog-title">{blog.title}</h3></a>
-                                    <p class="meta-data mt-3"><span><img src="images/cmnt-user.jpg" alt="user-avatar" class="rounded-circle"/> {blog.name}</span><span><img src="images/calendar-ylo.png" alt="Calendar Avatar"/> {blog.date}</span></p>
+                                <div className="blog-content bg-white">
+                                    <a href="blog-details.html"><h3 className="blog-title">{blog.title}</h3></a>
+                                    <p className="meta-data mt-3"><span><img src="images/cmnt-user.jpg" alt="user-avatar" className="rounded-circle"/> {blog.name}</span><span><img src="images/calendar-ylo.png" alt="Calendar Avatar"/> {blog.date}</span></p>
                                 </div>
                             </div>
                         </div>
