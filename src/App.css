@@ -925,6 +925,10 @@ input[type="checkbox"]:checked ~ .theme-toggle::before{
     padding: 16px 0;
 }
 
+.blog-list .single-blog:last-child{
+    border: 0;
+}
+
 .blog-list .single-blog {
     border-bottom: .5px solid #9D9B9B;
 }
