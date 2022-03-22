@@ -19,7 +19,7 @@ function VideoBlog(props) {
                     </div>
                     <div className="col-md-8">
                         <div className="video-post-info">
-                            <h5 className="blog-title text-white">{title}</h5>
+                            <a href="#"><h5 className="blog-title text-white">{title}</h5></a>
                             <p className="blog-date mt-2"><img src="images/clock-avatar.png" alt="Clock Avatar"/> {date}</p>
                         </div>
                     </div>

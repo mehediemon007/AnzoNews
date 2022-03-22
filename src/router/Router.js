@@ -6,9 +6,9 @@ import Home from '../pages/Home';
 function router() {
   return (
     <Routes>
-        <Route path="/" exact element={<Home/>}/>
-        <Route path="/category-three-grid" exact element={<CategoryGridThree/>}/>
-        <Route>404 Not Found</Route>
+      <Route path="/" exact element={<Home/>}/>
+      <Route path="/category-three-grid" exact element={<CategoryGridThree/>}/>
+      <Route>404 Not Found</Route>
     </Routes>
   )
 }
