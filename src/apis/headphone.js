@@ -62,8 +62,8 @@ const data = {
             alt:"White Laptop",
             title:"This is the title of a new tier has been done nis the title of a news",
             des:"",
-            name:" Masud R Delta",
-            date:" January 23 , 2022",
+            name:"Masud R Delta",
+            date:"January 23 , 2022",
             tag:"Monitor"
         },
         {
@@ -72,7 +72,7 @@ const data = {
             alt:"Keyboard",
             title:"This is the title of a  new nis the title of a  news",
             des:"",
-            name:"",
+            name:"Masud R Delta",
             date:" Novermber 21 , 2021",
             tag:"Keyboard"
         },
@@ -82,7 +82,7 @@ const data = {
             alt:"Trackpad",
             title:"This is the title of a  new nis the title of a  news",
             des:"",
-            name:"",
+            name:"Rashid Ifti",
             date:" Novermber 21 , 2021",
             tag:"Trackpad"
         },
