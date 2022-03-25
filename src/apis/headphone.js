@@ -142,7 +142,135 @@ const data = {
             name:"",
             date:"Novermber 21 , 2021"
         }
-    ]
+    ],
+    "newBlogs":{
+        "latestBlogs":[
+            {
+                id:0,
+                image:"blue-desktop.jpg",
+                alt:"RGB Desktop",
+                title:"This is the title of a  new nis the title of a  news",
+                des:"",
+                name:"",
+                date:"March 21,2022",
+                tag:"Latest"
+            },
+            {
+                id:1,
+                image:"neon-laptop.jpg",
+                alt:"Neon Laptop",
+                title:"This is the title of a new tier the title",
+                des:"",
+                name:"Masud R Delta",
+                date:"March 21,2022",
+                tag:""
+            },
+            {
+                id:2,
+                image:"lighting-desktop.jpg",
+                alt:"Light Laptop",
+                title:"This is the title of a  new nis the title of a  news",
+                des:"",
+                name:"",
+                date:"March 21,2022",
+                tag:""
+            },
+            {
+                id:3,
+                image:"apple-desktop.jpg",
+                alt:"Apple Desktop",
+                title:"This is the title of a  new nis the title of a  news",
+                des:"",
+                name:"",
+                date:"March 20,2022",
+                tag:"Latest"
+            },
+        ],
+        "trendingBlogs":[
+            {
+                id:0,
+                image:"blue-desktop.jpg",
+                alt:"RGB Desktop",
+                title:"This is the title of a  new nis the title of a  news",
+                des:"",
+                name:"",
+                date:"March 21,2022",
+                tag:"Trending"
+            },
+            {
+                id:1,
+                image:"lighting-desktop.jpg",
+                alt:"Light Laptop",
+                title:"This is the title of a  new nis the title of a  news",
+                des:"",
+                name:"",
+                date:"March 21,2022",
+                tag:""
+            },
+            {
+                id:2,
+                image:"neon-laptop.jpg",
+                alt:"Neon Laptop",
+                title:"This is the title of a new tier the title",
+                des:"",
+                name:"Masud R Delta",
+                date:"March 21,2022",
+                tag:""
+            },
+            {
+                id:3,
+                image:"apple-desktop.jpg",
+                alt:"Apple Desktop",
+                title:"This is the title of a  new nis the title of a  news",
+                des:"",
+                name:"",
+                date:"March 20,2022",
+                tag:"Latest"
+            },
+        ],
+        "popularBlogs":[
+            {
+                id:0,
+                image:"blue-desktop.jpg",
+                alt:"RGB Desktop",
+                title:"This is the title of a  new nis the title of a  news",
+                des:"",
+                name:"",
+                date:"March 21,2022",
+                tag:"Popular"
+            },
+            {
+                id:1,
+                image:"lighting-desktop.jpg",
+                alt:"Light Laptop",
+                title:"This is the title of a  new nis the title of a  news",
+                des:"",
+                name:"",
+                date:"March 21,2022",
+                tag:""
+            },
+            {
+                id:2,
+                image:"apple-desktop.jpg",
+                alt:"Apple Desktop",
+                title:"This is the title of a  new nis the title of a  news",
+                des:"",
+                name:"",
+                date:"March 20,2022",
+                tag:"Latest"
+            },
+            {
+                id:3,
+                image:"neon-laptop.jpg",
+                alt:"Neon Laptop",
+                title:"This is the title of a new tier the title",
+                des:"",
+                name:"Masud R Delta",
+                date:"March 21,2022",
+                tag:""
+            },
+        ]
+    }
 }
 
 export default data;
