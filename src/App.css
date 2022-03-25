@@ -850,6 +850,10 @@ input[type="checkbox"]:checked ~ .theme-toggle::before{
     margin-bottom: 17px;
 }
 
+.news-tab-links{
+    border-bottom: none;
+}
+
 .news-tab-links .nav-link{
     font-size: 1.15rem;
     font-weight: var(--font-weight-medium);
