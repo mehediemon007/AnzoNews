@@ -1,4 +1,5 @@
 import React from 'react'
+import Banner from '../components/banners/Banner';
 import BlogCategory from '../components/blog-category/BlogCategory';
 import CategoryBlogs from '../components/blog-category/CategoryBlogs';
 import Footer from '../components/footer/Footer';
@@ -12,10 +13,12 @@ function Home() {
   return (
     <>
         <Header/>
+        <Banner/>
         <NewBlogs/>
         <CategoryBlogs/>
         <Headphones/>
         <BlogCategory/>
+        <Banner/>
         <VideoBlogs/>
         <LikedPost/>
         <Footer/>
