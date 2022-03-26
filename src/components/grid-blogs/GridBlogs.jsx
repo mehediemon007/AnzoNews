@@ -13,7 +13,7 @@ function GridBlogs() {
         setBlogNum(noOfBlog + 3);
     }
 
-    const slice = blogs.slice(0,noOfBlog);
+    const slice = blogs["gridBlogs"].slice(0,noOfBlog);
 
     return (
         <>
@@ -22,7 +22,7 @@ function GridBlogs() {
                 {slice.map(blog => <SingleBlog blog={blog} key={blog.id}/>)}
             </div>
             <div className="text-center">
-            {noOfBlog < blogs.length && <a href='#' className="view-more-btn" onClick={loadMore}>View More <i className={`uil ${clicked ? "uil-arrow-circle-down" : "uil-arrow-circle-right"}`}></i></a>}
+            {noOfBlog < blogs["gridBlogs"].length && <a href='#' className="view-more-btn" onClick={loadMore}>View More <i className={`uil ${clicked ? "uil-arrow-circle-down" : "uil-arrow-circle-right"}`}></i></a>}
             </div>
         </>
     )

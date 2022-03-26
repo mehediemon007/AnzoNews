@@ -8,7 +8,7 @@ function CategoryGridThree() {
   return (
     <>  
         <Header/>
-        <div className="an-main-content">
+        <main className="an-main-content">
             <div className="an-category">
                 <div className="container">
                     <div className="an-breadcrumb my-2 text-end">
@@ -27,7 +27,7 @@ function CategoryGridThree() {
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
         <Footer/>
     </>
   )
