@@ -32,11 +32,11 @@
 
 @media only screen and (min-width:992px){
 
-    .an-banner .owl-carousel .owl-stage{
-        padding-top: 120px;
+    .an-banner .slick-slider .slick-list{
+        padding-top: 120px !important;
     }
     
-    .an-banner .owl-carousel .owl-item.center img{
+    .an-banner .slick-slider .slick-center img{
         transform: scaleY(1.10) translateY(-28px);
     }
 
