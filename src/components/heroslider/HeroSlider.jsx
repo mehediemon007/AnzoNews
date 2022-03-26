@@ -4,14 +4,14 @@ import Slider from "react-slick";
 function SampleNextArrow(props) {
     const { onClick } = props;
     return (
-        <span class="slick-nav-next slick-arrow" onClick={onClick}><i class="uil uil-angle-right-b"></i></span>
+        <span className="slick-nav-next slick-arrow" onClick={onClick}><i className="uil uil-angle-right-b"></i></span>
     );
   }
   
 function SamplePrevArrow(props) {
     const {onClick } = props;
     return (
-        <span class="slick-nav-prev slick-arrow" onClick={onClick}><i class="uil uil-angle-left-b"></i></span>
+        <span className="slick-nav-prev slick-arrow" onClick={onClick}><i className="uil uil-angle-left-b"></i></span>
     );
 }
 

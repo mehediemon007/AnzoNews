@@ -34,7 +34,7 @@ const NewBlogs = () => {
                         </div>
                     </div>
                     <div className="col-xl-3 col-md-5 col-lg-4">
-                        <h3 class="my-4 mt-md-0">Online Vote</h3>
+                        <h3 className="my-4 mt-md-0">Online Vote</h3>
                         <VoteWidget/>
                     </div>
                 </div>

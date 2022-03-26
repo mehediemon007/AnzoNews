@@ -17,7 +17,7 @@ function GridBlogs() {
 
     return (
         <>
-            <h2 class="mb-3">Category</h2>
+            <h2 className="mb-3">Category</h2>
             <div className="blog-category-list">
                 {slice.map((blog,index) => <SingleBlog blog={blog} key={index}/>)}
             </div>
