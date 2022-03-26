@@ -1,6 +1,20 @@
-import React from 'react'
+import React from 'react';
+import OwlCarousel from 'react-owl-carousel';
 
 function Toolbar() {
+
+    const newsSliderOptions ={
+        items:1,
+        loop:true,
+        autoplay:true,
+        dots:false,
+        autoplayTimeout: 2000,
+        smartSpeed: 1000,
+        animateOut: "slideOutDown",
+        animateIn: "slideInDown",
+        touchDrag  : false,
+    }
+
   return (
     <div className="an-toolbar primary-gradient py-2">
         <div className="container">
@@ -10,11 +24,11 @@ function Toolbar() {
                         <div className="breaking-title">
                             <p>BREAKING NEWS</p>
                         </div>
-                        <div className="news-carousel owl-carousel">
+                        <OwlCarousel className="news-carousel owl-carousel" {...newsSliderOptions}>
                             <p className="text-white">phasellus odio purus consectetur in dignissim</p>
                             <p className="text-white">phasellus odio purus consectetur in dignissim</p>
                             <p className="text-white">phasellus odio purus consectetur in dignissim</p>
-                        </div>
+                        </OwlCarousel>
                     </div>
                 </div>
                 <div className="col-xl-6 col-lg-5">
