@@ -1,6 +1,7 @@
 import React from 'react'
 import OwlCarousel from 'react-owl-carousel';
-import VoteWidget from './VoteWidget';
+import SingleVote from './vote-widget/SingleVote';
+import VoteWidget from './vote-widget/VoteWidget';
 
 function SidebarWidget() {
 
@@ -89,75 +90,7 @@ function SidebarWidget() {
                 <div className="col-xl-12 col-sm-6">
                     <div className="vote-widget mb-4">
                         <h4 className="mb-4">Online Vote</h4>
-                        <img src="images/blogs/vote.jpg" alt="Vote"/>
-                        <div className="vote-content p-4 pb-2 bg-white">
-                            <OwlCarousel className="vote-topics owl-carousel" {...voteSliderOptions}>
-                                <div className="item">
-                                    <h4 className="mb-3">This is the title of a the of a test news</h4>
-                                    <div className="vote-topic">
-                                        <div className="vote-option">
-                                            <span className="circle"></span>
-                                            <span>YES</span>
-                                        </div>
-                                        <span>40%</span>
-                                        <span className="progress" style={{'--w':40}}></span>
-                                    </div>
-                                    <div className="vote-topic">
-                                        <div className="vote-option">
-                                            <span className="circle"></span>
-                                            <span>NO</span>
-                                        </div>
-                                        <span>50%</span>
-                                        <span className="progress" style={{'--w':50}}></span>
-                                    </div>
-                                    <div className="vote-topic">
-                                        <div className="vote-option">
-                                            <span className="circle"></span>
-                                            <span>NO COMMENT</span>
-                                        </div>
-                                        <span>20%</span>
-                                        <span className="progress" style={{'--w':20}}></span>
-                                    </div>
-                                    <div className="text-center">
-                                        <a href="#" className="vote-btn">Chnage Vote</a>
-                                    </div>
-                                </div>
-                                <VoteWidget/>
-                                <div className="item">
-                                    <h4 className="mb-3">This is the title of a the of a test news</h4>
-                                    <div className="vote-topic">
-                                        <div className="vote-option">
-                                            <span className="circle"></span>
-                                            <span>YES</span>
-                                        </div>
-                                        <span>40%</span>
-                                        <span className="progress" style={{'--w':40}}></span>
-                                    </div>
-                                    <div className="vote-topic">
-                                        <div className="vote-option">
-                                            <span className="circle"></span>
-                                            <span>NO</span>
-                                        </div>
-                                        <span>50%</span>
-                                        <span className="progress" style={{'--w':50}}></span>
-                                    </div>
-                                    <div className="vote-topic">
-                                        <div className="vote-option">
-                                            <span className="circle"></span>
-                                            <span>NO COMMENT</span>
-                                        </div>
-                                        <span>20%</span>
-                                        <span className="progress" style={{'--w':20}}></span>
-                                    </div>
-                                    <div className="text-center">
-                                        <a href="#" className="vote-btn">Chnage Vote</a>
-                                    </div>
-                                </div>
-                            </OwlCarousel>
-                            <div className="owl-navigation">
-                                <span className="arrow-btn"><a><i className="uil uil-arrow-right"></i></a></span>
-                            </div>
-                        </div>
+                        <VoteWidget/>
                     </div>
                 </div>
                 <div className="col-xl-12 col-sm-6">

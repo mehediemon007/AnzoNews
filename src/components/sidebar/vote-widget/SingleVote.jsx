@@ -1,6 +1,6 @@
 import React from 'react'
 
-const VoteWidget = () => {
+const SingleVote = () => {
     return (
         <>
             <div className="item">
@@ -37,4 +37,4 @@ const VoteWidget = () => {
     )
 }
 
-export default VoteWidget
+export default SingleVote;
