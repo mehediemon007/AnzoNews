@@ -1,7 +1,9 @@
 import React,{useState} from 'react';
-import data from "../../apis/like-post";
+import Data from "../../apis/like-post";
 
 function LikedPost() {
+
+    const {likedPosts} = Data;
 
     const [noOfBlog, setBlogNum] = useState(9);
     const [clicked,setClicked] = useState(false);
@@ -21,7 +23,7 @@ function LikedPost() {
                     <a href="#" className="more-link">More <i className="uil uil-angle-right-b"></i></a>
                 </div>
                 <div className="row recommended-blog">
-                    {data.slice(0,noOfBlog).map((blog,index) => (
+                    {likedPosts.slice(0,noOfBlog).map((blog,index) => (
                         <div className="col-lg-4 col-md-6" key={index}>
                             <div className="single-blog">
                                 <div className="blog-image">
@@ -36,7 +38,7 @@ function LikedPost() {
                     ))}
                 </div>
                 <div className="text-center">
-                    {noOfBlog < data.length && <a href='#' className="view-more-btn" onClick={loadMore}>View More <i className={`uil ${clicked ? "uil-arrow-circle-down" : "uil-arrow-circle-right"}`}></i></a>}
+                    {noOfBlog < likedPosts.length && <a href='#' className="view-more-btn" onClick={loadMore}>View More <i className={`uil ${clicked ? "uil-arrow-circle-down" : "uil-arrow-circle-right"}`}></i></a>}
                 </div>
             </div>
         </div>
