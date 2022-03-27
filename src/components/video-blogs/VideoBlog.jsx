@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
+import VideoModal from './VideoModal';
 
 function VideoBlog(props) {
-    
+
     const {image,alt,title,date} = props.blog;
     return (
         <>
@@ -10,11 +11,7 @@ function VideoBlog(props) {
                     <div className="col-md-4">
                         <div className="video-post-image position-relative">
                             <img src={`images/blogs/${image}`} alt={alt}/>
-                            <div className="video-overlay">
-                                <a className="vid-icon venobox vbox-item more videolink" href="https://www.youtube.com/watch?v=yzCkM5MRaaI">
-                                    <i className="uil uil-play"></i>
-                                </a>
-                            </div>
+                            <VideoModal/>
                         </div>
                     </div>
                     <div className="col-md-8">

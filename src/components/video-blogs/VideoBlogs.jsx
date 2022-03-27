@@ -1,6 +1,7 @@
 import React from 'react';
 import videoData from "../../apis/video-blogs";
 import VideoBlog from './VideoBlog';
+import VideoModal from './VideoModal';
 
 function VideoBlogs() {
   return (
@@ -16,11 +17,7 @@ function VideoBlogs() {
                         <div className="single-video-post overlay-blog position-relative mb-xl-0" key={0}>
                             <div className="video-post-image">
                                 <img src={`images/blogs/${videoData[0].image}`} alt={videoData[0].alt} className="video-main-img"/>
-                                <div className="video-overlay">
-                                    <a className="vid-icon venobox vbox-item more videolink" href="https://www.youtube.com/watch?v=yzCkM5MRaaI">
-                                        <i className="uil uil-play"></i>
-                                    </a>
-                                </div>
+                                <VideoModal/>
                             </div>
                             <div className="video-post-info blog-content">
                                 <a href="#"><h5 className="blog-title text-white">{videoData[0].title}</h5></a>
