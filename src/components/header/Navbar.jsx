@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink , Link} from "react-router-dom";
 
 function Navbar() {
   return (
@@ -11,25 +12,25 @@ function Navbar() {
                     </div>
                     <nav className="an-main-nav">
                         <ul className="nav-menu d-lg-flex align-items-center">
-                            <li><a href="#" className="nav-active">Home</a></li>
-                            <li className="has-children"><a href="#"><span>Tech</span><i className="uil uil-angle-down"></i></a>
+                            <li><NavLink to="/" className="nav-active">Home</NavLink></li>
+                            <li className="has-children"><NavLink to="/category-three-grid"><span>Tech</span><i className="uil uil-angle-down"></i></NavLink>
                                 <ul className="sub-menu">
-                                    <li><a href="#">News Category 1</a></li>
-                                    <li><a href="#">News Category 2</a></li>
-                                    <li className="has-children"><a href="#">News Category 3 <i className="uil uil-angle-right d-none d-lg-inline-block"></i><i className="uil uil-angle-down d-lg-none"></i></a>
+                                    <li><NavLink to="/category-list">News Category 1</NavLink></li>
+                                    <li><NavLink to="/category-list">News Category 2</NavLink></li>
+                                    <li className="has-children"><NavLink to="/category-list">News Category 3 <i className="uil uil-angle-right d-none d-lg-inline-block"></i><i className="uil uil-angle-down d-lg-none"></i></NavLink>
                                         <ul className="sub-menu">
-                                            <li><a href="#">News Category 1</a></li>
-                                            <li><a href="#">News Category 2</a></li>
-                                            <li className="border-bottom-0"><a href="#">News Category 6</a></li>
+                                            <li><NavLink to="/category-list">News Category 1</NavLink></li>
+                                            <li><NavLink to="/category-list">News Category 2</NavLink></li>
+                                            <li className="border-bottom-0"><NavLink to="/category-list">News Category 6</NavLink></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">News Category 4</a></li>
-                                    <li><a href="#">News Category 5</a></li>
-                                    <li className="border-bottom-0"><a href="#">News Category 6</a></li>
+                                    <li><NavLink to="/category-three-grid">News Category 4</NavLink></li>
+                                    <li><NavLink to="/category-three-grid">News Category 5</NavLink></li>
+                                    <li className="border-bottom-0"><NavLink to="/category-three-grid">News Category 6</NavLink></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Science</a></li>
-                            <li><a href="#">Mobile</a></li>
+                            <li><NavLink to="/category-three-grid">Science</NavLink></li>
+                            <li><NavLink to="/category-three-grid">Mobile</NavLink></li>
                             <li className="has-children position-static"><a href="#"><span>Laptops</span><i className="uil uil-angle-down"></i></a>
                                 <ul className="sub-menu mega-menu justify-content-around d-lg-flex">
                                     <div>

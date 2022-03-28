@@ -1,5 +1,5 @@
 import React from 'react';
-import OwlCarousel from 'react-owl-carousel';
+import OwlCarousel from 'react-owl-carousel'; 
 
 function Toolbar() {
 
