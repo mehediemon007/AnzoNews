@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import Data from "../../apis/like-post";
+import {Link} from "react-router-dom"
 
 function LikedPost() {
 
@@ -27,10 +28,10 @@ function LikedPost() {
                         <div className="col-lg-4 col-md-6" key={index}>
                             <div className="single-blog">
                                 <div className="blog-image">
-                                    <a href="#"><img src={`images/blogs/${blog.image}`} alt={blog.alt}/></a>
+                                    <Link to="blog-details"><img src={`images/blogs/${blog.image}`} alt={blog.alt}/></Link>
                                 </div>
                                 <div className="blog-content bg-white">
-                                    <a href="blog-details.html"><h3 className="blog-title">{blog.title}</h3></a>
+                                    <Link to="blog-details"><h3 className="blog-title">{blog.title}</h3></Link>
                                     <p className="meta-data mt-3"><span><img src="images/cmnt-user.jpg" alt="user-avatar" className="rounded-circle"/> {blog.name}</span><span><img src="images/calendar-ylo.png" alt="Calendar Avatar"/> {blog.date}</span></p>
                                 </div>
                             </div>

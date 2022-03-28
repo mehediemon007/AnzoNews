@@ -11,7 +11,7 @@ function router() {
       <Route path="/" exact element={<Home/>}/>
       <Route path="/category-three-grid" exact element={<CategoryGridThree/>}/>
       <Route path="/category-list" exact element={<CategoryList/>}/>
-      <Route path="/home-6" exact element={<Home6/>}/>
+      <Route path="/blog-details" exact element={<Home6/>}/>
       <Route>404 Not Found</Route>
     </Routes>
   )
