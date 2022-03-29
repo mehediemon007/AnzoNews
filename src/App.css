@@ -603,7 +603,7 @@ label{
     background-color: #000000e6;
 }
 
-input[type="checkbox"]:checked ~ .theme-toggle::before{
+.dark-theme .theme-toggle::before{
     background-color: var(--white-color);
     left: auto;
     right: 5px;

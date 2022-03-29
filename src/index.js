@@ -6,11 +6,14 @@ import "owl.carousel/dist/assets/owl-animate.css";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import App from './App';
+import ThemeContextWrapper from './context/ThemeContext';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <ThemeContextWrapper>
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
+    </ThemeContextWrapper>,
   document.getElementById('root')
 );
 

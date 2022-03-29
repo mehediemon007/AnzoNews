@@ -1,21 +1,26 @@
-import React,{useEffect, useState} from 'react';
+import React,{useEffect, useState, useContext} from 'react';
 import {NavLink , Link} from "react-router-dom";
+import { ThemeContext, themes } from '../../context/ThemeContext';
 
 function Navbar() {
 
-    const [theme , setTheme] = useState(false);
+    const {theme, changeTheme} = useContext(ThemeContext);
 
-    const changeTheme = () =>{
-        setTheme(!theme);
-    }
+    const [darkMode, setMode] = useState(false);
 
-    useEffect(()=>{
-        if(theme){
-            document.body.classList.add("dark-theme")
-        }else{
-            document.body.classList.remove("dark-theme")
-        }
-    },[theme])
+    // const [theme , setTheme] = useState(false);
+
+    // const changeTheme = () =>{
+    //     setTheme(!theme);
+    // }
+
+    // useEffect(()=>{
+    //     if(theme){
+    //         document.body.classList.add("dark-theme")
+    //     }else{
+    //         document.body.classList.remove("dark-theme")
+    //     }
+    // },[theme])
 
     return (
         <>
@@ -319,7 +324,10 @@ function Navbar() {
                             </div>
                             <div className="nav-meta-icon theme-switch">
                                 <label htmlFor="theme-check">
-                                    <input type="checkbox" id="theme-check" onChange={changeTheme}/>
+                                    <input type="checkbox" id="theme-check" onChange={()=>{
+                                        setMode(!darkMode);
+                                        changeTheme(darkMode ? themes.light : themes.dark)
+                                    }}/>
                                     <span className="theme-toggle"></span>
                                 </label>
                             </div>
