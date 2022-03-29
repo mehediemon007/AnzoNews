@@ -628,6 +628,7 @@ label{
   outline: none;
   transition: 0.3s;
   z-index: 1;
+  cursor: pointer;
 }
 
 .an-banner .slick-arrow i{
@@ -866,6 +867,7 @@ label{
     color: var(--text-color);
     padding: .2rem 1rem;
     transition: var(--transition);
+    border: none;
 }
 
 .news-tab-links .nav-link.active{

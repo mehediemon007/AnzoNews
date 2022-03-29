@@ -21,7 +21,7 @@ function LikedPost() {
             <div className="container">
                 <div className="sec-heading d-flex justify-content-between align-items-center mb-4">
                     <h4>YOU MAY LIKE</h4>
-                    <a href="#" className="more-link">More <i className="uil uil-angle-right-b"></i></a>
+                    <Link to="/category-three-grid" className="more-link">More <i className="uil uil-angle-right-b"></i></Link>
                 </div>
                 <div className="row recommended-blog">
                     {likedPosts.slice(0,noOfBlog).map((blog,index) => (
