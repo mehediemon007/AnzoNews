@@ -4,6 +4,7 @@ import Header from '../components/header/Header';
 import AdsBanner from "../components/adsbanner/AdsBanner"
 import RelatedBlogs from '../components/related-blogs/RelatedBlogs';
 import SidebarWidget from '../components/sidebar/SidebarWidget';
+import VideoModal from "../components/video-blogs/VideoModal";
 
 function Home6() {
     
@@ -54,11 +55,7 @@ function Home6() {
                                     <div className="single-video-post position-relative">
                                         <div className="video-post-image">
                                             <img src="images/blogs/protest.jpg" alt="Protest" className="rounded-0"/>
-                                            <div className="video-overlay">
-                                                <a className="vid-icon venobox vbox-item more videolink" href="https://www.youtube.com/watch?v=yzCkM5MRaaI">
-                                                    <i className="uil uil-play"></i>
-                                                </a>
-                                            </div>
+                                            <VideoModal/>
                                         </div>
                                     </div>
                                     <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
