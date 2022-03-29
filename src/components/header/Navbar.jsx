@@ -5,8 +5,7 @@ import { ThemeContext, themes } from '../../context/ThemeContext';
 function Navbar() {
 
     const {theme, changeTheme} = useContext(ThemeContext);
-
-    const [darkMode, setMode] = useState(false);
+    
     const [searchBar, setSearchBar] = useState(false);
 
     // const [theme , setTheme] = useState(false);
@@ -326,8 +325,7 @@ function Navbar() {
                             <div className="nav-meta-icon theme-switch">
                                 <label htmlFor="theme-check">
                                     <input type="checkbox" id="theme-check" onChange={()=>{
-                                        setMode(!darkMode);
-                                        changeTheme(darkMode ? themes.light : themes.dark)
+                                        changeTheme(theme === "light" ? themes.dark : themes.light)
                                     }}/>
                                     <span className="theme-toggle"></span>
                                 </label>
