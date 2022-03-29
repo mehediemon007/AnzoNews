@@ -7,6 +7,7 @@ function Navbar() {
     const {theme, changeTheme} = useContext(ThemeContext);
 
     const [darkMode, setMode] = useState(false);
+    const [searchBar, setSearchBar] = useState(false);
 
     // const [theme , setTheme] = useState(false);
 
@@ -314,8 +315,8 @@ function Navbar() {
                         </nav>
                         <div className="nav-right">
                             <div className="nav-meta-icon"><Link to="/sign-in"><i className="uil uil-user-check"></i></Link></div>
-                            <div className="nav-meta-icon nav-search-icon"><i className="uil uil-search"></i>
-                                <form className="nav-search">
+                            <div className="nav-meta-icon nav-search-icon" onClick={()=>setSearchBar(!searchBar)}><i className="uil uil-search"></i>
+                                <form className={searchBar ? "nav-search show" : "nav-search"}>
                                     <fieldset className="nav-search-input">
                                         <label htmlFor="nav-search" className="visually-hidden">Search Product</label>
                                         <input type="text" id="nav-search" placeholder="Search for anything"/>
