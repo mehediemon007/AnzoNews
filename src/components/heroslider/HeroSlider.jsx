@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from "react-slick";
+import {Link} from "react-router-dom"
 
 function SampleNextArrow(props) {
     const { onClick } = props;
@@ -53,28 +54,28 @@ const HeroSlider = () => {
                             <div className="single-blog item overlay-blog">
                                 <img src="images/banner/banner-1.jpg" alt="banner"/>
                                 <div className="blog-content">
-                                    <a href="#"><h2 className="blog-title text-white">This is the title of a news is the title of a news</h2></a>
+                                    <Link to="/blog-details"><h2 className="blog-title text-white">This is the title of a news is the title of a news</h2></Link>
                                     <p className="blog-date mt-2">Novermber 21 , 2021</p>
                                 </div>
                             </div>
                             <div className="single-blog item overlay-blog">
                                 <img src="images/banner/banner-3.jpg" alt="banner"/>
                                 <div className="blog-content">
-                                    <a href="#"><h2 className=" blog-title text-white">This is the title of a news is the title of a news</h2></a>
+                                <Link to="/blog-details"><h2 className="blog-title text-white">This is the title of a news is the title of a news</h2></Link>
                                     <p className="blog-date mt-2">Novermber 21 , 2021</p>
                                 </div>
                             </div>
                             <div className="single-blog item overlay-blog">
                                 <img src="images/banner/banner-2.jpg" alt="banner"/>
                                 <div className="blog-content">
-                                    <a href="#"><h2 className="blog-title text-white">This is the title of a news is the title of a news</h2></a>
+                                <Link to="/blog-details"><h2 className="blog-title text-white">This is the title of a news is the title of a news</h2></Link>
                                     <p className="blog-date mt-2">Novermber 21 , 2021</p>
                                 </div>
                             </div>
                             <div className="single-blog item overlay-blog">
                                 <img src="images/banner/banner-4.jpg" alt="banner"/>
                                 <div className="blog-content">
-                                    <a href=""><h2 className="blog-title text-white">This is the title of a news is the title of a news</h2></a>
+                                    <Link to="/blog-details"><h2 className="blog-title text-white">This is the title of a news is the title of a news</h2></Link>
                                     <p className="blog-date mt-2">Novermber 21 , 2021</p>
                                 </div>
                             </div>

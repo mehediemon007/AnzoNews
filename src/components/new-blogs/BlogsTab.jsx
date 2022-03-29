@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import {Link} from "react-router-dom"
 
 const BlogsTab = (props) => {
 
@@ -14,7 +15,7 @@ const BlogsTab = (props) => {
                     </div>
                     <div className="blog-content">
                         <span className="bg-danger tag">{blogs[0].tag}</span>
-                        <a href="#"><h3 className="blog-title text-white">{blogs[0].title}</h3></a>
+                        <Link to="/blog-details"><h3 className="blog-title text-white">{blogs[0].title}</h3></Link>
                         <p className="blog-date mt-2"><img src="images/clock-avatar.png" alt="Clock Avatar"/> {blogs[0].date}</p>
                     </div>
                 </div>
@@ -23,10 +24,10 @@ const BlogsTab = (props) => {
                 {blogs.slice(1).map((blog) => (
                     <div className="single-blog mb-4" key={blog.id}>
                         <div className="blog-image">
-                            <a href="#"><img src={`images/blogs/${blog.image}`} alt={blog.alt}/></a>
+                            <Link to="/blog-details"><img src={`images/blogs/${blog.image}`} alt={blog.alt}/></Link>
                         </div>
                         <div className="blog-content bg-white py-3">
-                            <a href="#"><h5 className="blog-title">{blog.title}</h5></a>
+                            <Link to="/blog-details"><h5 className="blog-title">{blog.title}</h5></Link>
                             <a href="#"><p className="blog-date mt-1"><img src="images/man-avatar.png" alt="user-avatar"/> {blog.name}</p></a>
                             <p className="blog-date mt-1"><img src="images/clock-avatar.png" alt="Clock Avatar"/> {blog.date}</p>
                         </div>

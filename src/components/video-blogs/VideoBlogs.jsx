@@ -2,6 +2,7 @@ import React from 'react';
 import videoData from "../../apis/video-blogs";
 import VideoBlog from './VideoBlog';
 import VideoModal from './VideoModal';
+import {Link} from "react-router-dom"
 
 function VideoBlogs() {
   return (
@@ -20,7 +21,7 @@ function VideoBlogs() {
                                 <VideoModal/>
                             </div>
                             <div className="video-post-info blog-content">
-                                <a href="#"><h5 className="blog-title text-white">{videoData[0].title}</h5></a>
+                                <Link to="/blog-details"><h5 className="blog-title text-white">{videoData[0].title}</h5></Link>
                                 <p className="blog-date mt-2"><img src="images/clock-avatar.png" alt="Clock Avatar"/> {videoData[0].date}</p>
                             </div>
                         </div>

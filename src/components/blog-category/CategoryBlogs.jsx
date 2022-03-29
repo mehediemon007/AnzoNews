@@ -1,5 +1,6 @@
 import React from 'react';
 import categoryData from "../../apis/headphone";
+import {Link} from "react-router-dom"
 
 const CategoryBlogs = () => {
 
@@ -13,7 +14,7 @@ const CategoryBlogs = () => {
                         <div className="col-xl-9">
                             <div className="sec-heading d-flex justify-content-between align-items-center mb-4">
                                 <h4>LAPTOP’S</h4>
-                                <a href="#" className="more-link">More <i className="uil uil-angle-right-b"></i></a>
+                                <Link to="/category-list" className="more-link">More <i className="uil uil-angle-right-b"></i></Link>
                             </div>
                             <div className="row category-1">
                                 {laptop.map((blog,index) =>
@@ -25,7 +26,7 @@ const CategoryBlogs = () => {
                                                     <div className="image-overlay"></div>
                                                 </div>
                                                 <div className="blog-content">
-                                                    <a href="#"><h4 className="blog-title text-white overflow-title">{blog.title}</h4></a>
+                                                    <Link to="/category-list"><h4 className="blog-title text-white overflow-title">{blog.title}</h4></Link>
                                                     <p className="blog-date mt-2"><img src="images/clock-avatar.png" alt="Clock Avatar"/> {blog.date}</p>
                                                 </div>
                                             </div>
@@ -35,18 +36,18 @@ const CategoryBlogs = () => {
                             </div>
                             <div className="sec-heading d-flex justify-content-between align-items-center mb-4">
                                 <h4>Gadgets</h4>
-                                <a href="#" className="more-link">More <i className="uil uil-angle-right-b"></i></a>
+                                <Link to="/category-list" className="more-link">More <i className="uil uil-angle-right-b"></i></Link>
                             </div>
                             <div className="row hoz-blog category-2">
                                 {gadget.map((blog,index)=>
                                     (
                                         <div className="single-blog mb-4" key={index}>
                                             <div className="blog-image position-relative">
-                                                <a href="#"><img src={`images/blogs/${blog.image}`} alt={blog.alt}/></a>
+                                                <Link to="/category-list"><img src={`images/blogs/${blog.image}`} alt={blog.alt}/></Link>
                                                 <span className="bg-warning tag">{blog.tag}</span>
                                             </div>
                                             <div className="blog-content bg-white">
-                                                <a href="#"><h3 className="blog-title">{blog.title}</h3></a>
+                                                <Link to="/category-list"><h3 className="blog-title">{blog.title}</h3></Link>
                                                 <a href="#"><p className="blog-date"><img src="images/man-avatar.png" alt="user-avatar"/> {blog.name}</p></a>
                                                 <p className="blog-date mt-2"><img src="images/clock-avatar.png" alt="Clock Avatar"/> {blog.date}</p>
                                             </div>

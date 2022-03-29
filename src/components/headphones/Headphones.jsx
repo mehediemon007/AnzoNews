@@ -1,5 +1,6 @@
 import React from 'react';
 import Headphone from './Headphone.jsx';
+import {Link } from "react-router-dom"
 import headphoneData from "../../apis/headphone.js"
 
 const Headphones = () => {
@@ -20,10 +21,10 @@ const Headphones = () => {
                                         (
                                             <div className="single-blog" key={blog.id}>
                                                 <div className="blog-image">
-                                                    <a href="#"><img src={`images/blogs/${blog.image}`} alt={blog.alt}/></a>
+                                                    <Link to="/category-three-grid"><img src={`images/blogs/${blog.image}`} alt={blog.alt}/></Link>
                                                 </div>
                                                 <div className="blog-content ps-0">
-                                                    <a href="#"><h4 className="blog-title overflow-title">{blog.title}</h4></a>
+                                                    <Link to="/category-three-grid"><h4 className="blog-title overflow-title">{blog.title}</h4></Link>
                                                     <p className="mt-2 d-lg-none d-xxl-block">{blog.des}</p>
                                                     <p className="blog-date mt-2"><img src="images/clock-avatar.png" alt="Clock Avatar"/> {blog.date}</p>
                                                 </div>
@@ -38,7 +39,7 @@ const Headphones = () => {
                                             <div className="image-overlay"></div>
                                         </div>
                                         <div className="blog-content">
-                                            <a href="#"><h3 className="blog-title text-white overflow-title">{data[2].title}</h3></a>
+                                            <Link to="/category-three-grid"><h3 className="blog-title text-white overflow-title">{data[2].title}</h3></Link>
                                             <a href="#"><p className="blog-date mt-2"><img src="images/man-avatar.png" alt="user-avatar"/> {data[2].name}</p></a>
                                         </div>
                                     </div>
