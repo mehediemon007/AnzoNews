@@ -5,6 +5,7 @@ import CategoryGridThree from '../pages/CategoryGridThree';
 import CategoryList from '../pages/CategoryList';
 import Home from '../pages/Home';
 import Home6 from '../pages/Home6';
+import LogIn from '../pages/LogIn';
 
 const Wrapper = ({children}) => {
   const location = useLocation();
@@ -22,6 +23,7 @@ function router() {
             <Route path="/category-three-grid" exact element={<CategoryGridThree/>}/>
             <Route path="/category-list" exact element={<CategoryList/>}/>
             <Route path="/blog-details" exact element={<Home6/>}/>
+            <Route path="/sign-in" exact element={<LogIn/>}/>
             <Route>404 Not Found</Route>
         </Routes>
       </Wrapper>

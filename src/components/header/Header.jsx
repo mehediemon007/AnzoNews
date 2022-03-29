@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar';
 import Toolbar from './Toolbar';
+import {Link} from "react-router-dom";
 
 function Header() {
   return (
@@ -11,7 +12,7 @@ function Header() {
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-4">
-                            <a href="index.html"><img src="images/logo/logo.png" alt="logo"/></a>
+                            <Link to="/"><img src="images/logo/logo.png" alt="logo"/></Link>
                         </div>
                         <div className="col-8">
                             <a href="#"><img src="images/ads-banner.jpg" alt="ads"/></a>

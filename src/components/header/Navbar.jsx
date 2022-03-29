@@ -313,7 +313,7 @@ function Navbar() {
                             </ul>
                         </nav>
                         <div className="nav-right">
-                            <div className="nav-meta-icon"><a href="#"><i className="uil uil-user-check"></i></a></div>
+                            <div className="nav-meta-icon"><Link to="/sign-in"><i className="uil uil-user-check"></i></Link></div>
                             <div className="nav-meta-icon nav-search-icon"><i className="uil uil-search"></i>
                                 <form className="nav-search">
                                     <fieldset className="nav-search-input">
