@@ -549,10 +549,6 @@ label{
     transition: display .3s ease-in-out;
 }
 
-.nav-search.show{
-    display: block;
-}
-
 .nav-search input{
     width: 90%;
     border: 1px solid var(--dark-color);

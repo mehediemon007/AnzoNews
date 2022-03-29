@@ -316,7 +316,7 @@ function Navbar() {
                         <div className="nav-right">
                             <div className="nav-meta-icon"><Link to="/sign-in"><i className="uil uil-user-check"></i></Link></div>
                             <div className="nav-meta-icon nav-search-icon" onClick={()=>setSearchBar(!searchBar)}><i className="uil uil-search"></i>
-                                <form className={searchBar ? "nav-search show" : "nav-search"}>
+                                <form className="nav-search" style={{display : searchBar ? "block" : "none"}}>
                                     <fieldset className="nav-search-input">
                                         <label htmlFor="nav-search" className="visually-hidden">Search Product</label>
                                         <input type="text" id="nav-search" placeholder="Search for anything"/>
