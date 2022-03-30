@@ -1553,20 +1553,20 @@ button.mfp-close {
     padding:  0 10px;
 }
 
-.an-sign-up,
+/* .an-sign-up,
 .an-sign-in,
 .sign-with-phone,
 .sign-with-mail{
     display: none;
     transition: display var(--transition);
-}
+} */
 
-.an-sign-up.show,
+/* .an-sign-up.show,
 .an-sign-in.show,
 .sign-with-phone.show,
 .sign-with-mail.show{
     display: block;
-}
+} */
 
 .log-tab-links span,
 .sign-up-options span{

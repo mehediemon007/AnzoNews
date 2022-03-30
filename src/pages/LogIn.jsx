@@ -2,6 +2,7 @@ import React from 'react';
 import Footer from '../components/footer/Footer';
 import Header from '../components/header/Header';
 import SignIn from '../components/auth/SignIn';
+import SignTab from '../components/auth/SignTab';
 
 const LogIn = () => {
     return (
@@ -9,7 +10,8 @@ const LogIn = () => {
             <Header/>
             <mian className="an-main-content">
                 <div className="container">
-                    <SignIn/>
+                    {/* <SignIn/> */}
+                    <SignTab/>
                 </div>
             </mian>
             <Footer/>
