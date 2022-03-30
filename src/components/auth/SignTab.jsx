@@ -4,6 +4,7 @@ import { Tabs, Tab } from "react-bootstrap";
 const SignTab = () => {
 
     const [key, setKey] = useState("signin");
+    const [signUpKey, setSignUp] = useState("phone")
 
     return (
         <>
@@ -39,46 +40,48 @@ const SignTab = () => {
                         </Tab>
                         <Tab eventKey="signup" title="Register" className=''>
                             <div className="an-sign-up">
-                                <div className="sign-up-options text-center mb-4">
-                                    <span className="phone-login active border-0 "><i className="uil uil-mobile-android"></i> Phone</span>
-                                    <span className="mail-login border-0"><i className="uil uil-envelope"></i> Email</span>
-                                </div>
-                                <form className="sign-with-phone show">
-                                    <fieldset className="an-input mb-4">
-                                        <label for="user-phone" className="visually-hidden"></label>
-                                        <input type="text" placeholder="Phone No." id="user-phone"/>
-                                    </fieldset>
-                                    <fieldset className="an-input position-relative mb-4">
-                                            <label for="user-password" className="visually-hidden"></label>
-                                            <input type="text" placeholder="Password" id="user-password"/>
-                                            <div className="pass-input">
-                                                <i className="uil uil-eye"></i>
-                                            </div>
-                                    </fieldset>
-                                    <fieldset className="policy-checkbox mt-2">
-                                        <input type="checkbox" id="policy-check"/>
-                                        <label for="policy-check">I agree to angoods.com terms of Use and privacy policy</label>
-                                    </fieldset>
-                                    <button type="submit" className="log-btn">Sign Up</button>
-                                </form>
-                                <form className="sign-with-mail">
-                                    <fieldset className="an-input mb-4">
-                                        <label for="user-mail" className="visually-hidden"></label>
-                                        <input type="text" placeholder="Email" id="user-mail"/>
-                                    </fieldset>
-                                    <fieldset className="an-input position-relative mb-4">
-                                            <label for="user-mail-pass" className="visually-hidden"></label>
-                                            <input type="text" placeholder="Password" id="user-mail-pass"/>
-                                            <div className="pass-input">
-                                                <i className="uil uil-eye"></i>
-                                            </div>
-                                    </fieldset>
-                                    <fieldset className="policy-checkbox mt-2">
-                                        <input type="checkbox" id="policy-check-mail"/>
-                                        <label for="policy-check-mail">I agree to angoods.com terms of Use and privacy policy</label>
-                                    </fieldset>
-                                    <button type="submit" className="log-btn">Sign Up</button>
-                                </form>
+                                <Tabs className="tabs sign-up-options" id="controlled-tab-example" activeKey={signUpKey} onSelect={(k) => setSignUp(k)}>
+                                    <Tab eventKey="phone" title="Phone" className=''>
+                                        <form className="sign-with-phone show">
+                                            <fieldset className="an-input mb-4">
+                                                <label for="user-phone" className="visually-hidden"></label>
+                                                <input type="text" placeholder="Phone No." id="user-phone"/>
+                                            </fieldset>
+                                            <fieldset className="an-input position-relative mb-4">
+                                                    <label for="user-password" className="visually-hidden"></label>
+                                                    <input type="text" placeholder="Password" id="user-password"/>
+                                                    <div className="pass-input">
+                                                        <i className="uil uil-eye"></i>
+                                                    </div>
+                                            </fieldset>
+                                            <fieldset className="policy-checkbox mt-2">
+                                                <input type="checkbox" id="policy-check"/>
+                                                <label for="policy-check">I agree to angoods.com terms of Use and privacy policy</label>
+                                            </fieldset>
+                                            <button type="submit" className="log-btn">Sign Up</button>
+                                        </form>
+                                    </Tab>
+                                    <Tab eventKey="email" title="Email" className=''>
+                                        <form className="sign-with-mail">
+                                            <fieldset className="an-input mb-4">
+                                                <label for="user-mail" className="visually-hidden"></label>
+                                                <input type="text" placeholder="Email" id="user-mail"/>
+                                            </fieldset>
+                                            <fieldset className="an-input position-relative mb-4">
+                                                    <label for="user-mail-pass" className="visually-hidden"></label>
+                                                    <input type="text" placeholder="Password" id="user-mail-pass"/>
+                                                    <div className="pass-input">
+                                                        <i className="uil uil-eye"></i>
+                                                    </div>
+                                            </fieldset>
+                                            <fieldset className="policy-checkbox mt-2">
+                                                <input type="checkbox" id="policy-check-mail"/>
+                                                <label for="policy-check-mail">I agree to angoods.com terms of Use and privacy policy</label>
+                                            </fieldset>
+                                            <button type="submit" className="log-btn">Sign Up</button>
+                                        </form>
+                                    </Tab>
+                                </Tabs>
                                 <div className="social-login text-center">
                                     <p className="my-3 light-color">Quick Access With</p>
                                     <div className="social-login-links">

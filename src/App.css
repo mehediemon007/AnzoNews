@@ -1553,32 +1553,29 @@ button.mfp-close {
     padding:  0 10px;
 }
 
-/* .an-sign-up,
-.an-sign-in,
-.sign-with-phone,
-.sign-with-mail{
-    display: none;
-    transition: display var(--transition);
-} */
+.an-log-form .nav-tabs{
+    margin-bottom: 24px;
+    justify-content: center;
+    text-align: center;
+    border: none;
+}
 
-/* .an-sign-up.show,
-.an-sign-in.show,
-.sign-with-phone.show,
-.sign-with-mail.show{
-    display: block;
-} */
-
-.log-tab-links span,
-.sign-up-options span{
+.log-tab-links .nav-link,
+.sign-up-options .nav-link{
     display: inline-block;
+    font-size: .85rem;
     padding: 8px 20px;
     transition: .3s;
-    border-bottom: 2px solid transparent;
+    border: none;
     cursor: pointer;
 }
 
-.log-tab-links span.active,
-.sign-up-options span.active{
+.log-tab-links .nav-link{
+    border-bottom: 2px solid transparent;
+}
+
+.log-tab-links .nav-link.active,
+.sign-up-options .nav-link.active{
     color: var(--hover-color);
     font-weight: var(--font-weight-medium);
     border-bottom-color: var(--hover-color);
