@@ -41,7 +41,7 @@ const SignTab = () => {
                         <Tab eventKey="signup" title="Register" className=''>
                             <div className="an-sign-up">
                                 <Tabs className="tabs sign-up-options" id="controlled-tab-example" activeKey={signUpKey} onSelect={(k) => setSignUp(k)}>
-                                    <Tab eventKey="phone" title="Phone" className=''>
+                                    <Tab eventKey="phone" title={<span><i class="uil uil-mobile-android"></i> Phone</span>} className=''>
                                         <form className="sign-with-phone show">
                                             <fieldset className="an-input mb-4">
                                                 <label for="user-phone" className="visually-hidden"></label>
@@ -61,7 +61,7 @@ const SignTab = () => {
                                             <button type="submit" className="log-btn">Sign Up</button>
                                         </form>
                                     </Tab>
-                                    <Tab eventKey="email" title="Email" className=''>
+                                    <Tab eventKey="email" title={<span><i class="uil uil-envelope"></i> Email</span>} className=''>
                                         <form className="sign-with-mail">
                                             <fieldset className="an-input mb-4">
                                                 <label for="user-mail" className="visually-hidden"></label>

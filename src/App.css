@@ -1563,6 +1563,7 @@ button.mfp-close {
 .log-tab-links .nav-link,
 .sign-up-options .nav-link{
     display: inline-block;
+    color: var(--dark-color);
     font-size: .85rem;
     padding: 8px 20px;
     transition: .3s;
@@ -1575,7 +1576,7 @@ button.mfp-close {
 }
 
 .log-tab-links .nav-link.active,
-.sign-up-options .nav-link.active{
+.sign-up-options .nav-link.active span{
     color: var(--hover-color);
     font-weight: var(--font-weight-medium);
     border-bottom-color: var(--hover-color);
