@@ -1639,6 +1639,11 @@ body.right-to-left .pass-input{
     padding-left: 10px;
 }
 
+.err-msg{
+    color: var(--hover-color);
+    margin: 8px 0;
+}
+
 /* News Home */
 
 .an-weekly-top .owl-carousel .owl-nav .owl-prev,

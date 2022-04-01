@@ -7,12 +7,12 @@ const LogIn = () => {
     return (
         <>
             <Header/>
-            <mian className="an-main-content">
+            <main className="an-main-content">
                 <div className="container">
                     {/* <SignIn/> */}
                     <SignTab/>
                 </div>
-            </mian>
+            </main>
             <Footer/>
         </>
     )
