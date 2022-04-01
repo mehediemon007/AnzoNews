@@ -1,4 +1,6 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import {oldUser} from "../../redux/actions";
 
 const SignIn = () => {
 
@@ -7,12 +9,21 @@ const SignIn = () => {
         password:""
     })
 
+    const userData = useSelector(state => state.signIn);
+
+    if(userData.user !== "" || userData.password !== ""){
+        console.log(userData);
+    }
+
+    let dispatch = useDispatch();
+
     const handleSignIn = (e) => {
         e.preventDefault();
+        dispatch(oldUser(signData));
         setData({
             "user":"",
             "password":""
-        })
+        });
     }
 
     return (

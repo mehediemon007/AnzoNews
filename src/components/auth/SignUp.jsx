@@ -3,8 +3,18 @@ import { Tabs, Tab } from "react-bootstrap";
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { useDispatch, useSelector } from 'react-redux';
+import { newUser } from '../../redux/actions';
 
 const SignUp = () => {
+
+    let dispatch = useDispatch();
+
+    const userData = useSelector(state => state.signUp);
+
+    if(userData.mail !== "" || userData.phone !== "" || userData.password !== ""){
+        console.log(userData);
+    }
 
     const [signUpKey, setSignUp] = useState("phone");
     const [signUpData ,setData] = useState({
@@ -37,6 +47,7 @@ const SignUp = () => {
     const handleSignUp = (e) => {
 
         e.preventDefault();
+        dispatch(newUser(signUpData));
         setData({
             mail:"",
             password:"",
