@@ -2,11 +2,13 @@ import React,{useEffect, useState, useContext} from 'react';
 import {NavLink , Link} from "react-router-dom";
 import { ThemeContext, themes } from '../../context/ThemeContext';
 
-function Navbar() {
+function Navbar(props) {
 
     const {theme, changeTheme} = useContext(ThemeContext);
     
     const [searchBar, setSearchBar] = useState(false);
+
+    const {langShow , langChange} = props.langProps;
 
     // const [theme , setTheme] = useState(false);
 
@@ -330,10 +332,10 @@ function Navbar() {
                                     <span className="theme-toggle"></span>
                                 </label>
                             </div>
-                            <div className="lang-switcher">
+                            <div className="lang-switcher" onClick={langChange}>
                                 <span className="flag"><img src="images/flags/usa-flag.png" alt="USA"/></span>
                                 <span className="lang"><i className="uil uil-angle-down"></i></span>
-                                <ul className="lang-list">
+                                <ul className={`lang-list ${langShow ? "lang-list-open" : ""}`}>
                                     <li className="single-lang"><span className="flag"><img src="images/flags/bd-flag.png" alt="bangladesh" /></span><a className="lang-text" href="#">BD</a></li>
                                     <li className="single-lang"><span className="flag"><img src="images/flags/usa-flag.png" alt="united-states" /></span><a className="lang-text" href="#">ENG</a></li>
                                     <li className="single-lang"><span className="flag"><img src="images/flags/china-flag.png" alt="china"/></span><a className="lang-text" href="#">CHN</a></li>
