@@ -7,12 +7,15 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import App from './App';
 import ThemeContextWrapper from './context/ThemeContext';
+import LangContextWrapper from "./context/LangContext";
 
 ReactDOM.render(
     <ThemeContextWrapper>
-        <React.StrictMode>
-          <App />
-        </React.StrictMode>
+        <LangContextWrapper>
+          <React.StrictMode>
+              <App />
+          </React.StrictMode>
+        </LangContextWrapper>
     </ThemeContextWrapper>,
   document.getElementById('root')
 );

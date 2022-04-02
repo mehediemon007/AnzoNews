@@ -1,9 +1,9 @@
-import React,{ useEffect} from 'react';
+import React,{ useEffect,} from 'react';
 import OwlCarousel from 'react-owl-carousel'; 
 
 function Toolbar(props) {
 
-    const {langShow , langChange } = props.langProps;
+    const {langShow , setLangShow} = props.langProps;
 
     const newsSliderOptions ={
         items:1,
@@ -41,7 +41,7 @@ function Toolbar(props) {
                             </div>
                             <div className="col-5">
                                 <div className="d-flex align-items-center justify-content-end">
-                                    <div className="lang-switcher" onClick={langChange}>
+                                    <div className="lang-switcher" onClick={()=> setLangShow(!langShow)}>
                                         <span className="flag"><img src="images/flags/usa-flag.png" alt="USA"/></span>
                                         <span className="lang"><i className="uil uil-angle-down"></i></span>
                                         <ul className={`lang-list ${langShow ? "lang-list-open" : ""}`}>

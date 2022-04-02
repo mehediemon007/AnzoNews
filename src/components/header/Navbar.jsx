@@ -8,7 +8,7 @@ function Navbar(props) {
     
     const [searchBar, setSearchBar] = useState(false);
 
-    const {langShow , langChange} = props.langProps;
+    const {langShow , setLangShow} = props.langProps;
 
     // const [theme , setTheme] = useState(false);
 
@@ -332,7 +332,7 @@ function Navbar(props) {
                                     <span className="theme-toggle"></span>
                                 </label>
                             </div>
-                            <div className="lang-switcher" onClick={langChange}>
+                            <div className="lang-switcher" onClick={() => setLangShow(!langShow)}>
                                 <span className="flag"><img src="images/flags/usa-flag.png" alt="USA"/></span>
                                 <span className="lang"><i className="uil uil-angle-down"></i></span>
                                 <ul className={`lang-list ${langShow ? "lang-list-open" : ""}`}>

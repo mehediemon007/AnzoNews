@@ -1,45 +1,50 @@
-import React,{useState, useRef, useEffect} from 'react'
+import React,{useState, useRef, useEffect,useContext} from 'react'
 import Navbar from './Navbar';
 import Toolbar from './Toolbar';
 import {Link} from "react-router-dom";
+import { LangContext } from '../../context/LangContext';
 
 function Header() {
-    const [langShow , setLangShow] = useState(false);
+
+    const {langShow , setLangShow, langChange} = useContext(LangContext);
+    
     // const langFlag = useRef();
 
-    function langChange(){
+    // function langChange(){
 
-        setLangShow(!langShow);
+    //     const lagnOpt = document.querySelectorAll(".single-lang");
 
-        const lagnOpt = document.querySelectorAll(".single-lang");
-
-        lagnOpt.forEach(el => {
-            el.addEventListener("click",function(e){
+    //     lagnOpt.forEach(el => {
+    //         el.addEventListener("click",function(e){
                 
-                e.preventDefault();
-                let logoSrc = el.querySelector(".flag").querySelector("img").getAttribute("src");
+    //             e.preventDefault();
+    //             let logoSrc = el.querySelector(".flag").querySelector("img").getAttribute("src");
                 
-                if(this.classList.contains("arabic")){
-                    document.body.classList.add('right-to-left');
-                }else{
-                    document.body.classList.remove('right-to-left');
-                }
+    //             if(this.classList.contains("arabic")){
+    //                 document.body.classList.add('right-to-left');
+    //             }else{
+    //                 document.body.classList.remove('right-to-left');
+    //             }
 
-                // document.querySelector(".lang-switcher > .flag img").setAttribute("src",logoSrc);
+    //             // document.querySelector(".lang-switcher > .flag img").setAttribute("src",logoSrc);
 
-                document.querySelectorAll(".lang-switcher > .flag img").forEach(el =>{
-                    el.setAttribute("src",logoSrc)
-                })
+    //             document.querySelectorAll(".lang-switcher > .flag img").forEach(el =>{
+    //                 el.setAttribute("src",logoSrc)
+    //             })
 
-                // langFlag.current.setAttribute('src', logoSrc);
-            })
-        });
-    }
+    //             // langFlag.current.setAttribute('src', logoSrc);
+    //         })
+    //     });
+    // }
+
+    // useEffect(()=>{
+    //     langChange()
+    // },[langShow]);
 
     return (
         <>
             <header className="an-header">
-                <Toolbar langProps={{langShow, langChange}}/>
+                <Toolbar langProps={{langShow, langChange, setLangShow}}/>
                 <div className="haeder-ads py-3">
                     <div className="container">
                         <div className="row align-items-center">
@@ -52,7 +57,7 @@ function Header() {
                         </div>
                     </div>
                 </div>
-                <Navbar langProps={{langShow, langChange}}/>
+                <Navbar langProps={{langShow, langChange, setLangShow}}/>
             </header>
         </>
     )
