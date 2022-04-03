@@ -71,7 +71,7 @@ function Home6() {
                                             <img src="images/user.jpg" alt="Smith"/>
                                             <div className="comment-content">
                                                 <form className="comment-form">
-                                                    <label for="comment-input"></label>
+                                                    <label htmlFor="comment-input"></label>
                                                     <textarea id="comment-input" placeholder="Add a public comment.."></textarea>
                                                 </form>
                                             </div>
