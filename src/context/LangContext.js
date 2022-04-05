@@ -4,12 +4,38 @@ export const LangContext = createContext();
 
 
 const LangContextWrapper = (props) => {
+    
     const [langShow , setLangShow] = useState(false);
 
-    const [langData, setlangData] = useState({
-        lang:["EN","USA","BAN","ARB"],
-        selected:"EN"
-    })
+    const [langData, setlangData] = useState([
+
+        {
+            img:"usa-flag.png",
+            alt:"ENG",
+            langName:"ENG"
+        },
+        {
+            img:"bd-flag.png",
+            alt:"BAN",
+            langName:"BAN"
+        },
+        {
+            img:"china-flag.png",
+            alt:"CHN",
+            langName:"CHN"
+        },
+        {
+            img:"saudi-flag.png",
+            alt:"ARB",
+            langName:"BD"
+        },
+        {
+            img:"german-flag.png",
+            alt:"GER",
+            langName:"GER"
+        },
+
+    ])
 
     function langChange(){
 
