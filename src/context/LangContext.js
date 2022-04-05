@@ -2,8 +2,14 @@ import React,{createContext, useState, useEffect} from 'react';
 
 export const LangContext = createContext();
 
+
 const LangContextWrapper = (props) => {
     const [langShow , setLangShow] = useState(false);
+
+    const [langData, setlangData] = useState({
+        lang:["EN","USA","BAN","ARB"],
+        selected:"EN"
+    })
 
     function langChange(){
 
@@ -37,7 +43,7 @@ const LangContextWrapper = (props) => {
     },[langShow])
 
     return (
-        <LangContext.Provider value={{langShow , setLangShow}}>
+        <LangContext.Provider value={{langShow , setLangShow, langData, setlangData}}>
             {props.children}
         </LangContext.Provider>
     )

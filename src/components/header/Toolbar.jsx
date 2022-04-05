@@ -1,7 +1,12 @@
-import React,{ useEffect,} from 'react';
-import OwlCarousel from 'react-owl-carousel'; 
+import React,{ useEffect, useContext} from 'react';
+import OwlCarousel from 'react-owl-carousel';
+import { LangContext } from '../../context/LangContext';
 
 function Toolbar(props) {
+
+    // const {langData,selected} = useContext(LangContext);
+
+   
 
     const {langShow , setLangShow} = props.langProps;
 
@@ -51,6 +56,14 @@ function Toolbar(props) {
                                             <li className="single-lang arabic"><span className="flag"><img src="images/flags/saudi-flag.png" alt="spain"/></span><a className="lang-text" href="#">ARB</a></li>
                                             <li className="single-lang"><span className="flag"><img src="images/flags/german-flag.png" alt="german"/></span><a className="lang-text" href="#">GER</a></li>
                                         </ul>
+                                        {/* <ul className = {`lang-list ${langShow ? "lang-list-open" : ""}`}>
+                                            {langData.lang.map(el =>{
+                                                return(
+                                                    <li className="single-lang" key={el}><span className="flag"><img src="images/flags/bd-flag.png" alt="bangladesh" /></span><a className="lang-text" href="#">{el}</a></li>
+                                                )
+                                                
+                                            })}
+                                        </ul> */}
                                     </div>
                                     <div className="toolbar-social-links text-lg-end">
                                         <a href="https://www.facebook.com/akaaritbd/" className="social-link"><i className="uil uil-facebook-f"></i></a>
