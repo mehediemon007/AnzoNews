@@ -4,7 +4,7 @@ import { LangContext } from '../../context/LangContext';
 
 function Toolbar(props) {
 
-    const {langData,selected} = useContext(LangContext);
+    const {langData, setLang} = useContext(LangContext);
     
     const {langShow , setLangShow} = props.langProps;
 
@@ -18,6 +18,11 @@ function Toolbar(props) {
         animateOut: "slideOutDown",
         animateIn: "slideInDown",
         touchDrag  : false,
+    }
+
+    function handleLang(el){
+        let prevLang = langData.filter(lang => lang.selected === true)[0];
+        setLang([...langData, prevLang.selected = false, el.selected = true]);
     }
 
     return (
@@ -45,7 +50,9 @@ function Toolbar(props) {
                             <div className="col-5">
                                 <div className="d-flex align-items-center justify-content-end">
                                     <div className="lang-switcher" onClick={()=> setLangShow(!langShow)}>
-                                        <span className="flag"><img src="images/flags/usa-flag.png" alt="USA"/></span>
+                                        <span className="flag">
+                                            {langData.filter(lang => lang.selected === true).map(({img,alt})=><img src={`images/flags/${img}`} alt={alt}/>)}
+                                        </span>
                                         <span className="lang"><i className="uil uil-angle-down"></i></span>
                                         {/* <ul className={`lang-list ${langShow ? "lang-list-open" : ""}`}>
                                             <li className="single-lang"><span className="flag"><img src="images/flags/bd-flag.png" alt="bangladesh" /></span><a className="lang-text" href="#">BD</a></li>
@@ -57,7 +64,7 @@ function Toolbar(props) {
                                         <ul className = {`lang-list ${langShow ? "lang-list-open" : ""}`}>
                                             {langData.map(el =>{
                                                 return(
-                                                    <li className="single-lang" key={el.langName}><span className="flag"><img src={`images/flags/${el.img}`} alt={el.alt} /></span><a className="lang-text" href="#">{el.langName}</a></li>
+                                                    <li className="single-lang" key={el.langName} onClick={()=> handleLang(el)}><span className="flag"><img src={`images/flags/${el.img}`} alt={el.alt} /></span><a className="lang-text" href="#">{el.langName}</a></li>
                                                 )
                                                 
                                             })}

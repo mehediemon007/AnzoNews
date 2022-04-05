@@ -1,6 +1,7 @@
 import React,{useEffect, useState, useContext} from 'react';
 import {NavLink , Link} from "react-router-dom";
 import { ThemeContext, themes } from '../../context/ThemeContext';
+import { LangContext } from '../../context/LangContext';
 
 function Navbar(props) {
 
@@ -8,7 +9,14 @@ function Navbar(props) {
     
     const [searchBar, setSearchBar] = useState(false);
 
+    const {langData, setLang} = useContext(LangContext);
+
     const {langShow , setLangShow} = props.langProps;
+
+    function handleLang(el){
+        let prevLang = langData.filter(lang => lang.selected === true)[0];
+        setLang([...langData, prevLang.selected = false, el.selected = true]);
+    }
 
     // const [theme , setTheme] = useState(false);
 
@@ -332,15 +340,25 @@ function Navbar(props) {
                                     <span className="theme-toggle"></span>
                                 </label>
                             </div>
-                            <div className="lang-switcher" onClick={() => setLangShow(!langShow)}>
-                                <span className="flag"><img src="images/flags/usa-flag.png" alt="USA"/></span>
+                            <div className="lang-switcher" onClick={()=> setLangShow(!langShow)}>
+                                <span className="flag">
+                                    {langData.filter(lang => lang.selected === true).map(({img,alt})=><img src={`images/flags/${img}`} alt={alt}/>)}
+                                </span>
                                 <span className="lang"><i className="uil uil-angle-down"></i></span>
-                                <ul className={`lang-list ${langShow ? "lang-list-open" : ""}`}>
+                                {/* <ul className={`lang-list ${langShow ? "lang-list-open" : ""}`}>
                                     <li className="single-lang"><span className="flag"><img src="images/flags/bd-flag.png" alt="bangladesh" /></span><a className="lang-text" href="#">BD</a></li>
                                     <li className="single-lang"><span className="flag"><img src="images/flags/usa-flag.png" alt="united-states" /></span><a className="lang-text" href="#">ENG</a></li>
                                     <li className="single-lang"><span className="flag"><img src="images/flags/china-flag.png" alt="china"/></span><a className="lang-text" href="#">CHN</a></li>
                                     <li className="single-lang arabic"><span className="flag"><img src="images/flags/saudi-flag.png" alt="spain"/></span><a className="lang-text" href="#">ARB</a></li>
                                     <li className="single-lang"><span className="flag"><img src="images/flags/german-flag.png" alt="german"/></span><a className="lang-text" href="#">GER</a></li>
+                                </ul> */}
+                                <ul className = {`lang-list ${langShow ? "lang-list-open" : ""}`}>
+                                    {langData.map(el =>{
+                                        return(
+                                            <li className="single-lang" key={el.langName} onClick={()=> handleLang(el)}><span className="flag"><img src={`images/flags/${el.img}`} alt={el.alt} /></span><a className="lang-text" href="#">{el.langName}</a></li>
+                                        )
+                                        
+                                    })}
                                 </ul>
                             </div>
                         </div>
