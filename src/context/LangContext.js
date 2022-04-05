@@ -30,7 +30,7 @@ const LangContextWrapper = (props) => {
         {
             img:"saudi-flag.png",
             alt:"ARB",
-            langName:"BD",
+            langName:"ARB",
             selected:false
         },
         {
@@ -42,39 +42,28 @@ const LangContextWrapper = (props) => {
 
     ])
 
-    // function langChange(){
+    function handleLang(el){
 
-    //     const lagnOpt = document.querySelectorAll(".single-lang");
+        if(el.langName === "ARB"){
+            document.body.classList.add('right-to-left');
+        }else{
+            document.body.classList.remove('right-to-left');
+        }
+        
+        let prevLang = langData.findIndex(lang => lang.selected === true);
+        let currLang =  langData.indexOf(el);
+        
+        langData[prevLang].selected = false;
+        langData[currLang].selected = true;
+        setLang(langData);
+    }
 
-    //     lagnOpt.forEach(el => {
-    //         el.addEventListener("click",function(e){
-                
-    //             e.preventDefault();
-    //             let logoSrc = el.querySelector(".flag").querySelector("img").getAttribute("src");
-                
-    //             if(this.classList.contains("arabic")){
-    //                 document.body.classList.add('right-to-left');
-    //             }else{
-    //                 document.body.classList.remove('right-to-left');
-    //             }
-
-    //             document.querySelector(".lang-switcher > .flag img").setAttribute("src",logoSrc);
-
-    //             document.querySelectorAll(".lang-switcher > .flag img").forEach(el =>{
-    //                 el.setAttribute("src",logoSrc)
-    //             })
-
-    //             langFlag.current.setAttribute('src', logoSrc);
-    //         })
-    //     });
-    // }
-
-    useEffect(()=>{
-        // langChange()
-    },[langShow])
+    // useEffect(()=>{
+    //     langChange()
+    // },[langShow])
 
     return (
-        <LangContext.Provider value={{langShow , setLangShow, langData, setLang}}>
+        <LangContext.Provider value={{langShow , setLangShow, langData, setLang, handleLang}}>
             {props.children}
         </LangContext.Provider>
     )

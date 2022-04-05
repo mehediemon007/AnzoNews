@@ -4,7 +4,7 @@ import { LangContext } from '../../context/LangContext';
 
 function Toolbar(props) {
 
-    const {langData, setLang} = useContext(LangContext);
+    const {langData, setLang, handleLang} = useContext(LangContext);
     
     const {langShow , setLangShow} = props.langProps;
 
@@ -18,11 +18,6 @@ function Toolbar(props) {
         animateOut: "slideOutDown",
         animateIn: "slideInDown",
         touchDrag  : false,
-    }
-
-    function handleLang(el){
-        let prevLang = langData.filter(lang => lang.selected === true)[0];
-        setLang([...langData, prevLang.selected = false, el.selected = true]);
     }
 
     return (
@@ -51,7 +46,7 @@ function Toolbar(props) {
                                 <div className="d-flex align-items-center justify-content-end">
                                     <div className="lang-switcher" onClick={()=> setLangShow(!langShow)}>
                                         <span className="flag">
-                                            {langData.filter(lang => lang.selected === true).map(({img,alt})=><img src={`images/flags/${img}`} alt={alt}/>)}
+                                            {langData.filter(lang => lang.selected === true).map(({img,alt})=><img src={`images/flags/${img}`} alt={alt} key={alt}/>)}
                                         </span>
                                         <span className="lang"><i className="uil uil-angle-down"></i></span>
                                         {/* <ul className={`lang-list ${langShow ? "lang-list-open" : ""}`}>
