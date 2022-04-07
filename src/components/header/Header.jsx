@@ -6,14 +6,14 @@ import { LangContext } from '../../context/LangContext';
 
 function Header() {
 
-    const {langShow , setLangShow, langChange} = useContext(LangContext);
+    const {langShow , setLangShow} = useContext(LangContext);
     
     // const langFlag = useRef();
     
     return (
         <>
             <header className="an-header">
-                <Toolbar langProps={{langShow, langChange, setLangShow}}/>
+                <Toolbar langProps={{langShow, setLangShow}}/>
                 <div className="haeder-ads py-3">
                     <div className="container">
                         <div className="row align-items-center">
@@ -26,7 +26,7 @@ function Header() {
                         </div>
                     </div>
                 </div>
-                <Navbar langProps={{langShow, langChange, setLangShow}}/>
+                <Navbar langProps={{langShow, setLangShow}}/>
             </header>
         </>
     )
