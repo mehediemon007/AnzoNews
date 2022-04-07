@@ -10,7 +10,7 @@ const VoteWidget = () => {
         autoplay:true,
         dots:false,
         nav:true,
-        // navText:["",(".owl-navigation .arrow-btn")],
+        navText:["","<span className='arrow-btn'><a><i className='uil uil-arrow-right'></i></a></span>"],
     }
 
     return (
