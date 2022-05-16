@@ -21,7 +21,7 @@ function router() {
       <Wrapper>
         <Routes>
             <Route path="/" exact element={<Home/>}/>
-            <Route path="home-news" exact element={<HomeNews/>}/>
+            <Route path="/home-news" exact element={<HomeNews/>}/>
             <Route path="/category-three-grid" exact element={<CategoryGridThree/>}/>
             <Route path="/category-list" exact element={<CategoryList/>}/>
             <Route path="/blog-details" exact element={<Home6/>}/>
