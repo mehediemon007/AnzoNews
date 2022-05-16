@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router-dom'
 
 const NewsBanner = () => {
     return (
@@ -14,8 +15,8 @@ const NewsBanner = () => {
                                 </div>
                                 <div className="blog-content">
                                     <span className="bg-danger tag">Latest</span>
-                                    <a href="#"><h2 className="blog-title text-white">Joe Biden order excluding non citizens from census could cost much than native</h2></a>
-                                    <p className="mt-3"><a href="" className="blog-date me-3"><img src="images/man-avatar.png" alt="user-avatar"/>Ava Sharpe</a><a href="#" className="blog-date"><img src="images/clock-avatar.png" alt="Clock Avatar"/>03 jan 2021</a></p>
+                                    <Link to="/blog-details"><h2 className="blog-title text-white">Joe Biden order excluding non citizens from census could cost much than native</h2></Link>
+                                    <p className="mt-3"><span className="blog-date me-3"><img src="images/man-avatar.png" alt="user-avatar"/>Ava Sharpe</span><span className="blog-date"><img src="images/clock-avatar.png" alt="Clock Avatar"/>03 jan 2021</span></p>
                                 </div>
                             </div>
                         </div>
