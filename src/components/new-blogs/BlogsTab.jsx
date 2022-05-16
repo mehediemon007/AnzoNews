@@ -10,7 +10,7 @@ const BlogsTab = (props) => {
             <div className="col-xl-7">
                 <div className="single-blog overlay-blog">
                     <div className="blog-image rounded-2">
-                        <img src={`/images/news/${blogs[0].image}`} alt={blogs[0].alt} style={{height: 450}}/>
+                        <img src={`/images/blogs/${blogs[0].image}`} alt={blogs[0].alt} style={{height: 450}}/>
                         <div className="image-overlay"></div>
                     </div>
                     <div className="blog-content">
@@ -24,7 +24,7 @@ const BlogsTab = (props) => {
                 {blogs.slice(1).map((blog) => (
                     <div className="single-blog mb-4" key={blog.id}>
                         <div className="blog-image">
-                            <Link to="/blog-details"><img src={`/images/news/${blog.image}`} alt={blog.alt}/></Link>
+                            <Link to="/blog-details"><img src={`/images/blogs/${blog.image}`} alt={blog.alt}/></Link>
                         </div>
                         <div className="blog-content bg-white py-3">
                             <Link to="/blog-details"><h5 className="blog-title">{blog.title}</h5></Link>
