@@ -6,6 +6,7 @@ import CategoryList from '../pages/CategoryList';
 import Home from '../pages/Home';
 import Home6 from '../pages/Home6';
 import LogIn from '../pages/LogIn';
+import HomeNews from '../pages/HomeNews';
 
 const Wrapper = ({children}) => {
   const location = useLocation();
@@ -20,6 +21,7 @@ function router() {
       <Wrapper>
         <Routes>
             <Route path="/" exact element={<Home/>}/>
+            <Route path="/home-news" exact element={<HomeNews/>}/>
             <Route path="/category-three-grid" exact element={<CategoryGridThree/>}/>
             <Route path="/category-list" exact element={<CategoryList/>}/>
             <Route path="/blog-details" exact element={<Home6/>}/>
