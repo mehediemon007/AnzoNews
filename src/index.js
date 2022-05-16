@@ -9,13 +9,15 @@ import ThemeContextWrapper from './context/ThemeContext';
 import LangContextWrapper from "./context/LangContext";
 
 ReactDOM.render(
-    <ThemeContextWrapper>
-        <LangContextWrapper>
-          <React.StrictMode>
-              <App />
-          </React.StrictMode>
-        </LangContextWrapper>
-    </ThemeContextWrapper>,
+
+  <ThemeContextWrapper>
+      <LangContextWrapper>
+        <React.StrictMode>
+            <App />
+        </React.StrictMode>
+      </LangContextWrapper>
+  </ThemeContextWrapper>,
   document.getElementById('root')
+  
 );
 
