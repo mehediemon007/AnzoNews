@@ -311,6 +311,171 @@ const data = {
                 date:"March 21,2022",
                 tag:""
             },
+        ],
+        "featureNews":[
+
+            {
+                id:0,
+                image:"car-rally.jpg",
+                alt:"Car Relly",
+                title:"FOX Sports & FOX Deportes Set Programming Schedule for Daytona Speedweeks Coverage",
+                des:"A long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,.",
+                name:"Ava Sharpe",
+                date:"13 feb 2021",
+                tag:"Feature"
+            },
+            {
+                id:1,
+                image:"messi.jpg",
+                alt:"Meesi",
+                title:"Messi Breaks World Record Of 300 Goals In UEFA League",
+                des:"A long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,.",
+                name:"Hasan Masud",
+                date:"03 jan 2022",
+                tag:"Feature"
+            },
+            {
+                id:2,
+                image:"ashes.jpg",
+                alt:"Ashes",
+                title:"Australia Smached England With 5-0 Series Victory Ashes 2021-22",
+                des:"A long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,.",
+                name:"Mehedi Emon",
+                date:"20 mar 2022",
+                tag:"Feature"
+            },
+            {
+                id:3,
+                image:"usa-airline.jpg",
+                alt:"Unitied Air",
+                title:"Unitied Airline Starts Flights After A Week Break",
+                des:"A long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,.",
+                name:"Mehedi Emon",
+                date:"22 mar 2022",
+                tag:"Latest",
+                postType:"video"
+            },
+            {
+                id:4,
+                image:"aid-ship.jpg",
+                alt:"Aid",
+                title:"Covid-stricken Australian aid ship makes contactless delivery to virus-free Tonga",
+                des:"A long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,.",
+                name:"Mehedi Emon",
+                date:"21 mar 2022",
+                tag:"Latest",
+                postType:"video"
+            },
+            {
+                id:5,
+                image:"deliver-boy.jpg",
+                alt:"Delivery Boy",
+                title:"More than a job’: the food delivery co-ops putting fairness into the gig economy",
+                des:"A long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,.",
+                name:"Mehedi Emon",
+                date:"21 mar 2022",
+                tag:"Latest",
+                postType:"image"
+            },
+            {
+                id:6,
+                image:"ukraine-army.jpg",
+                alt:"Army",
+                title:"Ukraine crisis: Nord Stream 2 gas pipeline won’t open if Russia invades, says US – live coverage",
+                des:"A long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,.",
+                name:"Mehedi Emon",
+                date:"16 mar 2022",
+                tag:"Latest",
+                postType:"video"
+            },
+            {
+                id:7,
+                image:"usa-trade.jpg",
+                alt:"Usa Trade",
+                title:"Markets rattled as hawkish Fed signals US rate rises coming – business live",
+                des:"A long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,.",
+                name:"Mehedi Emon",
+                date:"15 mar 2022",
+                tag:"Latest",
+                postType:"image"
+            },
+            {
+                id:8,
+                image:"lava.jpg",
+                alt:"Lava",
+                title:"Lava Fire: Raw Video Of Lava Fire As Flames Burn Buildings In Subdivision",
+                des:"A long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,.",
+                name:"Naim Hasan",
+                date:"25 mar 2022",
+                tag:"Popular",
+                postType:"video"
+            },
+            {
+                id:9,
+                image:"everest.jpg",
+                alt:"Everest",
+                title:"Nepal Tourist Department Banned Camping On Everest",
+                des:"A long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,.",
+                name:"Naim Hasan",
+                date:"15 mar 2022",
+                tag:"Popular",
+                postType:"video"
+            },
+            {
+                id:10,
+                image:"snow-fall.jpg",
+                alt:"Snow Fall",
+                title:"Snow Fall Breaks Down Transportation Lead To Food Crisis",
+                des:"A long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,.",
+                name:"Badrul Mia",
+                date:"15 feb 2022",
+                tag:"Popular",
+                postType:"video"
+            },
+            {
+                id:11,
+                image:"space-news.jpg",
+                alt:"Space News",
+                title:"The long-awaited James Webb Space Telescope has a big to-do list",
+                des:"A long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,.",
+                name:"Hasib Khan",
+                date:"25 feb 2022",
+                tag:"Interest",
+                postType:"video"
+            },
+            {
+                id:12,
+                image:"bitcoin-news.jpg",
+                alt:"Bit Coin",
+                title:"Bit Coin Market Falls 1 Trillion Dollars Over Night",
+                des:"A long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,.",
+                name:"Badrul Mia",
+                date:"15 feb 2022",
+                tag:"Interest",
+                postType:"video"
+            },
+            {
+                id:13,
+                image:"light-energy.jpg",
+                alt:"Engergy",
+                title:"Havard Student Innovates Smallest Thermal Chips For Smart Watch",
+                des:"A long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,.",
+                name:"Hasib Khan",
+                date:"15 jan 2022",
+                tag:"Interest",
+                postType:"video"
+            },
+            {
+                id:14,
+                image:"lab-news.jpg",
+                alt:"Lab",
+                title:"Scientist Tries To Search Corona's New Varient Genom",
+                des:"A long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,.",
+                name:"Hasib Khan",
+                date:"10 jan 2022",
+                tag:"Interest",
+                postType:"image"
+            },
         ]
     },
     "newsBanner":[

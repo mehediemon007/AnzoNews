@@ -11,7 +11,7 @@ const VideoModal = () => {
             <div className="video-overlay">
                 <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="yzCkM5MRaaI" onClose={() => setOpen(false)} />
                 <button className="vid-icon venobox vbox-item more videolink" onClick={()=> setOpen(true)}>
-                    <i className="uil uil-play"></i>
+                    <img src="/images/svg-icons/play-icon.svg" alt="Play Icon"/>
                 </button>
             </div>
         </>
