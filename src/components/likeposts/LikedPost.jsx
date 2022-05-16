@@ -28,10 +28,10 @@ function LikedPost() {
                         <div className="col-lg-4 col-md-6" key={index}>
                             <div className="single-blog">
                                 <div className="blog-image">
-                                    <Link to="blog-details"><img src={`images/blogs/${blog.image}`} alt={blog.alt}/></Link>
+                                    <Link to="/blog-details"><img src={`images/blogs/${blog.image}`} alt={blog.alt}/></Link>
                                 </div>
                                 <div className="blog-content bg-white">
-                                    <Link to="blog-details"><h3 className="blog-title">{blog.title}</h3></Link>
+                                    <Link to="/blog-details"><h3 className="blog-title">{blog.title}</h3></Link>
                                     <p className="meta-data mt-3"><span><img src="images/cmnt-user.jpg" alt="user-avatar" className="rounded-circle"/> {blog.name}</span><span><img src="images/calendar-ylo.png" alt="Calendar Avatar"/> {blog.date}</span></p>
                                 </div>
                             </div>

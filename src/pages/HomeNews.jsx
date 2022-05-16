@@ -7,6 +7,7 @@ import VideoBlogs from '../components/video-blogs/VideoBlogs';
 import LikedPost from '../components/likeposts/LikedPost';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
+import WeeklyBlogs from '../components/weekly-blogs/WeeklyBlogs';
 
 
 const HomeNews = () => {
@@ -20,6 +21,7 @@ const HomeNews = () => {
                 <BlogCategory/>
                 <AdsBanner/>
                 <VideoBlogs/>
+                <WeeklyBlogs/>
                 <LikedPost/>
             </main>
             <Footer/>
