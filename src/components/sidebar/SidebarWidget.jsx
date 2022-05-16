@@ -3,8 +3,8 @@ import OwlCarousel from 'react-owl-carousel';
 import SingleVote from './vote-widget/SingleVote';
 import VoteWidget from './vote-widget/VoteWidget';
 
-function SidebarWidget() {
-
+function SidebarWidget({sticky}) {
+    
     const voteSliderOptions = {
         items:1,
         loop:true,
@@ -15,10 +15,10 @@ function SidebarWidget() {
     }
 
     return (
-        <div className="an-siderbar-widget">
+        <div className={`an-siderbar-widget ${sticky ? 'sticky-sidebar' : ''}`}>
             <div className="row">
                 <div className="col-xl-12 col-sm-6">
-                    <div className="related-widget hoz-blog">
+                    <div className={`related-widget hoz-blog ${sticky ? 'pt-4' : ''}`}>
                         <h4 className="mb-4">Most Related</h4>
                         <div className="single-blog mb-4">
                             <div className="blog-image position-relative">

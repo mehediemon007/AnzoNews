@@ -143,6 +143,8 @@
     }
 
     .mega-menu li{
+        border: none !important;
+        margin-left: 16px !important;
         padding: 10px 0 !important;
     }
     
@@ -170,9 +172,9 @@
         padding-bottom: 15px;
     }
 
-    .an-nav .mega-menu li{
+    /* .an-nav .mega-menu li{
         border: none;
-    }
+    } */
 
     .an-nav .mega-menu li:hover{
         border: none;

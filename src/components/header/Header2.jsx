@@ -18,7 +18,7 @@ const Header2 = (props) => {
                 <div className="an-nav bg-dark">
                     <div className="container">
                         <div className="d-flex align-items-center justify-content-between position-relative">
-                            <a href="index.html"><img src="images/logo/logo.png" alt="ANews"/></a>
+                            <Link to="/"><img src="images/logo/logo.png" alt="ANews"/></Link>
                             <nav className="an-main-nav">
                                 <ul className="nav-menu d-lg-flex align-items-center">
                                     <li><NavLink to="/" className="nav-active">Home</NavLink></li>
