@@ -1,7 +1,11 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import data from "../../apis/headphone";
 
 const NewsBanner = () => {
+
+    const {newsBanner: news} = data;
+
     return (
         <>
             <div className="an-banner news-banner sec-spacer-80 pt-0">
@@ -15,56 +19,40 @@ const NewsBanner = () => {
                                 </div>
                                 <div className="blog-content">
                                     <span className="bg-danger tag">Latest</span>
-                                    <Link to="/blog-details"><h2 className="blog-title text-white">Joe Biden order excluding non citizens from census could cost much than native</h2></Link>
-                                    <p className="mt-3"><span className="blog-date me-3"><img src="images/man-avatar.png" alt="user-avatar"/>Ava Sharpe</span><span className="blog-date"><img src="images/clock-avatar.png" alt="Clock Avatar"/>03 jan 2021</span></p>
+                                    <Link to="/blog-details"><h2 className="blog-title text-white">{news[0].title}</h2></Link>
+                                    <p className="mt-3"><span className="blog-date me-3"><img src="images/man-avatar.png" alt="user-avatar"/>{news[0].name}</span><span className="blog-date"><img src="images/clock-avatar.png" alt="Clock Avatar"/>{news[0].date}</span></p>
                                 </div>
                             </div>
                         </div>
                         <div className="col-xl-6">
                             <div className="row">
                                 <div className="col-sm-6">
-                                    <div className="single-blog overlay-blog mb-3">
-                                        <div className="blog-image rounded-2">
-                                            <img src="images/news/milisia.jpg" alt="Military"/>
-                                            <div className="image-overlay"></div>
+                                    {news.slice(1,3).map((item,index)=>(
+                                        <div className={`single-blog overlay-blog mb-3 ${index === 1 ? 'mb-sm-0' : '' }`} key={item.id}>
+                                            <div className="blog-image rounded-2">
+                                                <img src={`/images/news/${item.image}`} alt={item.alt}/>
+                                                <div className="image-overlay"></div>
+                                            </div>
+                                            <div className="blog-content">
+                                                <Link to="/blog-details"><h4 className="blog-title text-white">{item.title}</h4></Link>
+                                                <p className="blog-date mt-2"><img src="images/clock-avatar.png" alt="Clock Avatar"/> {item.date}</p>
+                                            </div>
                                         </div>
-                                        <div className="blog-content">
-                                            <a href="#"><h4 className="blog-title text-white">Military Are Refushes To Fight Against Iraq Again</h4></a>
-                                            <p className="blog-date mt-2"><img src="images/clock-avatar.png" alt="Clock Avatar"/> Novermber 21,2021</p>
-                                        </div>
-                                    </div>
-                                    <div className="single-blog overlay-blog mb-3 mb-sm-0">
-                                        <div className="blog-image rounded-2">
-                                            <img src="images/news/us-rocket.jpg" alt="Rocket"/>
-                                            <div className="image-overlay"></div>
-                                        </div>
-                                        <div className="blog-content">
-                                            <a href="#"><h4 className="blog-title text-white">Nasa And US Government Launched Rocket</h4></a>
-                                            <p className="blog-date mt-2"><img src="images/clock-avatar.png" alt="Clock Avatar"/> Novermber 21,2021</p>
-                                        </div>
-                                    </div>
+                                    ))}
                                 </div>
                                 <div className="col-sm-6">
-                                    <div className="single-blog overlay-blog mb-3">
-                                        <div className="blog-image rounded-2">
-                                            <img src="images/news/iran-trade.jpg" alt="Iran Trade"/>
-                                            <div className="image-overlay"></div>
+                                    {news.slice(3,5).map((item,index)=>(
+                                        <div className={`single-blog overlay-blog ${index === 0 ? 'mb-3' : '' }`} key={item.id}>
+                                            <div className="blog-image rounded-2">
+                                                <img src={`/images/news/${item.image}`} alt={item.alt}/>
+                                                <div className="image-overlay"></div>
+                                            </div>
+                                            <div className="blog-content">
+                                                <Link to="/blog-details"><h4 className="blog-title text-white">{item.title}</h4></Link>
+                                                <p className="blog-date mt-2"><img src="images/clock-avatar.png" alt="Clock Avatar"/> {item.date}</p>
+                                            </div>
                                         </div>
-                                        <div className="blog-content">
-                                            <a href="#"><h4 className="blog-title text-white">Trump And Iran Trade War Coming To End</h4></a>
-                                            <p className="blog-date mt-2"><img src="images/clock-avatar.png" alt="Clock Avatar"/> Novermber 21,2021</p>
-                                        </div>
-                                    </div>
-                                    <div className="single-blog overlay-blog">
-                                        <div className="blog-image rounded-2">
-                                            <img src="images/news/senegal.jpg" alt="Senegal"/>
-                                            <div className="image-overlay"></div>
-                                        </div>
-                                        <div className="blog-content">
-                                            <a href="#"><h4 className="blog-title text-white">China Tries To Friendship With Senegal In 2022</h4></a>
-                                            <p className="blog-date mt-2"><img src="images/clock-avatar.png" alt="Clock Avatar"/> Novermber 21,2021</p>
-                                        </div>
-                                    </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>

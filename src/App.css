@@ -684,6 +684,8 @@ label{
 .news-banner .bg-image{
     min-height: 365px;
     background-image: url("../public/images/news/biden.jpg");
+    background-position: top;
+    background-size: cover;
 }
 
 /* Single Blog */

@@ -312,7 +312,59 @@ const data = {
                 tag:""
             },
         ]
-    }
+    },
+    "newsBanner":[
+        {
+            id:0,
+            image:"biden.jpg",
+            alt:"Biden",
+            title:"Joe Biden order excluding non citizens from census could cost much than native",
+            des:"",
+            name:"Ava Sharpe",
+            date:"03 jan 2021",
+            tag:""
+        },
+        {
+            id:1,
+            image:"milisia.jpg",
+            alt:"Military",
+            title:"Military Are Refushes To Fight Against Iraq Again",
+            des:"",
+            name:"Ava Sharpe",
+            date:"April 21,2022",
+            tag:""
+        },
+        {
+            id:2,
+            image:"us-rocket.jpg",
+            alt:"Rocket",
+            title:"Nasa And US Government Launched Rocket",
+            des:"",
+            name:"Ava Sharpe",
+            date:"February 02 2022",
+            tag:""
+        },
+        {
+            id:3,
+            image:"iran-trade.jpg",
+            alt:"Iran Trade",
+            title:"Trump And Iran Trade War Coming To End",
+            des:"",
+            name:"Ava Sharpe",
+            date:"April 21,2022",
+            tag:""
+        },
+        {
+            id:4,
+            image:"senegal.jpg",
+            alt:"Senegal",
+            title:"China Tries To Friendship With Senegal In 2022",
+            des:"",
+            name:"Ava Sharpe",
+            date:"March 21 2022",
+            tag:""
+        },
+    ]
 }
 
 export default data;
