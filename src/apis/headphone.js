@@ -144,6 +144,48 @@ const data = {
         }
     ],
     "newBlogs":{
+        "latestNewsBlogs":[
+            {
+                id:0,
+                image:"corona.jpg",
+                alt:"Corona",
+                title:"This is the title of a  new nis the title of a  news",
+                des:"",
+                name:"",
+                date:"March 02,2022",
+                tag:"Latest"
+            },
+            {
+                id:1,
+                image:"corona-india.jpg",
+                alt:"Corona India",
+                title:"This is the title of a new tier the title",
+                des:"",
+                name:"Masud R Delta",
+                date:"March 21,2022",
+                tag:""
+            },
+            {
+                id:2,
+                image:"corona-usa.jpg",
+                alt:"Corona Usa",
+                title:"This is the title of a new tier the title",
+                des:"",
+                name:"",
+                date:"March 21,2022",
+                tag:""
+            },
+            {
+                id:3,
+                image:"corona-bangla.jpg",
+                alt:"Corona Bangla",
+                title:"This is the title of a new tier the title",
+                des:"",
+                name:"",
+                date:"March 20,2022",
+                tag:"Latest"
+            },
+        ],
         "latestBlogs":[
             {
                 id:0,

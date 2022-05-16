@@ -52,19 +52,19 @@ const WeeklyBlogs = () => {
         <>
             <div className="an-weekly-top sec-spacer-80">
                 <div className="container">
-                    <div class="sec-heading d-flex justify-content-between align-items-center mb-4">
+                    <div className="sec-heading d-flex justify-content-between align-items-center mb-4">
                         <h4>WEEKLY TOP</h4>
                     </div>
-                    <Slider class="week-top-news" {...settings}>
+                    <Slider className="week-top-news" {...settings}>
                         {likedPosts.slice(0,9).map((blog,index)=>(
-                            <div class="single-blog" key={index}>
-                                <div class="blog-image">
+                            <div className="single-blog" key={index}>
+                                <div className="blog-image">
                                     <Link to="/blog-details"><img src={`images/blogs/${blog.image}`} alt={blog.alt}/></Link>
                                 </div>
-                                <div class="blog-content bg-white">
-                                    <Link to="/blog-details"><h4 class="blog-title">Google Has Decided To Open Branch In Dhaka</h4></Link>
-                                    <p class="meta-data mt-3"><span><img src="images/cmnt-user.jpg" alt="user-avatar" class="rounded-circle"/> {blog.name}</span><span><img src="images/calendar-ylo.png" alt="Calendar Avatar"/> {blog.date}</span></p>
-                                    <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aliquid dolores odit ab eveniet deleniti.</p>
+                                <div className="blog-content bg-white">
+                                    <Link to="/blog-details"><h4 className="blog-title">Google Has Decided To Open Branch In Dhaka</h4></Link>
+                                    <p className="meta-data mt-3"><span><img src="images/cmnt-user.jpg" alt="user-avatar" className="rounded-circle"/> {blog.name}</span><span><img src="images/calendar-ylo.png" alt="Calendar Avatar"/> {blog.date}</span></p>
+                                    <p className="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aliquid dolores odit ab eveniet deleniti.</p>
                                 </div>
                             </div>
                         ))}

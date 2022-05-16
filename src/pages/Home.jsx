@@ -9,15 +9,19 @@ import HeroSlider from '../components/heroslider/HeroSlider';
 import LikedPost from '../components/likeposts/LikedPost';
 import NewBlogs from '../components/new-blogs/NewBlogs';
 import VideoBlogs from '../components/video-blogs/VideoBlogs';
+import blogData from "../apis/headphone";
 
 function Home() {
+
+  const {latestBlogs, trendingBlogs, popularBlogs } = blogData.newBlogs;
+
   return (
     <>
         <Header/>
         <HeroSlider/>
         <main className="an-main-content">
           <AdsBanner/>
-          <NewBlogs/>
+          <NewBlogs value={{latestBlogs, trendingBlogs, popularBlogs}}/>
           <CategoryBlogs/>
           <Headphones/>
           <BlogCategory/>
