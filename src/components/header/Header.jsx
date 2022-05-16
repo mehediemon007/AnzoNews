@@ -21,7 +21,7 @@ function Header() {
                                 <Link to="/"><img src="images/logo/logo.png" alt="logo"/></Link>
                             </div>
                             <div className="col-8">
-                                <a href="#"><img src="images/ads-banner.jpg" alt="ads"/></a>
+                                <Link to="/"><img src="images/ads-banner.jpg" alt="ads"/></Link>
                             </div>
                         </div>
                     </div>

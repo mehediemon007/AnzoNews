@@ -318,10 +318,10 @@ label{
     direction: ltr;
 }
 
-.arrow-btn{
+.slick-nav-next.arrow-btn{
     position: absolute;
-    top: 30px;
-    right: 5px;
+    top: 20px;
+    right: -5px;
     display: inline-block;
     min-width: 24px;
     width: 24px;
@@ -331,6 +331,7 @@ label{
     border-radius: 50%;
     text-align: center;
     line-height: 24px;
+    cursor: pointer;
 }
 
 .right-to-left .arrow-btn{

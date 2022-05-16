@@ -1,5 +1,6 @@
 import React,{ useEffect, useContext} from 'react';
 import OwlCarousel from 'react-owl-carousel';
+// import Slider from "react-slick";
 import { LangContext } from '../../context/LangContext';
 
 function Toolbar(props) {
@@ -19,7 +20,7 @@ function Toolbar(props) {
         animateIn: "slideInDown",
         touchDrag  : false,
     }
-
+    
     return (
 
         <div className="an-toolbar primary-gradient py-2">
@@ -30,7 +31,7 @@ function Toolbar(props) {
                             <div className="breaking-title">
                                 <p>BREAKING NEWS</p>
                             </div>
-                            <OwlCarousel className="news-carousel owl-carousel" {...newsSliderOptions}>
+                            <OwlCarousel className="news-carousel" {...newsSliderOptions}>
                                 <p className="text-white">phasellus odio purus consectetur in dignissim</p>
                                 <p className="text-white">phasellus odio purus consectetur in dignissim</p>
                                 <p className="text-white">phasellus odio purus consectetur in dignissim</p>
