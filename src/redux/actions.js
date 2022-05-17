@@ -34,3 +34,9 @@ export const newUser = (data) =>{
         dispatch(signup(data));
     }
 }
+
+export const addPost = (post) =>({
+
+    type: types.ADD_POST,
+    post
+})

@@ -14,6 +14,9 @@ const postReducer = (state=initialState, action) =>{
         case ADD_POST:
             return{
                 ...state,
+                image: action.post.image["name"],
+                title: action.post.title,
+                des:action.post.des
             } 
         default:
             return state;
