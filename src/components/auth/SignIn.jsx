@@ -14,11 +14,7 @@ const SignIn = () => {
     })
 
     const userData = useSelector(state => state.signIn);
-
-    if(userData.user !== "" || userData.password !== ""){
-        console.log(userData);
-    }
-
+    
     let dispatch = useDispatch();
 
     const handleSignIn = (e) => {

@@ -11,6 +11,8 @@ const NewPost = () => {
 
     const [selectedImage, setSelectedImage] = useState()
 
+    console.log(selectedImage)
+
     const {langShow , setLangShow} = useContext(LangContext);
 
     const imageChange = (e) =>{
