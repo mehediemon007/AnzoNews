@@ -3,7 +3,9 @@ import "./Responsive.css";
 import {BrowserRouter as Router} from "react-router-dom";
 import { Provider } from 'react-redux';
 import Routes from "./router/Router";
-import Store from "./redux/store"
+import Store from "./redux/store";
+import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -12,6 +14,7 @@ function App() {
         <Router>
           <Routes/>
         </Router>
+        <ToastContainer/>
       </div>
     </Provider>
   );

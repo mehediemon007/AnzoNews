@@ -8,6 +8,7 @@ import { LangContext } from '../context/LangContext';
 import {Link, useNavigate} from "react-router-dom";
 import {addPost} from '../redux/actions';
 import { useDispatch } from 'react-redux';
+import {toast} from 'react-toastify';
 
 const NewPost = () => {
 
@@ -38,10 +39,15 @@ const NewPost = () => {
         })
     }
 
+    const notify = (msg) =>{
+        toast.success(msg);
+    }
+
     const handleSubmit = (e) =>{
         e.preventDefault();
         dispatch(addPost(post))
-        navigate("/")
+        notify("New Post Added!")
+        // navigate("/")
     }
 
     return (
