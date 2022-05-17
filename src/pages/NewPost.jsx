@@ -1,4 +1,4 @@
-import React,{useContext} from 'react';
+import React,{useContext, useState} from 'react';
 import Footer from '../components/footer/Footer';
 import AdsBanner from '../components/adsbanner/AdsBanner';
 import ProfileSidebar from '../components/sidebar/ProfileSidebar';
@@ -9,7 +9,15 @@ import {Link} from "react-router-dom"
 
 const NewPost = () => {
 
+    const [selectedImage, setSelectedImage] = useState()
+
     const {langShow , setLangShow} = useContext(LangContext);
+
+    const imageChange = (e) =>{
+        if(e.target.files && e.target.files.length > 0){
+            setSelectedImage(e.target.files[0])
+        }
+    }
 
     return (
         <>
@@ -42,11 +50,11 @@ const NewPost = () => {
                                             <form className="an-add-post">
                                                 <div className="post-pic">
                                                     <div className="uploaded-image">
-                                                        <img className="profile-pic" src="images/upload.png" alt="John"/>
+                                                        <img className="profile-pic" src={selectedImage ? URL.createObjectURL(selectedImage) : `images/upload.png`} alt="John"/>
                                                     </div>
                                                     <div className="uplaod-image">
-                                                        <span className="upload-button">Upload Image</span>
-                                                        <input className="file-upload d-none" type="file" accept="image/*"/>
+                                                        <label className="upload-button" htmlFor="img-upload">Upload Image</label>
+                                                        <input className="file-upload d-none" id='img-upload' type="file" accept="image/*" onChange={(e)=> imageChange(e)}/>
                                                     </div>
                                                 </div>
                                                 <div className="post-content">
