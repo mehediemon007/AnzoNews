@@ -15,6 +15,8 @@ import NewPost from '../pages/NewPost';
 import Profile from '../pages/Profile';
 import UserActivity from '../pages/UserActivity';
 import RecentViews from '../pages/RecentViews';
+import ImageGallery from '../pages/ImageGallery';
+import VideoGallery from '../pages/VideoGallery';
 
 const Wrapper = ({children}) => {
   const location = useLocation();
@@ -37,6 +39,8 @@ function router() {
                 <Route path="/profile" exact element={<Profile/>}/>
                 <Route path="/activity" exact element={<UserActivity/>}/>
                 <Route path="/recent-views" exact element={<RecentViews/>}/>
+                <Route path="/image-gallery" exact element={<ImageGallery/>}/>
+                <Route path="/video-gallery" exact element={<VideoGallery/>}/>
                 <Route path="/new-post" exact element={<NewPost/>}/>
                 <Route path="/sign-in" exact element={<LogIn/>}/>
                 <Route path="/forget-password" exact element={<ForgetPassword/>}/>
