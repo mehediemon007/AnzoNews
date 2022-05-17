@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 
-const Newpass = (props) => {
+const Newpass = () => {
 
     let navigate = useNavigate();
 

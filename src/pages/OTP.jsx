@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 const OTP = () => {
 
+
     const [key, setKey] = useState("phone");
 
     let navigate = useNavigate();
@@ -30,12 +31,16 @@ const OTP = () => {
                                                 <span>Phone No.</span>
                                                 <p>+880176XXXXXX</p>
                                             </div>
-                                            <form className="sign-with-phone show" onSubmit={(e)=> handleSubmit(e)}>
-                                                <fieldset className="an-input mb-4 position-relative">
-                                                    <label htmlFor="user-phone" className="visually-hidden"></label>
-                                                    <input type="password" placeholder="Phone No." id="user-phone"/>
-                                                </fieldset>
-                                                <button type="submit" className="log-btn mb-0">Send Request</button>
+                                            <form class="otp-with-phone show" onSubmit={(e)=> handleSubmit(e)}>
+                                                <div class="otp-number py-3 p-sm-4">
+                                                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');"/>
+                                                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');"/>
+                                                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');"/>
+                                                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');"/>
+                                                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');"/>
+                                                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');"/>
+                                                </div>
+                                                <button type="submit" class="log-btn m-0">Submit</button>
                                             </form>
                                         </Tab>
                                         <Tab eventKey="email" title="Email" className=''>
@@ -43,12 +48,16 @@ const OTP = () => {
                                                 <span>Email.</span>
                                                 <p>xxxxx@gmail.com</p>
                                             </div>
-                                            <form className="sign-with-mail" onSubmit={(e)=> handleSubmit(e)}>
-                                                <fieldset className="an-input mb-4 position-relative">
-                                                    <label htmlFor="user-mail" className="visually-hidden"></label>
-                                                    <input type="password" placeholder="Email" id="user-mail"/>
-                                                </fieldset>
-                                                <button type="submit" className="log-btn mb-0">Send Request</button>
+                                            <form class="otp-with-mail" onSubmit={(e)=> handleSubmit(e)}>
+                                                <div class="otp-number py-3 p-sm-4">
+                                                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');"/>
+                                                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');"/>
+                                                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');"/>
+                                                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');"/>
+                                                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');"/>
+                                                    <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');"/>
+                                                </div>
+                                                <button type="submit" class="log-btn m-0">Submit</button>
                                             </form>
                                         </Tab>
                                     </Tabs>

@@ -1627,10 +1627,6 @@ body.right-to-left .pass-input{
     border-color: transparent;
 }
 
-.otp-source{
-    margin-bottom: 16px;
-}
-
 .otp-source span{
     font-size: .85rem;
     color: var(--text-color-light);

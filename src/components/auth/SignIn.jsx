@@ -2,8 +2,11 @@ import React,{useState,useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {Link} from 'react-router-dom'
 import {oldUser} from "../../redux/actions";
+import { useNavigate } from 'react-router-dom';
 
 const SignIn = () => {
+
+    let navigate = useNavigate();
 
     const [signData , setData ] = useState({
         "user":"",
@@ -25,6 +28,8 @@ const SignIn = () => {
             "user":"",
             "password":""
         });
+
+        navigate("/")
     }
 
     return (
@@ -38,9 +43,9 @@ const SignIn = () => {
                     <fieldset className="an-input position-relative">
                         <label htmlFor="user-pass" className="visually-hidden"></label>
                         <input type="text" value={signData.password} placeholder="Password" id="user-pass" name='password' onChange={(e)=> setData({...signData, password: e.target.value})}/>
-                        <div className="pass-input">
+                        {/* <div className="pass-input">
                                 <i className="uil uil-eye"></i>
-                        </div>
+                        </div> */}
                     </fieldset>
                     <button type="submit" className="log-btn">Login</button>
                 </form>
