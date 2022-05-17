@@ -8,6 +8,9 @@ import Home6 from '../pages/Home6';
 import LogIn from '../pages/LogIn';
 import HomeNews from '../pages/HomeNews';
 import News from '../pages/News';
+import ForgetPassword from '../pages/ForgetPassword';
+import OTP from '../pages/OTP';
+import Newpass from '../pages/Newpass';
 
 const Wrapper = ({children}) => {
   const location = useLocation();
@@ -19,18 +22,21 @@ const Wrapper = ({children}) => {
 
 function router() {
     return (
-      <Wrapper>
-        <Routes>
-            <Route path="/" exact element={<Home/>}/>
-            <Route path="/home-news" exact element={<HomeNews/>}/>
-            <Route path="/news" exact element={<News/>}/>
-            <Route path="/category-three-grid" exact element={<CategoryGridThree/>}/>
-            <Route path="/category-list" exact element={<CategoryList/>}/>
-            <Route path="/blog-details" exact element={<Home6/>}/>
-            <Route path="/sign-in" exact element={<LogIn/>}/>
-            <Route>404 Not Found</Route>
-        </Routes>
-      </Wrapper>
+        <Wrapper>
+            <Routes>
+                <Route path="/" exact element={<Home/>}/>
+                <Route path="/home-news" exact element={<HomeNews/>}/>
+                <Route path="/news" exact element={<News/>}/>
+                <Route path="/category-three-grid" exact element={<CategoryGridThree/>}/>
+                <Route path="/category-list" exact element={<CategoryList/>}/>
+                <Route path="/blog-details" exact element={<Home6/>}/>
+                <Route path="/sign-in" exact element={<LogIn/>}/>
+                <Route path="/forget-password" exact element={<ForgetPassword/>}/>
+                <Route path="/otp" exact element={<OTP/>}/>
+                <Route path="/new-pass" exact element={<Newpass/>}/>
+                <Route>404 Not Found</Route>
+            </Routes>
+        </Wrapper>
     )
 }
 

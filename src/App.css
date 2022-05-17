@@ -1570,7 +1570,7 @@ button.mfp-close {
     color: var(--dark-color);
     font-size: .85rem;
     padding: 8px 20px;
-    transition: .3s;
+    transition: var(--transition);
     border: none;
     cursor: pointer;
 }
@@ -1616,6 +1616,19 @@ button.mfp-close {
 body.right-to-left .pass-input{
     right: auto;
     left: 0;
+}
+
+.an-pass-recover .nav-link:hover{
+    border-color: transparent;
+}
+
+.an-pass-recover .nav-link.active{
+    color: var(--hover-color);
+    border-color: transparent;
+}
+
+.otp-source{
+    margin-bottom: 16px;
 }
 
 .otp-source span{

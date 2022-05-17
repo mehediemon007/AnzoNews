@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import {Link} from 'react-router-dom'
 import {oldUser} from "../../redux/actions";
 
 const SignIn = () => {
@@ -43,7 +44,7 @@ const SignIn = () => {
                     </fieldset>
                     <button type="submit" className="log-btn">Login</button>
                 </form>
-                <p className="text-center mt-2"><a href="forget-pass.html">Forgot your Password?</a></p>
+                <p className="text-center mt-2"><Link to="/forget-password">Forgot your Password?</Link></p>
                 <div className="social-login text-center">
                     <p className="my-3 light-color">Quick Access With</p>
                     <div className="social-login-links">
