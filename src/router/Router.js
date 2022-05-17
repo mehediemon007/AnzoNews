@@ -13,6 +13,8 @@ import OTP from '../pages/OTP';
 import Newpass from '../pages/Newpass';
 import NewPost from '../pages/NewPost';
 import Profile from '../pages/Profile';
+import UserActivity from '../pages/UserActivity';
+import RecentViews from '../pages/RecentViews';
 
 const Wrapper = ({children}) => {
   const location = useLocation();
@@ -33,6 +35,8 @@ function router() {
                 <Route path="/category-list" exact element={<CategoryList/>}/>
                 <Route path="/blog-details" exact element={<Home6/>}/>
                 <Route path="/profile" exact element={<Profile/>}/>
+                <Route path="/activity" exact element={<UserActivity/>}/>
+                <Route path="/recent-views" exact element={<RecentViews/>}/>
                 <Route path="/new-post" exact element={<NewPost/>}/>
                 <Route path="/sign-in" exact element={<LogIn/>}/>
                 <Route path="/forget-password" exact element={<ForgetPassword/>}/>
