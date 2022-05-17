@@ -40,3 +40,9 @@ export const addPost = (post) =>({
     type: types.ADD_POST,
     post
 })
+
+export const editUser = (user) =>({
+    
+    type:types.EDIT_USER,
+    user
+})

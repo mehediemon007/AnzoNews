@@ -25,7 +25,7 @@ const SignIn = () => {
             "password":""
         });
 
-        navigate("/")
+        navigate("/profile")
     }
 
     return (

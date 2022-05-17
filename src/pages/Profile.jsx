@@ -5,10 +5,79 @@ import Footer from '../components/footer/Footer';
 import Toolbar from '../components/header/Toolbar';
 import Navbar from '../components/header/Navbar';
 import { LangContext } from '../context/LangContext';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import {editUser} from '../redux/actions';
+import {toast} from 'react-toastify';
 
 const Profile = () => {
 
+    let dispatch = useDispatch()
+
+
     const {langShow , setLangShow} = useContext(LangContext);
+
+    const {user, userAuth} = useSelector(state => state.user);
+
+    const [userData, setUser] = useState({
+
+        image:"",
+        userName: "",
+        phone:"",
+        mail:"",
+        password:"",
+        rePass:"",
+        gender:"",
+        education:"",
+        industry:""
+
+    })
+
+    const imageChange = (e) =>{
+        if(e.target.files && e.target.files.length > 0){
+            setUser({
+                ...userData,
+                image : e.target.files[0]
+            })
+        }
+    }
+
+    const handleChange = (e) =>{
+
+        setUser({
+            ...userData,
+            [e.target.name] : e.target.value
+        })
+    }
+
+    const handlePass = (e) =>{
+        e.preventDefault();
+        delete userData["rePass"];
+        dispatch(editUser(userData));
+        notify("Change Saved!")
+    }
+
+    const handleSave = (e) =>{
+        
+        delete userData["password"];
+        delete userData["rePass"];
+        e.preventDefault();
+        dispatch(editUser(userData));
+        notify("Change Saved!!")
+    }
+
+    const notify = (msg) =>{
+        toast.success(msg);
+    }
+
+    useEffect(()=>{
+
+        setUser({
+            ...userData,
+            password: userAuth?.password
+        })
+
+    },[user,userAuth])
 
     return (
         <>
@@ -40,11 +109,11 @@ const Profile = () => {
                                         <div className="col-sm-4">
                                             <div className="customer-pic text-center mb-4 mb-sm-0">
                                                 <div className="circle">
-                                                    <img className="profile-pic" src="images/customer-pic.jpg" alt="John"/>
+                                                    <img className="profile-pic" src={userData.image ? URL.createObjectURL(userData.image) : `images/customer-pic.jpg`} alt="Profile Pic"/>
                                                 </div>
                                                 <div className="p-image">
-                                                    <span className="upload-button">Upload Avatar</span>
-                                                    <input className="file-upload d-none" type="file" accept="image/*"/>
+                                                    <label htmlFor='img-upload' className="upload-button">Upload Avatar</label>
+                                                    <input className="file-upload d-none" id='img-upload' type="file" accept="image/*" onChange={(e)=>imageChange(e)}/>
                                                 </div>
                                             </div>
                                         </div>
@@ -55,13 +124,13 @@ const Profile = () => {
                                                     <fieldset className="an-info-input">
                                                         <p className="input-heading">Nickname</p>
                                                         <label htmlFor="user-name" className="visually-hidden">Nickname</label>
-                                                        <input type="text" id="user-name" value="Mehedi Hasan Emon"/>
+                                                        <input type="text" id="user-name" placeholder='Enter Name' value={userData.userName} name="userName" onChange={(e)=>handleChange(e)}/>
                                                     </fieldset>
                                                     <fieldset className="an-info-input">
                                                         <p className="input-heading">Gender</p>
                                                         <div>
-                                                            <label htmlFor="male" className="me-3"><input type="radio" id="male" name="gender"/>Male</label>
-                                                            <label htmlFor="female"><input type="radio" id="female" name="gender"/>Female</label>
+                                                            <label htmlFor="male" className="me-3"><input type="radio" id="male" name="gender" value="Male" onChange={(e)=>handleChange(e)}/>Male</label>
+                                                            <label htmlFor="female"><input type="radio" id="female" name="gender" value="Female" onChange={(e)=>handleChange(e)}/>Female</label>
                                                         </div>
                                                     </fieldset>
                                                     <fieldset className="an-info-input">
@@ -77,32 +146,32 @@ const Profile = () => {
                                                     <fieldset className="an-info-input">
                                                         <p className="input-heading">E-mail</p>
                                                         <label htmlFor="user-email" className="visually-hidden">E-mail</label>
-                                                        <input type="email" id="user-email" value="emonoffice@gmail.com"/>
+                                                        <input type="email" id="user-email" placeholder='Enter E-mail' value={userData.mail} name="mail" onChange={(e)=>handleChange(e)}/>
                                                         <div className="text-end mt-4">
                                                             <button className="an-btn">Cancel</button>
-                                                            <button className="an-btn an-primary-btn">Save</button>
+                                                            <button className="an-btn an-primary-btn" onClick={(e)=> handleSave(e)}>Save</button>
                                                         </div>
                                                     </fieldset>
                                                     <fieldset className="an-info-input">
                                                         <p className="input-heading">Mobile Number</p>
-                                                        <label htmlFor="user-phone" className="visually-hidden">E-mail</label>
-                                                        <input type="text" id="user-phone" placeholder="Please Set Now"/>
-                                                        <label htmlFor="phone-verify" className="visually-hidden">E-mail</label>
-                                                        <input type="text" id="phone-verify" className="mt-4" placeholder="Verification Code"/>
+                                                        <label htmlFor="user-phone" className="visually-hidden">Phone</label>
+                                                        <input type="text" id="user-phone" placeholder="Please Set Now" name="phone" value={userData.phone} onChange={(e)=>handleChange(e)}/>
+                                                        <label htmlFor="phone-verify" className="visually-hidden">Phone</label>
+                                                        <input type="text" id="phone-verify" className="mt-4" placeholder="Verification Code" value={user.rePhone}/>
                                                         <div className="text-end mt-4">
                                                             <button className="an-btn">Cancel</button>
-                                                            <button className="an-btn an-primary-btn">Save</button>
+                                                            <button className="an-btn an-primary-btn" onClick={(e)=> handleSave(e)}>Save</button>
                                                         </div>
                                                     </fieldset>
                                                     <fieldset className="an-info-input">
                                                         <p className="input-heading">Password</p>
                                                         <label htmlFor="old-pass" className="visually-hidden">Password</label>
-                                                        <input type="password" id="old-pass" placeholder="Old Password" value="mehedi12"/>
+                                                        <input type="password" id="old-pass" name="password" placeholder="Old Password" value={userData.password} onChange={(e)=>handleChange(e)}/>
                                                         <label htmlFor="new-pass" className="visually-hidden">Password</label>
-                                                        <input type="text" id="new-pass" className="mt-4" placeholder="New Password"/>
+                                                        <input type="text" id="new-pass" className="mt-4" name="rePass" placeholder="New Password" value={userData.rePass} onChange={(e)=>handleChange(e)}/>
                                                         <div className="text-end mt-4">
                                                             <button className="an-btn">Cancel</button>
-                                                            <button className="an-btn an-primary-btn">Change</button>
+                                                            <button className="an-btn an-primary-btn" onClick={(e)=>handlePass(e)}>Change</button>
                                                         </div>
                                                     </fieldset>
                                                 </div>
@@ -111,16 +180,16 @@ const Profile = () => {
                                                     <fieldset className="an-info-input">
                                                         <p className="input-heading">Education</p>
                                                         <label htmlFor="education" className="visually-hidden">Education</label>
-                                                        <input type="text" id="education" value="" placeholder="Please Set Now"/>
+                                                        <input type="text" id="education" placeholder="Please Set Now" name='education' value={userData.education} onChange={(e)=>handleChange(e)}/>
                                                     </fieldset>
                                                     <fieldset className="an-info-input">
                                                         <p className="input-heading">Industry</p>
                                                         <label htmlFor="industry" className="visually-hidden">Industry</label>
-                                                        <input type="text" id="industry" value="" placeholder="Please Set Now"/>
+                                                        <input type="text" id="industry" placeholder="Please Set Now" name="industry" value={userData.industry} onChange={(e)=>handleChange(e)}/>
                                                     </fieldset>
                                                     <div className="text-end mb-2">
                                                         <button className="an-btn">Cancel</button>
-                                                        <button className="an-btn an-primary-btn">Save</button>
+                                                        <button className="an-btn an-primary-btn" onClick={(e)=> handleSave(e)}>Save</button>
                                                     </div>
                                                 </div>
                                             </div>
