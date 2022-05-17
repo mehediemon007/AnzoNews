@@ -11,6 +11,7 @@ import News from '../pages/News';
 import ForgetPassword from '../pages/ForgetPassword';
 import OTP from '../pages/OTP';
 import Newpass from '../pages/Newpass';
+import NewPost from '../pages/NewPost';
 
 const Wrapper = ({children}) => {
   const location = useLocation();
@@ -30,6 +31,7 @@ function router() {
                 <Route path="/category-three-grid" exact element={<CategoryGridThree/>}/>
                 <Route path="/category-list" exact element={<CategoryList/>}/>
                 <Route path="/blog-details" exact element={<Home6/>}/>
+                <Route path="/new-post" exact element={<NewPost/>}/>
                 <Route path="/sign-in" exact element={<LogIn/>}/>
                 <Route path="/forget-password" exact element={<ForgetPassword/>}/>
                 <Route path="/otp" exact element={<OTP/>}/>
