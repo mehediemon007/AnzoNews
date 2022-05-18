@@ -86,49 +86,57 @@ const foodBlogs = {
             id:0,
             image:"chicken.jpg",
             alt:"Fried chicken",
-            name:"Fried chicken"
+            name:"Fried chicken",
+            type:"Main"
         },
         {
             id:1,
             image:"burger.jpg",
             alt:"Burger",
-            name:"Burger"
+            name:"Burger",
+            type:"Main"
         },
         {
             id:2,
             image:"pizza.jpg",
             alt:"Pizza",
-            name:"Pizza"
+            name:"Pizza",
+            type:"Main"
         },
         {
             id:3,
             image:"pasta.jpg",
             alt:"Pasta",
-            name:"Pasta"
+            name:"Pasta",
+            type:"Main"
         },
         {
             id:4,
             image:"sushi.jpg",
             alt:"Sushi",
-            name:"Sushi"
+            name:"Sushi",
+            type:"Main"
         },
         {
             id:5,
             image:"food.jpg",
             alt:"Food",
-            name:"Food"
+            name:"Food",
+            type:"Main"
         },
         {
             id:6,
             image:"salad.jpg",
             alt:"Salad",
-            name:"Salad"
+            name:"Salad",
+            type:"Main"
         },
         {
             id:7,
             image:"sandwitch.jpg",
             alt:"Sanwitch",
-            name:"Sanwitch"
+            name:"Sanwitch",
+            type:"Main"
         },
         {
             id:8,
@@ -146,35 +154,35 @@ const foodBlogs = {
         },
         {
             id:10,
-            image:"sandwitch.jpg",
+            image:"potato.jpg",
             alt:"Burgers",
             name:"Burgers",
             type:"Popular"
         },
         {
             id:11,
-            image:"sandwitch.jpg",
+            image:"pizza-lg.jpg",
             alt:"Sandwitch",
             name:"Sandwitch",
             type:"Popular"
         },
         {
             id:12,
-            image:"sandwitch.jpg",
+            image:"potato.jpg",
             alt:"Chicken",
             name:"Chicken",
             type:"Popular"
         },
         {
             id:13,
-            image:"sandwitch.jpg",
+            image:"pizza-lg.jpg",
             alt:"Fish",
             name:"Fish",
             type:"Popular"
         },
         {
             id:14,
-            image:"sandwitch.jpg",
+            image:"potato.jpg",
             alt:"Advertise",
             name:"Advertise",
             type:"Popular"
@@ -187,7 +195,8 @@ const foodBlogs = {
             alt:"Taccos",
             name:"Birria Tacos Recipe",
             rating:"4.7",
-            tag:"Easy"
+            tag:"Easy",
+            type:"Week-best"
         },
         {
             id:"1",
@@ -195,7 +204,8 @@ const foodBlogs = {
             alt:"Chocolate Bombss",
             name:"Tiktok hot Chocolate Bombs",
             rating:"4.5",
-            tag:"Desert"
+            tag:"Desert",
+            type:"Week-best"
         },
         {
             id:"3",
@@ -203,7 +213,8 @@ const foodBlogs = {
             alt:"Rice",
             name:"Tiktok Ramen Rice",
             rating:"4.7",
-            tag:"Chinese"
+            tag:"Chinese",
+            type:"Week-best"
         },
         {
             id:"4",
@@ -211,15 +222,8 @@ const foodBlogs = {
             alt:"Cheeesecake",
             name:"Basque Cheeesecake Recipe",
             rating:"4.5",
-            tag:"Desert"
-        },
-        {
-            id:"4",
-            image:"cake.jpg",
-            alt:"Cheeesecake",
-            name:"Basque Cheeesecake Recipe",
-            rating:"4.5",
-            tag:"Desert"
+            tag:"Desert",
+            type:"Week-best"
         },
         {
             id:"5",
@@ -227,7 +231,8 @@ const foodBlogs = {
             alt:"Mac cake",
             name:"Velveeta Mac And Cheese",
             rating:"4.5",
-            tag:"Desert"
+            tag:"Desert",
+            type:"Week-best"
         },
         {
             id:"6",
@@ -235,15 +240,8 @@ const foodBlogs = {
             alt:"Squash",
             name:"Honeynut Squash",
             rating:"4.2",
-            tag:"Vegetable"
-        },
-        {
-            id:"7",
-            image:"bbq.jpg",
-            alt:"Bar-b-q",
-            name:"Ultimate Korean BBQ at Home",
-            rating:"4.5",
-            tag:"Fast Food"
+            tag:"Vegetable",
+            type:"Week-best"
         },
         {
             id:"7",
@@ -251,7 +249,8 @@ const foodBlogs = {
             alt:"Donat",
             name:"Twisted Bacon",
             rating:"4.5",
-            tag:"Fast Food"
+            tag:"Fast Food",
+            type:"Week-best"
         },
         {
             id:"8",
@@ -259,7 +258,8 @@ const foodBlogs = {
             alt:"French Fries",
             name:"The Crispiest Smashed Potatoes",
             rating:"4.6",
-            tag:"Fast Food"
+            tag:"Fast Food",
+            type:"Week-best"
         },
         {
             id:"9",
@@ -500,6 +500,15 @@ const foodBlogs = {
             des:"Have you ever had Hainanese chicken rice before? Are you as obsessed with it as I am? I’m guessing the answer is no because.",
             tag:"Snacks",
             type:"Easy"
+        },
+        {
+            id:"33",
+            image:"bbq.jpg",
+            alt:"Bar-b-q",
+            name:"Ultimate Korean BBQ at Home",
+            rating:"4.5",
+            tag:"Fast Food",
+            type:"Week-best"
         },
     ]
 
