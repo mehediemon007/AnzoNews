@@ -17,6 +17,7 @@ import UserActivity from '../pages/UserActivity';
 import RecentViews from '../pages/RecentViews';
 import ImageGallery from '../pages/ImageGallery';
 import VideoGallery from '../pages/VideoGallery';
+import FoodBlogs from '../pages/FoodBlogs';
 
 
 const Wrapper = ({children}) => {
@@ -28,11 +29,13 @@ const Wrapper = ({children}) => {
 } 
 
 function router() {
+    
     return (
         <Wrapper>
             <Routes>
                 <Route path="/" exact element={<Home/>}/>
                 <Route path="/home-news" exact element={<HomeNews/>}/>
+                <Route path="/home-foods" exact element={<FoodBlogs/>}/>
                 <Route path="/news" exact element={<News/>}/>
                 <Route path="/category-three-grid" exact element={<CategoryGridThree/>}/>
                 <Route path="/category-list" exact element={<CategoryList/>}/>
