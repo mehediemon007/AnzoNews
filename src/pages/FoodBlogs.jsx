@@ -4,6 +4,7 @@ import Navbar from '../components/header/Navbar';
 import Footer from '../components/footer/Footer';
 import { LangContext } from '../context/LangContext';
 import foodData from '../apis/food-blogs';
+import {Link} from 'react-router-dom'
 
 const FoodBlogs = () => {
 
@@ -22,7 +23,25 @@ const FoodBlogs = () => {
                 <div className="an-food-blogs sec-spacer-80">
                     <div className="container">
                         <div className="row">
+                            {foods.filter(food => food.category === "Banner").map((food,index) =>(
 
+                                <div className={`mb-4 ${index == 0 || index == 3 ? "col-lg-8" : `col-lg-4 ${index > 3 ? "col-sm-6" : ""}`}`} key={food.id}>
+                                    <div className="single-blog">
+                                        <div className="blog-image rounded-2">
+                                            <Link to="/blog-details"><img src={`images/foods/${food.image}`} alt={food.alt}/></Link>
+                                        </div>
+                                        <div className="food-content-holder">
+                                            <div className="blog-content">
+                                                <span className="food-tag">{food.tag}</span>
+                                                <Link to="/blog-details"><h4 className="my-3">{food.title}</h4></Link>
+                                                <p className="meta-data my-3"><span><img src="images/woman-avatar.png" alt="user-avatar"/> {food.name}</span><span><img src="images/food-calendar.png" alt="Calendar Avatar"/> {food.date}</span></p>
+                                                <p>{food.des}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            ))}
                         </div>
                     </div>
                 </div>
