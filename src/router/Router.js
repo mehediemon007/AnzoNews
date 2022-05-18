@@ -18,6 +18,7 @@ import RecentViews from '../pages/RecentViews';
 import ImageGallery from '../pages/ImageGallery';
 import VideoGallery from '../pages/VideoGallery';
 
+
 const Wrapper = ({children}) => {
   const location = useLocation();
   useLayoutEffect(() => {

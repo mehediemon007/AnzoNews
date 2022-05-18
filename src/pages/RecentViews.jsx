@@ -1,4 +1,4 @@
-import React,{useContext, useEffect, useState} from 'react';
+import React,{useContext} from 'react';
 import Footer from '../components/footer/Footer';
 import ProfileSidebar from '../components/sidebar/ProfileSidebar';
 import Toolbar from '../components/header/Toolbar';
