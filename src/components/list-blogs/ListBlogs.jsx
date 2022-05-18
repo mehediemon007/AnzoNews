@@ -22,7 +22,7 @@ function GridBlogs() {
                 {slice.map((blog,index) => <SingleBlog blog={blog} key={index}/>)}
             </div>
             <div className="text-center">
-                {noOfBlog < blogs["listBlogs"].length && <a href='#' className="view-more-btn" onClick={loadMore}>View More <i className={`uil ${clicked ? "uil-arrow-circle-down" : "uil-arrow-circle-right"}`}></i></a>}
+                {noOfBlog < blogs["listBlogs"].length && <button className="view-more-btn" onClick={loadMore}>View More <i className={`uil ${clicked ? "uil-arrow-circle-down" : "uil-arrow-circle-right"}`}></i></button>}
             </div>
         </>
     )

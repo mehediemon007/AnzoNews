@@ -1,5 +1,5 @@
 import React,{useContext, useState} from 'react';
-import {Link, useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
 import ProfileSidebar from '../components/sidebar/ProfileSidebar';
 import Footer from '../components/footer/Footer';
 import Toolbar from '../components/header/Toolbar';
@@ -72,10 +72,13 @@ const Profile = () => {
 
     useEffect(()=>{
 
-        setUser({
-            ...userData,
-            password: userAuth?.password
-        })
+        if(userData.password === ""){
+            
+            setUser({
+                ...userData,
+                password: userAuth?.password
+            })
+        }
 
     },[user,userAuth])
 

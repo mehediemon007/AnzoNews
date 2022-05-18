@@ -32,7 +32,7 @@ const userReducer = (state=initialState, action) =>{
                 ...state,
                 userAuth:{
                     ...state.userAuth,
-                    password: action.user.password
+                    password: action.user.password ? action.user.password : state.userAuth.password
                 },
                 user:{
                     ...state.user,

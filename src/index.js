@@ -7,15 +7,18 @@ import "slick-carousel/slick/slick-theme.css";
 import App from './App';
 import ThemeContextWrapper from './context/ThemeContext';
 import LangContextWrapper from "./context/LangContext";
+import SimpleReactLightbox from 'simple-react-lightbox'
 
 ReactDOM.render(
 
   <ThemeContextWrapper>
-      <LangContextWrapper>
-        <React.StrictMode>
-            <App />
-        </React.StrictMode>
-      </LangContextWrapper>
+        <LangContextWrapper>
+            <React.StrictMode>
+                <SimpleReactLightbox>
+                    <App />
+                </SimpleReactLightbox>
+            </React.StrictMode>
+        </LangContextWrapper>
   </ThemeContextWrapper>,
   document.getElementById('root')
   
