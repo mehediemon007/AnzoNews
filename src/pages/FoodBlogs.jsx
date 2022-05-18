@@ -25,7 +25,7 @@ const FoodBlogs = () => {
                         <div className="row">
                             {foods.filter(food => food.category === "Banner").map((food,index) =>(
 
-                                <div className={`mb-4 ${index == 0 || index == 3 ? "col-lg-8" : `col-lg-4 ${index > 3 ? "col-sm-6" : ""}`}`} key={food.id}>
+                                <div className={`${index == 0 || index == 3 ? "col-lg-8 mb-4" : `col-lg-4 ${index > 3 ? "col-sm-6" : "mb-4"}`}`} key={food.id}>
                                     <div className="single-blog">
                                         <div className="blog-image rounded-2">
                                             <Link to="/blog-details"><img src={`images/foods/${food.image}`} alt={food.alt}/></Link>

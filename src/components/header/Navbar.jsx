@@ -29,7 +29,7 @@ function Navbar(props) {
 
     return (
         <>
-            <div className="an-nav bg-white">
+            <div className={`an-nav `}>
                 <div className="container">
                     <div className="d-flex align-items-center justify-content-between position-relative">
                         <div className="nav-meta-icon nav-toggle d-lg-none">
