@@ -15,8 +15,8 @@ const FoodBlogs = () => {
     return (
         <>
             <header className="an-header an-food-header">
-                <Toolbar langProps={{langShow, setLangShow}}/>
-                <Navbar  langProps={{langShow, setLangShow}}/>
+                <Toolbar langProps={{langShow, setLangShow}} dark="true"/>
+                <Navbar  langProps={{langShow, setLangShow}} dark="true"/>
             </header>
             <main className="an-main-content bg-food">
 

@@ -23,7 +23,7 @@ function Toolbar(props) {
     
     return (
 
-        <div className="an-toolbar primary-gradient py-2">
+        <div className={`an-toolbar ${!props.dark ? 'primary-gradient' : ''} py-2`}>
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-xl-6 col-lg-7">
@@ -32,16 +32,16 @@ function Toolbar(props) {
                                 <p>BREAKING NEWS</p>
                             </div>
                             <OwlCarousel className="news-carousel" {...newsSliderOptions}>
-                                <p className="text-white">phasellus odio purus consectetur in dignissim</p>
-                                <p className="text-white">phasellus odio purus consectetur in dignissim</p>
-                                <p className="text-white">phasellus odio purus consectetur in dignissim</p>
+                                <p className={`${!props.dark ? 'text-white' : 'text-yellow'}`}>phasellus odio purus consectetur in dignissim</p>
+                                <p className={`${!props.dark ? 'text-white' : 'text-yellow'}`}>phasellus odio purus consectetur in dignissim</p>
+                                <p className={`${!props.dark ? 'text-white' : 'text-yellow'}`}>phasellus odio purus consectetur in dignissim</p>
                             </OwlCarousel>
                         </div>
                     </div>
                     <div className="col-xl-6 col-lg-5">
                         <div className="row align-items-center">
                             <div className="col-7 text-lg-end">
-                                <p className="fw-bold text-white"><i className="uil uil-clock-three"></i> Wednesday, January 19, 2022</p>
+                                <p className={`fw-bold ${!props.dark ? 'text-white' : 'text-yellow'}`}><i className="uil uil-clock-three"></i> Wednesday, January 19, 2022</p>
                             </div>
                             <div className="col-5">
                                 <div className="d-flex align-items-center justify-content-end">
@@ -49,7 +49,7 @@ function Toolbar(props) {
                                         <span className="flag">
                                             {langData.filter(lang => lang.selected === true).map(({img,alt})=><img src={`images/flags/${img}`} alt={alt} key={alt}/>)}
                                         </span>
-                                        <span className="lang"><i className="uil uil-angle-down"></i></span>
+                                        <span className="lang"><i className={`uil uil-angle-down ${props.dark ? 'text-yellow' : ''}`}></i></span>
                                         {/* <ul className={`lang-list ${langShow ? "lang-list-open" : ""}`}>
                                             <li className="single-lang"><span className="flag"><img src="images/flags/bd-flag.png" alt="bangladesh" /></span><a className="lang-text" href="#">BD</a></li>
                                             <li className="single-lang"><span className="flag"><img src="images/flags/usa-flag.png" alt="united-states" /></span><a className="lang-text" href="#">ENG</a></li>

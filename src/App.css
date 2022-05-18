@@ -477,6 +477,10 @@ label{
     vertical-align: middle;
 }
 
+.an-food-header .an-nav .uil{
+    color: var(--secondary-color);
+}
+
 .nav-menu li.has-children a{
     display: flex;
     align-items: center;
