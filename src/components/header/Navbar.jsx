@@ -38,14 +38,14 @@ function Navbar(props) {
                         </div>
                         <nav className={`an-main-nav ${navClick ? 'show' : ''}`}>
                             <ul className="nav-menu d-lg-flex align-items-center">
-                                <li className="has-children"><NavLink to="/" className="nav-active"><span>Home</span><i className="uil uil-angle-down"></i></NavLink>
+                                <li className="has-children"><NavLink to="#" className="nav-active"><span>Home</span><i className="uil uil-angle-down"></i></NavLink>
                                     <ul className="sub-menu">
                                         <li><NavLink to="/">Home Main</NavLink></li>
                                         <li><NavLink to="/home-news">Home News</NavLink></li>
                                         <li className="border-bottom-0"><NavLink to="/home-food">Home Food</NavLink></li>
                                     </ul>
                                 </li>
-                                <li className="has-children"><NavLink to="/category-three-grid"><span>Blog</span><i className="uil uil-angle-down"></i></NavLink>
+                                <li className="has-children"><NavLink to="#"><span>Blog</span><i className="uil uil-angle-down"></i></NavLink>
                                     <ul className="sub-menu">
                                         <li><NavLink to="/category-three-grid">Blog Grid</NavLink></li>
                                         <li><NavLink to="/category-list">Blog List</NavLink></li>
@@ -54,54 +54,61 @@ function Navbar(props) {
                                 </li>
                                 <li><NavLink to="/category-three-grid">Science</NavLink></li>
                                 <li><NavLink to="/category-three-grid">Mobile</NavLink></li>
-                                <li className="has-children position-static"><a href="#"><span>Laptops</span><i className="uil uil-angle-down"></i></a>
-                                    <ul className="sub-menu mega-menu justify-content-around d-lg-flex">
-                                        <div>
-                                            <h5 className="my-3">Hp Gaming Laptop</h5>
-                                            <ul>
-                                                <li><a href="#">Hp Horizon</a></li>
-                                                <li><a href="#">Hp Horizon</a></li>
-                                                <li><a href="#">Hp Horizon</a></li>
-                                                <li><a href="#">Hp Horizon</a></li>
-                                            </ul>
-                                        </div>
-                                        <div>
-                                            <h5 className="my-3">Hp Gaming Laptop</h5>
-                                            <ul>
-                                                <li><a href="#">Hp Horizon</a></li>
-                                                <li><a href="#">Hp Horizon</a></li>
-                                                <li><a href="#">Hp Horizon</a></li>
-                                                <li><a href="#">Hp Horizon</a></li>
-                                            </ul>
-                                        </div>
-                                        <div>
-                                            <h5 className="my-3">Hp Gaming Laptop</h5>
-                                            <ul>
-                                                <li><a href="#">Hp Horizon</a></li>
-                                                <li><a href="#">Hp Horizon</a></li>
-                                                <li><a href="#">Hp Horizon</a></li>
-                                                <li><a href="#">Hp Horizon</a></li>
-                                            </ul>
-                                        </div>
-                                        <div>
-                                            <h5 className="my-3">Hp Gaming Laptop</h5>
-                                            <ul>
-                                                <li><a href="#">Hp Horizon</a></li>
-                                                <li><a href="#">Hp Horizon</a></li>
-                                                <li><a href="#">Hp Horizon</a></li>
-                                                <li><a href="#">Hp Horizon</a></li>
-                                            </ul>
-                                        </div>
-                                        <div>
-                                            <h5 className="my-3">Hp Gaming Laptop</h5>
-                                            <ul>
-                                                <li><a href="#">Hp Horizon</a></li>
-                                                <li><a href="#">Hp Horizon</a></li>
-                                                <li><a href="#">Hp Horizon</a></li>
-                                                <li><a href="#">Hp Horizon</a></li>
-                                            </ul>
-                                        </div>
+                                <li className="has-children"><Link to="#"><span>Pages</span><i className="uil uil-angle-down"></i></Link>
+                                    <ul className="sub-menu">
+                                        <li><NavLink to="/news">News</NavLink></li>
+                                        <li><NavLink to="/recent-views">Recent Viewed</NavLink></li>
+                                        <li><NavLink to="/activity">Activity</NavLink></li>
+                                        <li><NavLink to="/image-gallery">Image Gallery</NavLink></li>
+                                        <li className="border-bottom-0"><NavLink to="/video-gallery">Video Gallery</NavLink></li>
                                     </ul>
+                                    {/* <ul className="sub-menu mega-menu justify-content-around d-lg-flex">
+                                        <div>
+                                            <h5 className="my-3">Hp Gaming Laptop</h5>
+                                            <ul>
+                                                <li><a href="#">Hp Horizon</a></li>
+                                                <li><a href="#">Hp Horizon</a></li>
+                                                <li><a href="#">Hp Horizon</a></li>
+                                                <li><a href="#">Hp Horizon</a></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h5 className="my-3">Hp Gaming Laptop</h5>
+                                            <ul>
+                                                <li><a href="#">Hp Horizon</a></li>
+                                                <li><a href="#">Hp Horizon</a></li>
+                                                <li><a href="#">Hp Horizon</a></li>
+                                                <li><a href="#">Hp Horizon</a></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h5 className="my-3">Hp Gaming Laptop</h5>
+                                            <ul>
+                                                <li><a href="#">Hp Horizon</a></li>
+                                                <li><a href="#">Hp Horizon</a></li>
+                                                <li><a href="#">Hp Horizon</a></li>
+                                                <li><a href="#">Hp Horizon</a></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h5 className="my-3">Hp Gaming Laptop</h5>
+                                            <ul>
+                                                <li><a href="#">Hp Horizon</a></li>
+                                                <li><a href="#">Hp Horizon</a></li>
+                                                <li><a href="#">Hp Horizon</a></li>
+                                                <li><a href="#">Hp Horizon</a></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h5 className="my-3">Hp Gaming Laptop</h5>
+                                            <ul>
+                                                <li><a href="#">Hp Horizon</a></li>
+                                                <li><a href="#">Hp Horizon</a></li>
+                                                <li><a href="#">Hp Horizon</a></li>
+                                                <li><a href="#">Hp Horizon</a></li>
+                                            </ul>
+                                        </div>
+                                    </ul> */}
                                 </li>
                                 <li><a href="#">Tablets</a></li>
                                 <li className="has-children position-static"><a href="#"><span>Headphones</span><i className="uil uil-angle-down"></i></a>
