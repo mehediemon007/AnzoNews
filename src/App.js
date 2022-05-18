@@ -6,16 +6,19 @@ import Routes from "./router/Router";
 import Store from "./redux/store";
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import SimpleReactLightbox from 'simple-react-lightbox'
 
 function App() {
   return (
     <Provider store={Store}>
-      <div className="App">
-        <Router>
-          <Routes/>
-        </Router>
-        <ToastContainer/>
-      </div>
+      <SimpleReactLightbox>
+        <div className="App">
+          <Router>
+            <Routes/>
+          </Router>
+          <ToastContainer/>
+        </div>
+      </SimpleReactLightbox>
     </Provider>
   );
 }
