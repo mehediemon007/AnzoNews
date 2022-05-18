@@ -8,6 +8,7 @@ function Navbar(props) {
     const {theme, changeTheme} = useContext(ThemeContext);
     
     const [searchBar, setSearchBar] = useState(false);
+    const [navClick, setNavClick] = useState(false);
 
     const {langData, setLang, handleLang } = useContext(LangContext);
 
@@ -32,13 +33,12 @@ function Navbar(props) {
             <div className={`an-nav${!props.dark ? ' bg-white' : ''}`}>
                 <div className="container">
                     <div className="d-flex align-items-center justify-content-between position-relative">
-                        <div className="nav-meta-icon nav-toggle d-lg-none">
-                            <i className="uil uil-bars"></i>
+                        <div className="nav-meta-icon nav-toggle d-lg-none" onClick={()=> setNavClick(!navClick)}>
+                            <i className={`${navClick ? 'uil uil-times' : 'uil uil-bars'}`}></i>
                         </div>
-                        <nav className="an-main-nav">
+                        <nav className={`an-main-nav ${navClick ? 'show' : ''}`}>
                             <ul className="nav-menu d-lg-flex align-items-center">
-                                {/* <li><NavLink to="/" className="nav-active">Home</NavLink></li> */}
-                                <li className="has-children"><NavLink to="/"><span>Home</span><i className="uil uil-angle-down"></i></NavLink>
+                                <li className="has-children"><NavLink to="/" className="nav-active"><span>Home</span><i className="uil uil-angle-down"></i></NavLink>
                                     <ul className="sub-menu">
                                         <li><NavLink to="/">Home Main</NavLink></li>
                                         <li><NavLink to="/home-news">Home News</NavLink></li>
