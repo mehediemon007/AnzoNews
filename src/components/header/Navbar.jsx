@@ -45,20 +45,11 @@ function Navbar(props) {
                                         <li className="border-bottom-0"><NavLink to="/home-food">Home Food</NavLink></li>
                                     </ul>
                                 </li>
-                                <li className="has-children"><NavLink to="/category-three-grid"><span>Tech</span><i className="uil uil-angle-down"></i></NavLink>
+                                <li className="has-children"><NavLink to="/category-three-grid"><span>Blog</span><i className="uil uil-angle-down"></i></NavLink>
                                     <ul className="sub-menu">
-                                        <li><NavLink to="/category-list">News Category 1</NavLink></li>
-                                        <li><NavLink to="/category-list">News Category 2</NavLink></li>
-                                        <li className="has-children"><NavLink to="/category-list">News Category 3 <i className="uil uil-angle-right d-none d-lg-inline-block"></i><i className="uil uil-angle-down d-lg-none"></i></NavLink>
-                                            <ul className="sub-menu">
-                                                <li><NavLink to="/category-list">News Category 1</NavLink></li>
-                                                <li><NavLink to="/category-list">News Category 2</NavLink></li>
-                                                <li className="border-bottom-0"><NavLink to="/category-list">News Category 6</NavLink></li>
-                                            </ul>
-                                        </li>
-                                        <li><NavLink to="/category-three-grid">News Category 4</NavLink></li>
-                                        <li><NavLink to="/category-three-grid">News Category 5</NavLink></li>
-                                        <li className="border-bottom-0"><NavLink to="/category-three-grid">News Category 6</NavLink></li>
+                                        <li><NavLink to="/category-three-grid">Blog Grid</NavLink></li>
+                                        <li><NavLink to="/category-list">Blog List</NavLink></li>
+                                        <li className="border-bottom-0"><NavLink to="/blog-details">Blog Details</NavLink></li>
                                     </ul>
                                 </li>
                                 <li><NavLink to="/category-three-grid">Science</NavLink></li>
