@@ -436,6 +436,10 @@ label{
     direction: var(--direction);
 }
 
+.an-food-header {
+    background-color: var(--dark-color);
+}
+
 .toolbar-social-links .social-link{
     font-size: 1.25rem;
     color: var(--white-color);

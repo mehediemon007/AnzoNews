@@ -23,7 +23,7 @@ function Toolbar(props) {
     
     return (
 
-        <div className={`an-toolbar ${!props.dark ? 'primary-gradient' : ''} py-2`}>
+        <div className={`an-toolbar py-2${!props.dark ? ' primary-gradient' : ''}`}>
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-xl-6 col-lg-7">

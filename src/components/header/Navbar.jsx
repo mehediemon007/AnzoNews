@@ -29,7 +29,7 @@ function Navbar(props) {
 
     return (
         <>
-            <div className={`an-nav ${!props.dark ? 'bg-white' : ''}`}>
+            <div className={`an-nav${!props.dark ? ' bg-white' : ''}`}>
                 <div className="container">
                     <div className="d-flex align-items-center justify-content-between position-relative">
                         <div className="nav-meta-icon nav-toggle d-lg-none">
@@ -37,7 +37,14 @@ function Navbar(props) {
                         </div>
                         <nav className="an-main-nav">
                             <ul className="nav-menu d-lg-flex align-items-center">
-                                <li><NavLink to="/" className="nav-active">Home</NavLink></li>
+                                {/* <li><NavLink to="/" className="nav-active">Home</NavLink></li> */}
+                                <li className="has-children"><NavLink to="/"><span>Home</span><i className="uil uil-angle-down"></i></NavLink>
+                                    <ul className="sub-menu">
+                                        <li><NavLink to="/">Home Main</NavLink></li>
+                                        <li><NavLink to="/home-news">Home News</NavLink></li>
+                                        <li className="border-bottom-0"><NavLink to="/home-food">Home Food</NavLink></li>
+                                    </ul>
+                                </li>
                                 <li className="has-children"><NavLink to="/category-three-grid"><span>Tech</span><i className="uil uil-angle-down"></i></NavLink>
                                     <ul className="sub-menu">
                                         <li><NavLink to="/category-list">News Category 1</NavLink></li>

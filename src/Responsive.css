@@ -67,11 +67,7 @@
     .an-nav.bg-dark ul ul .uil{
         color: var(--text-color);
     }
-
-    .an-food-header {
-        background-color: var(--dark-color);
-    }
-
+    
     .an-food-header li a,
     .an-food-header li a span,
     .an-food-header a .uil{
