@@ -1,8 +1,8 @@
 import React,{useContext, useState} from 'react';
-import Footer from '../components/footer/Footer';
 import ProfileSidebar from '../components/sidebar/ProfileSidebar';
 import Toolbar from '../components/header/Toolbar';
 import Navbar from '../components/header/Navbar';
+import Footer from '../components/footer/Footer';
 import { LangContext } from '../context/LangContext';
 import {Link} from "react-router-dom";
 import blogs from "../apis/grid-catagory";

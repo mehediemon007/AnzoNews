@@ -35,7 +35,7 @@ function router() {
             <Routes>
                 <Route path="/" exact element={<Home/>}/>
                 <Route path="/home-news" exact element={<HomeNews/>}/>
-                <Route path="/home-foods" exact element={<FoodBlogs/>}/>
+                <Route path="/home-food" exact element={<FoodBlogs/>}/>
                 <Route path="/news" exact element={<News/>}/>
                 <Route path="/category-three-grid" exact element={<CategoryGridThree/>}/>
                 <Route path="/category-list" exact element={<CategoryList/>}/>
