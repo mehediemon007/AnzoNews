@@ -61,7 +61,7 @@ const NavMenu = () => {
                                                         }
                                                         <div className="">
                                                             <Link to="/news"><h6 className="overflow-title">This is the title of a new tier has been the title of a news</h6></Link>
-                                                            <p>{news.date}</p>
+                                                            <p><img src="/images/clock-avatar.png" alt="Clock Avatar" style={{"verticalAlign": "sub"}}/> {news.date}</p>
                                                         </div>
                                                     </div> 
                                                 </div>
@@ -83,7 +83,7 @@ const NavMenu = () => {
                                                         }
                                                         <div className="">
                                                             <Link to="/news"><h6 className="overflow-title">This is the title of a new tier has been the title of a news</h6></Link>
-                                                            <p>{news.date}</p>
+                                                            <p><img src="/images/clock-avatar.png" alt="Clock Avatar" style={{"verticalAlign": "sub"}}/> {news.date}</p>
                                                         </div>
                                                     </div> 
                                                 </div>
@@ -105,7 +105,7 @@ const NavMenu = () => {
                                                         }
                                                         <div className="">
                                                             <Link to="/news"><h6 className="overflow-title">This is the title of a new tier has been the title of a news</h6></Link>
-                                                            <p>{news.date}</p>
+                                                            <p><img src="/images/clock-avatar.png" alt="Clock Avatar" style={{"verticalAlign": "sub"}}/> {news.date}</p>
                                                         </div>
                                                     </div> 
                                                 </div>
@@ -127,7 +127,7 @@ const NavMenu = () => {
                                                         }
                                                         <div className="">
                                                             <Link to="/news"><h6 className="overflow-title">This is the title of a new tier has been the title of a news</h6></Link>
-                                                            <p>{news.date}</p>
+                                                            <p><img src="/images/clock-avatar.png" alt="Clock Avatar" style={{"verticalAlign": "sub"}}/> {news.date}</p>
                                                         </div>
                                                     </div> 
                                                 </div>

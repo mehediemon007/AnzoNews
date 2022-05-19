@@ -1,12 +1,13 @@
 import React,{useState} from 'react';
-// import blogData from "../../apis/headphone";
+import blogData from "../../apis/headphone";
 import { Tabs, Tab } from "react-bootstrap";
 import BlogsTab from './BlogsTab';
 import VoteWidget from '../sidebar/vote-widget/VoteWidget';
 
+
 const NewBlogs = (props) => {
     
-    const {latestBlogs, trendingBlogs, popularBlogs } = props.value;
+    const {latestBlogs, trendingBlogs, popularBlogs } = blogData.newBlogs;
 
     const [key, setKey] = useState("latest");
 

@@ -161,7 +161,7 @@ const data = {
                 alt:"Corona India",
                 title:"This is the title of a new tier the title",
                 des:"",
-                name:"Masud R Delta",
+                name:"Masud Rana",
                 date:"March 21,2022",
                 tag:""
             },
@@ -171,7 +171,7 @@ const data = {
                 alt:"Corona Usa",
                 title:"This is the title of a new tier the title",
                 des:"",
-                name:"",
+                name:"Mehedi Emon",
                 date:"March 21,2022",
                 tag:""
             },
@@ -181,7 +181,7 @@ const data = {
                 alt:"Corona Bangla",
                 title:"This is the title of a new tier the title",
                 des:"",
-                name:"",
+                name:"Sakib Mahbub",
                 date:"March 20,2022",
                 tag:"Latest"
             },
@@ -203,7 +203,7 @@ const data = {
                 alt:"Neon Laptop",
                 title:"This is the title of a new tier the title",
                 des:"",
-                name:"Masud R Delta",
+                name:"Musfiq Hamid",
                 date:"March 21,2022",
                 tag:""
             },
@@ -213,7 +213,7 @@ const data = {
                 alt:"Light Laptop",
                 title:"This is the title of a new tier the title",
                 des:"",
-                name:"",
+                name:"Radul Hasan",
                 date:"March 21,2022",
                 tag:""
             },
@@ -223,7 +223,7 @@ const data = {
                 alt:"Apple Desktop",
                 title:"This is the title of a new tier the title",
                 des:"",
-                name:"",
+                name:"Dalim Ferdose",
                 date:"March 20,2022",
                 tag:"Latest"
             },
@@ -245,7 +245,7 @@ const data = {
                 alt:"Light Laptop",
                 title:"This is the title of a new tier the title",
                 des:"",
-                name:"",
+                name:"Abdul Hamid",
                 date:"March 21,2022",
                 tag:""
             },
@@ -255,7 +255,7 @@ const data = {
                 alt:"Neon Laptop",
                 title:"This is the title of a new tier the title",
                 des:"",
-                name:"Masud R Delta",
+                name:"Masud Rana",
                 date:"March 21,2022",
                 tag:""
             },
@@ -265,7 +265,7 @@ const data = {
                 alt:"Apple Desktop",
                 title:"This is the title of a new tier the title",
                 des:"",
-                name:"",
+                name:"Latif Iqbal",
                 date:"March 20,2022",
                 tag:"Latest"
             },
