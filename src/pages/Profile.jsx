@@ -1,10 +1,9 @@
-import React,{useContext, useState} from 'react';
+import React,{useState} from 'react';
 import {Link} from "react-router-dom";
 import ProfileSidebar from '../components/sidebar/ProfileSidebar';
 import Footer from '../components/footer/Footer';
 import Toolbar from '../components/header/Toolbar';
 import Navbar from '../components/header/Navbar';
-import { LangContext } from '../context/LangContext';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import {editUser} from '../redux/actions';
@@ -13,9 +12,6 @@ import {toast} from 'react-toastify';
 const Profile = () => {
 
     let dispatch = useDispatch()
-
-
-    const {langShow , setLangShow} = useContext(LangContext);
 
     const {user, userAuth} = useSelector(state => state.user);
 
@@ -85,8 +81,8 @@ const Profile = () => {
     return (
         <>
             <header className="an-header">
-                <Toolbar langProps={{langShow, setLangShow}}/>
-                <Navbar  langProps={{langShow, setLangShow}}/>
+                <Toolbar/>
+                <Navbar/>
             </header>
             <div className="an-ads py-4">
                 <div className="container">

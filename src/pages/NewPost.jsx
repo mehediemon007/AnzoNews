@@ -1,10 +1,9 @@
-import React,{useContext, useState} from 'react';
+import React,{useState} from 'react';
 import Footer from '../components/footer/Footer';
 // import AdsBanner from '../components/adsbanner/AdsBanner';
 import ProfileSidebar from '../components/sidebar/ProfileSidebar';
 import Toolbar from '../components/header/Toolbar';
 import Navbar from '../components/header/Navbar';
-import { LangContext } from '../context/LangContext';
 import {Link, useNavigate} from "react-router-dom";
 import {addPost} from '../redux/actions';
 import { useDispatch } from 'react-redux';
@@ -20,8 +19,6 @@ const NewPost = () => {
         title: "",
         des:""
     })
-
-    const {langShow , setLangShow} = useContext(LangContext);
 
     const imageChange = (e) =>{
         if(e.target.files && e.target.files.length > 0){
@@ -53,8 +50,8 @@ const NewPost = () => {
     return (
         <>
             <header className="an-header">
-                <Toolbar langProps={{langShow, setLangShow}}/>
-                <Navbar  langProps={{langShow, setLangShow}}/>
+                <Toolbar/>
+                <Navbar/>
             </header>
             <div className="an-ads py-4">
                 <div className="container">

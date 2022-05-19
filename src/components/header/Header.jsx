@@ -26,7 +26,7 @@ function Header() {
                         </div>
                     </div>
                 </div>
-                <Navbar langProps={{langShow, setLangShow}}/>
+                <Navbar/>
             </header>
         </>
     )

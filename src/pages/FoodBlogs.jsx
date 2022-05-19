@@ -1,22 +1,20 @@
-import React,{useContext, useState} from 'react';
+import React from 'react';
 import Toolbar from '../components/header/Toolbar';
 import Navbar from '../components/header/Navbar';
 import Footer from '../components/footer/Footer';
-import { LangContext } from '../context/LangContext';
 import foodData from '../apis/food-blogs';
 import {Link} from 'react-router-dom'
 
 const FoodBlogs = () => {
 
-    const {langShow , setLangShow} = useContext(LangContext);
 
     const {foods, foodCategory, recepies} = foodData;
 
     return (
         <>
             <header className="an-header an-food-header">
-                <Toolbar langProps={{langShow, setLangShow}} dark="true"/>
-                <Navbar  langProps={{langShow, setLangShow}} dark="true"/>
+                <Toolbar dark="true"/>
+                <Navbar dark="true"/>
             </header>
             <main className="an-main-content bg-food">
 

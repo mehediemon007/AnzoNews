@@ -1,8 +1,7 @@
-import React,{useContext, useEffect, useState} from 'react';
+import React,{useEffect, useState} from 'react';
 import Footer from '../components/footer/Footer';
 import Toolbar from '../components/header/Toolbar';
 import Navbar from '../components/header/Navbar';
-import { LangContext } from '../context/LangContext';
 import {Link} from "react-router-dom";
 import { SRLWrapper } from "simple-react-lightbox";
 import data from '../apis/headphone';
@@ -10,8 +9,6 @@ import data from '../apis/headphone';
 const ImageGallery = () => {
 
     const [images,setImages] = useState([]);
-
-    const {langShow , setLangShow} = useContext(LangContext);
 
     useEffect(()=>{
 
@@ -22,8 +19,8 @@ const ImageGallery = () => {
     return (
         <>
             <header className="an-header">
-                <Toolbar langProps={{langShow, setLangShow}}/>
-                <Navbar  langProps={{langShow, setLangShow}}/>
+                <Toolbar/>
+                <Navbar/>
             </header>
             <div className="an-ads py-4">
                 <div className="container">

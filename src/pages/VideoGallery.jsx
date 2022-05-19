@@ -1,18 +1,14 @@
-import React,{useContext, useEffect, useState} from 'react';
+import React,{useEffect, useState} from 'react';
 import Footer from '../components/footer/Footer';
 import Toolbar from '../components/header/Toolbar';
 import Navbar from '../components/header/Navbar';
 import VideoModal from '../components/video-blogs/VideoModal';
-import { LangContext } from '../context/LangContext';
 import {Link} from "react-router-dom";
 import data from '../apis/headphone';
 
 const VideoGallery = () => {
 
     const [videos,setVideos] = useState([]);
-
-
-    const {langShow , setLangShow} = useContext(LangContext);
 
     useEffect(()=>{
 
@@ -23,8 +19,8 @@ const VideoGallery = () => {
     return (
         <>
             <header className="an-header">
-                <Toolbar langProps={{langShow, setLangShow}}/>
-                <Navbar  langProps={{langShow, setLangShow}}/>
+                <Toolbar/>
+                <Navbar/>
             </header>
             <div className="an-ads py-4">
                 <div className="container">

@@ -5,10 +5,8 @@ import { LangContext } from '../../context/LangContext';
 
 function Toolbar(props) {
 
-    const {langData, setLang, handleLang} = useContext(LangContext);
+    const {langData, setLang, handleLang, langShow , setLangShow} = useContext(LangContext);
     
-    const {langShow , setLangShow} = props.langProps;
-
     const newsSliderOptions ={
         items:1,
         loop:true,

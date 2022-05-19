@@ -1,9 +1,8 @@
-import React,{useContext, useState} from 'react';
+import React,{useState} from 'react';
 import ProfileSidebar from '../components/sidebar/ProfileSidebar';
 import Toolbar from '../components/header/Toolbar';
 import Navbar from '../components/header/Navbar';
 import Footer from '../components/footer/Footer';
-import { LangContext } from '../context/LangContext';
 import {Link} from "react-router-dom";
 import blogs from "../apis/grid-catagory";
 import SingleBlog from '../components/list-blogs/SingleBlog';
@@ -13,7 +12,6 @@ const RecentViews = () => {
     const [noOfBlog, setBlogNum] = useState(7);
     const [clicked,setClicked] = useState(false);
 
-    const {langShow , setLangShow} = useContext(LangContext);
 
     function loadMore(e){
         e.preventDefault();
@@ -24,8 +22,8 @@ const RecentViews = () => {
     return (
         <>
             <header className="an-header">
-                <Toolbar langProps={{langShow, setLangShow}}/>
-                <Navbar  langProps={{langShow, setLangShow}}/>
+                <Toolbar/>
+                <Navbar/>
             </header>
             <div className="an-ads py-4">
                 <div className="container">
