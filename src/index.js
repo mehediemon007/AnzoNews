@@ -11,7 +11,7 @@ import SimpleReactLightbox from 'simple-react-lightbox'
 
 ReactDOM.render(
 
-  <ThemeContextWrapper>
+    <ThemeContextWrapper>
         <LangContextWrapper>
             <React.StrictMode>
                 <SimpleReactLightbox>
@@ -19,7 +19,7 @@ ReactDOM.render(
                 </SimpleReactLightbox>
             </React.StrictMode>
         </LangContextWrapper>
-  </ThemeContextWrapper>,
+    </ThemeContextWrapper>,
   document.getElementById('root')
   
 );

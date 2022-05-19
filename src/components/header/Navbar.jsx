@@ -18,6 +18,11 @@ function Navbar(props) {
 
     const {featureNews: news} = data.newBlogs;
 
+    const handleSubMenu = (e) =>{
+        
+        e.currentTarget.querySelector(".sub-menu").classList.toggle("show");
+    }
+
     // const [theme , setTheme] = useState(false);
 
     // const changeTheme = () =>{
@@ -40,7 +45,7 @@ function Navbar(props) {
                          <Link to="/"><img src="images/logo/logo.png" alt="logo"/></Link>
                         <nav className={`an-main-nav ${navClick ? 'show' : ''}`}>
                             <ul className="nav-menu d-lg-flex align-items-center">
-                                <li className="has-children"><NavLink to="#" className="nav-active"><span>Home</span><i className="uil uil-angle-down"></i></NavLink>
+                                <li className="has-children" onClick={(e)=>handleSubMenu(e)}><NavLink to="#" className="nav-active"><span>Home</span><i className="uil uil-angle-down"></i></NavLink>
                                     <ul className="sub-menu">
                                         <li><NavLink to="/">Home Main</NavLink></li>
                                         <li><NavLink to="/home-news">Home News</NavLink></li>
@@ -257,8 +262,8 @@ function Navbar(props) {
                             <div className="nav-meta-icon">
                                 <span><i className="uil uil-user-check"></i></span>
                                 <ul className="acc-menu">
-                                    <li><Link to="/sign-in"><i class="uil uil-signin"></i> Sign In/Up</Link></li>
-                                    <li><Link to="/profile"><i class="uil uil-setting"></i> Profile</Link></li>
+                                    <li><Link to="/sign-in"><i className="uil uil-signin"></i> Sign In/Up</Link></li>
+                                    <li><Link to="/profile"><i className="uil uil-setting"></i> Profile</Link></li>
                                 </ul>
                             </div>
                             <div className="nav-meta-icon nav-search-icon" onClick={()=>setSearchBar(!searchBar)}><i className="uil uil-search"></i>
