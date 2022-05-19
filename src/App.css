@@ -544,6 +544,10 @@ label{
     z-index: 1;
 }
 
+.acc-menu *{
+    color: var(--text-color) !important;
+}
+
 .acc-menu li{
     padding: 5px 14px !important;
 }

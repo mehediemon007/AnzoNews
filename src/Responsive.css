@@ -344,6 +344,10 @@
         padding: 0;
     }
 
+    .nav-meta-icon:hover .acc-menu{
+        top: 46px;
+    }
+
     .single-blog .blog-image img,
     .an-siderbar-widget img{
         width: 100%;
@@ -465,7 +469,7 @@
     .bg-dark .nav-right i{
         color: var(--white-color);
     }
-
+    
     /* Weekly Top */
 
     .an-weekly-top .owl-nav .owl-prev {
