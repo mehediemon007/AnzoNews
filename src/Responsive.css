@@ -5,7 +5,7 @@
     }
 
     .mega-menu-content{
-        min-height: 250px !important;
+        min-height: 225px !important;
     }
 
     .news-tab-links{
@@ -177,7 +177,7 @@
     }
 
     .mega-menu-content{
-        min-height: 220px;
+        min-height: 195px;
     }
 
     .nav-right .lang-switcher{
@@ -212,8 +212,8 @@
     .blog-mega-menu .single-blog p{
         font-size: .81rem;
     }
-    
-    .an-nav ul li:hover > .blog-mega-menu{
+
+    .mega-menu-content li:hover > .blog-mega-menu{
         visibility: visible;
         opacity: 1;
     }
@@ -221,6 +221,10 @@
     .show-first{
         visibility: visible;
         opacity: 1;
+    }
+
+    .mega-menu-content li:hover .single-blog{
+        background-color: var(--white-color);
     }
 
     .bg-image,

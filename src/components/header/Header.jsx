@@ -17,10 +17,10 @@ function Header() {
                 <div className="haeder-ads py-3">
                     <div className="container">
                         <div className="row align-items-center">
-                            <div className="col-4">
+                            {/* <div className="col-4">
                                 <Link to="/"><img src="images/logo/logo.png" alt="logo"/></Link>
-                            </div>
-                            <div className="col-8">
+                            </div> */}
+                            <div className="col-12">
                                 <Link to="/"><img src="images/ads-banner.jpg" alt="ads"/></Link>
                             </div>
                         </div>
