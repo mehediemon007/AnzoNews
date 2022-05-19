@@ -42,7 +42,7 @@ const NavMenu = () => {
                             <li className="border-bottom-0"><NavLink to="/blog-details">Blog Details</NavLink></li>
                         </ul>
                     </li>
-                    <li className="has-children position-static" onClick={(e)=>handleSubMenu(e)}><Link to="#"><span>News</span><i className="uil uil-angle-down"></i></Link>
+                    <li className="has-children position-static" onClick={(e)=>handleSubMenu(e)}><NavLink to="#"><span>News</span><i className="uil uil-angle-down"></i></NavLink>
                         <ul className="sub-menu mega-menu" onClick={()=>setNavClick(!navClick)}>
                             <div>
                                 <ul className="mega-menu-content">
@@ -178,7 +178,7 @@ const NavMenu = () => {
                             </div>
                         </ul>
                     </li>
-                    <li className="has-children" onClick={(e)=>handleSubMenu(e)}><Link to="#"><span>Pages</span><i className="uil uil-angle-down"></i></Link>
+                    <li className="has-children" onClick={(e)=>handleSubMenu(e)}><NavLink to="#"><span>Pages</span><i className="uil uil-angle-down"></i></NavLink>
                         <ul className="sub-menu" onClick={()=>setNavClick(!navClick)}>
                             {/* <li><NavLink to="/news">News</NavLink></li> */}
                             <li><NavLink to="/recent-views">Recent Viewed</NavLink></li>
@@ -234,7 +234,7 @@ const NavMenu = () => {
                             </div>
                         </ul> */}
                     </li>
-                    <li><Link to="/new-post">Add Blog</Link></li>
+                    <li><NavLink to="/new-post">Add Blog</NavLink></li>
                     <li><Link to="#"></Link></li>
                 </ul>
             </nav>
