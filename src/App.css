@@ -471,7 +471,8 @@ label{
     font-size: .95rem;
 }
 
-.an-nav ul li{
+.an-nav ul li,
+.nav-meta-icon{
     padding: 20px 0;
 }
 
@@ -528,6 +529,33 @@ label{
 
 .nav-meta-icon{
     cursor: pointer;
+}
+
+.acc-menu{
+    position: absolute;
+    width: max-content;
+    top: 120%;
+    background-color: var(--body-bg-color);
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0px 15px 65px 5px rgb(0 0 0 / 7%);
+    visibility: hidden;
+    opacity: 0;
+    transition: var(--transition);
+    z-index: 1;
+}
+
+.acc-menu li{
+    padding: 5px 14px !important;
+}
+
+.acc-menu li .uil{
+    font-size: 1.15rem;
+}
+
+.nav-meta-icon:hover .acc-menu{
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
 }
 
 .sidebar-menu li a{

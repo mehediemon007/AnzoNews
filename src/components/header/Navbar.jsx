@@ -246,6 +246,7 @@ function Navbar(props) {
                                         </div>
                                     </ul> */}
                                 </li>
+                                <li><Link to="/new-post">Add Blog</Link></li>
                                 <li><Link to="#"></Link></li>
                             </ul>
                         </nav>
@@ -253,7 +254,13 @@ function Navbar(props) {
                             <div className="nav-meta-icon nav-toggle d-lg-none" onClick={()=> setNavClick(!navClick)}>
                                 <i className={`${navClick ? 'uil uil-times' : 'uil uil-bars'}`}></i>
                             </div>
-                            <div className="nav-meta-icon"><Link to="/sign-in"><i className="uil uil-user-check"></i></Link></div>
+                            <div className="nav-meta-icon">
+                                <span><i className="uil uil-user-check"></i></span>
+                                <ul className="acc-menu">
+                                    <li><Link to="/sign-in"><i class="uil uil-signin"></i> Sign In/Up</Link></li>
+                                    <li><Link to="/profile"><i class="uil uil-setting"></i> Profile</Link></li>
+                                </ul>
+                            </div>
                             <div className="nav-meta-icon nav-search-icon" onClick={()=>setSearchBar(!searchBar)}><i className="uil uil-search"></i>
                                 <form className="nav-search" style={{display : searchBar ? "block" : "none"}}>
                                     <fieldset className="nav-search-input">

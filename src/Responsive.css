@@ -273,7 +273,8 @@
         font-size: 1rem;
     }
 
-    .an-nav ul li{
+    .an-nav ul li,
+    .nav-meta-icon{
         padding: 14px 0;
     }
 
@@ -337,6 +338,10 @@
 
     .an-toolbar{
         display: none;
+    }
+
+    .nav-meta-icon{
+        padding: 0;
     }
 
     .single-blog .blog-image img,
