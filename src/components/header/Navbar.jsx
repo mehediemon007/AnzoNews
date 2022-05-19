@@ -21,6 +21,7 @@ function Navbar(props) {
     const handleSubMenu = (e) =>{
         
         e.currentTarget.querySelector(".sub-menu").classList.toggle("show");
+
     }
 
     // const [theme , setTheme] = useState(false);
@@ -46,21 +47,21 @@ function Navbar(props) {
                         <nav className={`an-main-nav ${navClick ? 'show' : ''}`}>
                             <ul className="nav-menu d-lg-flex align-items-center">
                                 <li className="has-children" onClick={(e)=>handleSubMenu(e)}><NavLink to="#" className="nav-active"><span>Home</span><i className="uil uil-angle-down"></i></NavLink>
-                                    <ul className="sub-menu">
+                                    <ul className="sub-menu" onClick={()=>setNavClick(!navClick)}>
                                         <li><NavLink to="/">Home Main</NavLink></li>
                                         <li><NavLink to="/home-news">Home News</NavLink></li>
                                         <li className="border-bottom-0"><NavLink to="/home-food">Home Food</NavLink></li>
                                     </ul>
                                 </li>
-                                <li className="has-children"><NavLink to="#"><span>Blog</span><i className="uil uil-angle-down"></i></NavLink>
-                                    <ul className="sub-menu">
+                                <li className="has-children" onClick={(e)=>handleSubMenu(e)}><NavLink to="#"><span>Blog</span><i className="uil uil-angle-down"></i></NavLink>
+                                    <ul className="sub-menu" onClick={()=>setNavClick(!navClick)}>
                                         <li><NavLink to="/category-three-grid">Blog Grid</NavLink></li>
                                         <li><NavLink to="/category-list">Blog List</NavLink></li>
                                         <li className="border-bottom-0"><NavLink to="/blog-details">Blog Details</NavLink></li>
                                     </ul>
                                 </li>
-                                <li className="has-children position-static"><Link to="#"><span>News</span><i className="uil uil-angle-down"></i></Link>
-                                    <ul className="sub-menu mega-menu">
+                                <li className="has-children position-static" onClick={(e)=>handleSubMenu(e)}><Link to="#"><span>News</span><i className="uil uil-angle-down"></i></Link>
+                                    <ul className="sub-menu mega-menu" onClick={()=>setNavClick(!navClick)}>
                                         <div>
                                             <ul className="mega-menu-content">
                                                 <li><Link to="/news">Latest News</Link>
@@ -195,8 +196,8 @@ function Navbar(props) {
                                         </div>
                                     </ul>
                                 </li>
-                                <li className="has-children"><Link to="#"><span>Pages</span><i className="uil uil-angle-down"></i></Link>
-                                    <ul className="sub-menu">
+                                <li className="has-children" onClick={(e)=>handleSubMenu(e)}><Link to="#"><span>Pages</span><i className="uil uil-angle-down"></i></Link>
+                                    <ul className="sub-menu" onClick={()=>setNavClick(!navClick)}>
                                         {/* <li><NavLink to="/news">News</NavLink></li> */}
                                         <li><NavLink to="/recent-views">Recent Viewed</NavLink></li>
                                         <li><NavLink to="/activity">Activity</NavLink></li>
