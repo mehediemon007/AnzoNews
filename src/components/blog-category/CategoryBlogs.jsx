@@ -86,7 +86,7 @@ const CategoryBlogs = () => {
                                             <form action="" className="archive-form">
                                                 <fieldset className="an-input position-relative" id="datePicker">
                                                     <label htmlFor="archive-input" className="visually-hidden">Archive</label>
-                                                    <input type="text" id="archive-input" autoComplete="off" placeholder="Search News"/>
+                                                    <input type="date" id="archive-input" autoComplete="off" placeholder="Search News"/>
                                                     <span className="input-append"><i className="uil uil-schedule"></i></span>
                                                 </fieldset>
                                                 <button className="archive-search">Search</button>

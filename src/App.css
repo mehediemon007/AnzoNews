@@ -1612,7 +1612,7 @@ button.mfp-close {
 .log-tab-links .nav-link,
 .sign-up-options .nav-link{
     display: inline-block;
-    color: var(--dark-color);
+    color: var(--text-color);
     font-size: .85rem;
     padding: 8px 20px;
     transition: var(--transition);
@@ -1624,10 +1624,11 @@ button.mfp-close {
     border-bottom: 2px solid transparent;
 }
 
-.log-tab-links .nav-link.active,
-.sign-up-options .nav-link.active span{
+.an-sign .nav-link.active,
+.an-sign .nav-link.active span{
     color: var(--hover-color);
     font-weight: var(--font-weight-medium);
+    background-color: transparent;
     border-bottom-color: var(--hover-color);
 }
 

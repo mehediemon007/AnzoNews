@@ -1,18 +1,7 @@
 import React from 'react'
-import OwlCarousel from 'react-owl-carousel';
-import SingleVote from './vote-widget/SingleVote';
 import VoteWidget from './vote-widget/VoteWidget';
 
 function SidebarWidget({sticky}) {
-    
-    const voteSliderOptions = {
-        items:1,
-        loop:true,
-        autoplay:true,
-        dots:false,
-        nav:true,
-        // navText:["",(".owl-navigation .arrow-btn")],
-    }
 
     return (
         <div className={`an-siderbar-widget ${sticky ? 'sticky-sidebar' : ''}`}>
