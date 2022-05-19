@@ -3,6 +3,7 @@ import Footer from '../components/footer/Footer';
 import Header2 from '../components/header/Header2';
 import SidebarWidget from '../components/sidebar/SidebarWidget';
 import VideoPost from '../components/video-blogs/VideoPost';
+import {Link} from 'react-router-dom'
 import data from '../apis/headphone';
 import ImagePost from '../components/video-blogs/ImagePost';
 
@@ -19,17 +20,17 @@ const News = () => {
                             <div className="d-none d-xl-block col-xl-3">
                                 <div className="an-sidebar-menu-wpr bg-white p-4 sticky-sidebar">
                                     <ul className="sidebar-menu nav-menu">
-                                        <li><a href="#" className="pt-0"><img src="images/svg-icons/trend.svg" alt="Trend"/>Trending</a></li>
-                                        <li><a href="#"><img src="images/svg-icons/popular.svg" alt="Popular"/>Popular</a></li>
-                                        <li><a href="#"><img src="images/svg-icons/most-read.svg" alt="Most Read"/>Most Read</a></li>
-                                        <li><a href="#" className="has-children"><img src="images/svg-icons/category.svg" alt="Category"/>Categories</a>
+                                        <li><Link to="#" className="pt-0"><img src="images/svg-icons/trend.svg" alt="Trend"/>Trending</Link></li>
+                                        <li><Link to="#"><img src="images/svg-icons/popular.svg" alt="Popular"/>Popular</Link></li>
+                                        <li><Link to="#"><img src="images/svg-icons/most-read.svg" alt="Most Read"/>Most Read</Link></li>
+                                        <li><Link to="#" className="has-children"><img src="images/svg-icons/category.svg" alt="Category"/>Categories</Link>
                                             <ul className="sidebar-sub-menu">
-                                                <li><a href="#">National</a></li>
-                                                <li><a href="#">International</a></li>
-                                                <li><a href="#">Sports</a></li>
-                                                <li><a href="#">Life Style</a></li>
-                                                <li><a href="#">Technology</a></li>
-                                                <li><a href="#">Economics</a></li>
+                                                <li><Link to="#">National</Link></li>
+                                                <li><Link to="#">International</Link></li>
+                                                <li><Link to="#">Sports</Link></li>
+                                                <li><Link to="#">Life Style</Link></li>
+                                                <li><Link to="#">Technology</Link></li>
+                                                <li><Link to="#">Economics</Link></li>
                                             </ul>
                                         </li>
                                     </ul>

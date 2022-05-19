@@ -2065,6 +2065,7 @@ input[type="radio"]:checked::before{
 
 .post-content textarea{
     height: 200px;
+    background-color: transparent;
 }
 
 /* Footer */

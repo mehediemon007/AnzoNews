@@ -90,7 +90,7 @@ const NavMenu = () => {
                                             ))}
                                         </div>
                                     </li>
-                                    <li><Link to="#">Popular News</Link>
+                                    <li><Link to="/news">Popular News</Link>
                                         <div className="blog-mega-menu d-none d-lg-grid">
                                             {news.filter(news => news.tag === 'Popular').slice(0,4).map(news =>(
                                                 <div className="blog-menu-item" key={news.id}>
@@ -112,7 +112,7 @@ const NavMenu = () => {
                                             ))}
                                         </div>
                                     </li>
-                                    <li><Link to="#">Attractive News</Link>
+                                    <li><Link to="/news">Attractive News</Link>
                                         <div className="blog-mega-menu d-none d-lg-grid">
                                             {news.filter(news => news.tag === 'Interest').slice(0,4).map(news =>(
                                                 <div className="blog-menu-item" key={news.id}>
