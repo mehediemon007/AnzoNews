@@ -1,8 +1,16 @@
-import React from 'react';
+import React,{useState} from 'react';
 import categoryData from "../../apis/headphone";
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 const CategoryBlogs = () => {
+
+    const [defaultDate, setDate] = useState(new Date())
+
+    function handleDatePicker(value){
+        setDate(value)
+    }
 
     const {laptop,gadget} = categoryData;
 
@@ -48,7 +56,7 @@ const CategoryBlogs = () => {
                                             </div>
                                             <div className="blog-content bg-white">
                                                 <Link to="/category-list"><h3 className="blog-title">{blog.title}</h3></Link>
-                                                <a href="#"><p className="blog-date"><img src="images/man-avatar.png" alt="user-avatar"/> {blog.name}</p></a>
+                                                <p className="blog-date"><img src="images/man-avatar.png" alt="user-avatar"/> {blog.name}</p>
                                                 <p className="blog-date mt-2"><img src="images/clock-avatar.png" alt="Clock Avatar"/> {blog.date}</p>
                                             </div>
                                         </div> 
@@ -63,30 +71,31 @@ const CategoryBlogs = () => {
                                         <h3 className="mb-4">TOP CATEGORIES</h3>
                                         <div className="category-widget">
                                             <div className="blog-img">
-                                                <a href="#"><img src="images/blogs/hp-laptop.jpg" alt="Hp Laptop"/></a>
-                                                <a href="#" className="tag">Laptop</a>
+                                                <Link to="#"><img src="images/blogs/hp-laptop.jpg" alt="Hp Laptop"/></Link>
+                                                <Link to="#" className="tag">Laptop</Link>
                                             </div>
                                             <div className="blog-img">
-                                                <a href="#"><img src="images/blogs/rgb-laptop-flat.jpg" alt="Rgb Laptop"/></a>
-                                                <a href="#" className="tag">Gaming Laptop</a>
+                                                <Link to="#"><img src="images/blogs/rgb-laptop-flat.jpg" alt="Rgb Laptop"/></Link>
+                                                <Link to="#" className="tag">Gaming Laptop</Link>
                                             </div>
                                             <div className="blog-img">
-                                                <a href="#"><img src="images/blogs/black-laptop.jpg" alt="Black Laptop"/></a>
-                                                <a href="#" className="tag">Monitor</a>
+                                                <Link to="#"><img src="images/blogs/black-laptop.jpg" alt="Black Laptop"/></Link>
+                                                <Link to="#" className="tag">Monitor</Link>
                                             </div>
                                             <div className="blog-img">
-                                                <a href="#"><img src="images/blogs/old-laptop.jpg" alt="Used Laptop"/></a>
-                                                <a href="#" className="tag">Desktop</a>
+                                                <Link to="#"><img src="images/blogs/old-laptop.jpg" alt="Used Laptop"/></Link>
+                                                <Link to="#" className="tag">Desktop</Link>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="col-xl-12 col-md-6">
                                         <div className="archive-widget bg-white">
                                             <h3 className="mb-2">ARCHIVE</h3>
-                                            <form action="" className="archive-form">
+                                            <form action="" className="archive-form" onSubmit={(e) => {e.preventDefault()}}>
                                                 <fieldset className="an-input position-relative" id="datePicker">
-                                                    <label htmlFor="archive-input" className="visually-hidden">Archive</label>
-                                                    <input type="date" id="archive-input" autoComplete="off" placeholder="Search News"/>
+                                                    {/* <label htmlFor="archive-input" className="visually-hidden">Archive</label>
+                                                    <input type="date" id="archive-input" autoComplete="off" placeholder="Search News"/> */}
+                                                    <DatePicker selected={defaultDate} onChange={handleDatePicker} dateFormat="dd MMM yyyy"></DatePicker>
                                                     <span className="input-append"><i className="uil uil-schedule"></i></span>
                                                 </fieldset>
                                                 <button className="archive-search">Search</button>
@@ -100,7 +109,7 @@ const CategoryBlogs = () => {
                                         <div className="social-widget">
                                             <h3 className="mb-4">Social Link</h3>
                                             <ul className="widget-social-links d-flex flex-wrap">
-                                                <li><a href="#" className="fb-link"><span><i className="uil uil-facebook-f"></i> Facebook</span><span>5K</span></a></li>
+                                                <li><a href="https://www.facebook.com/" className="fb-link"><span><i className="uil uil-facebook-f"></i> Facebook</span><span>5K</span></a></li>
                                                 <li><a href="#" className="tweet-link"><span><i className="uil uil-twitter"></i> Twitter</span><span>6K</span></a></li>
                                                 <li><a href="#" className="insta-link"><span><i className="uil uil-instagram"></i> Instagram</span><span>7K</span></a></li>
                                                 <li><a href="#" className="youtube-link"><span><i className="uil uil-youtube"></i> Youtube</span><span>8K</span></a></li>
