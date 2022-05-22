@@ -23,7 +23,7 @@ const FoodBlogs = () => {
                         <div className="row">
                             {foods.filter(food => food.category === "Banner").map((food,index) =>(
 
-                                <div className={`${index == 0 || index == 3 ? "col-lg-8 mb-4" : `col-lg-4 ${index > 3 ? "col-sm-6" : "mb-4"}`}`} key={food.id}>
+                                <div className={`${index === 0 || index === 3 ? "col-lg-8 mb-4" : `col-lg-4 ${index > 3 ? "col-sm-6" : "mb-4"}`}`} key={food.id}>
                                     <div className="single-blog">
                                         <div className="blog-image rounded-2">
                                             <Link to="/blog-details"><img src={`images/foods/${food.image}`} alt={food.alt}/></Link>
@@ -53,10 +53,10 @@ const FoodBlogs = () => {
 
                                 <div className="single-category text-center" key={category.id}>
                                     <div className="position-relative">
-                                        <a href="#"><img src={`images/foods/${category.image}`} alt={category.alt}/></a>
-                                        <div className="overlay-image"><a href="#"><img src="images/instagram.png" alt="Instagram"/></a></div>
+                                        <Link to="#"><img src={`images/foods/${category.image}`} alt={category.alt}/></Link>
+                                        <div className="overlay-image"><Link to="#"><img src="images/instagram.png" alt="Instagram"/></Link></div>
                                     </div>
-                                    <a href="#"><h5 className="mt-4">{category.name}</h5></a>
+                                    <Link to="#"><h5 className="mt-4">{category.name}</h5></Link>
                                 </div>
 
                             ))}
@@ -75,12 +75,12 @@ const FoodBlogs = () => {
 
                                         <div className="single-blog mb-4 bg-food-content" key={recepie.id}>
                                             <div className="blog-image position-relative">
-                                                <a href="#"><img src={`images/foods/${recepie.image}`} alt={recepie.alt} className="food-img"/></a>
+                                                <Link to="#"><img src={`images/foods/${recepie.image}`} alt={recepie.alt} className="food-img"/></Link>
                                             </div>
                                             <div className="blog-content position-relative ms-4">
                                                 <h1 className="food-num">{index + 1}</h1>
                                                 <span className="food-tag">{recepie.tag}</span>
-                                                <a href="#"><h2 className="my-3 overflow-title">{recepie.name}</h2></a>
+                                                <Link to="#"><h2 className="my-3 overflow-title">{recepie.name}</h2></Link>
                                                 <div className="ratings">
                                                     <span className="me-2">Rating: {recepie.rating}</span>
                                                     <span><i className="uis uis-star"></i></span>
@@ -101,7 +101,7 @@ const FoodBlogs = () => {
                                     {foodCategory.filter(category => category.type === "Popular").map(category =>(
 
                                         <div className="blog-img position-relative" key={category.id}>
-                                            <a href="#"><img src={`images/foods/${category.image}`} alt={category.alt} className="food-img"/></a>
+                                            <Link to="#"><img src={`images/foods/${category.image}`} alt={category.alt} className="food-img"/></Link>
                                             <span className="food-tag">{category.name}</span>
                                         </div>
 
@@ -132,10 +132,10 @@ const FoodBlogs = () => {
 
                                 <div className="col-lg-4 col-sm-6" key={recepie.id}>
                                     <div className="single-blog mb-4">
-                                        <div className="blog-image"><a href="#"><img src={`images/foods/${recepie.image}`} alt={recepie.alt} className="rounded-0"/></a></div>
+                                        <div className="blog-image"><Link to="/blog-details"><img src={`images/foods/${recepie.image}`} alt={recepie.alt} className="rounded-0"/></Link></div>
                                         <div className="blog-content ps-3 bg-white">
                                             <div className="mb-3"><span className="food-tag">{recepie.tag}</span></div>
-                                            <a href="#"><h4 className="blog-title overflow-title">{recepie.name}</h4></a>
+                                            <Link to="/blog-details"><h4 className="blog-title overflow-title">{recepie.name}</h4></Link>
                                             <div className="ratings mt-3">
                                                 <span className="me-2">Rating: {recepie.rating}</span>
                                                 <span><i className="uis uis-star"></i></span>
@@ -163,10 +163,10 @@ const FoodBlogs = () => {
 
                                 <div className="col-lg-4 col-sm-6" key={recepie.id}>
                                     <div className="single-blog mb-4">
-                                        <div className="blog-image"><a href="#"><img src={`images/foods/${recepie.image}`} alt={recepie.alt} className="rounded-0"/></a></div>
+                                        <div className="blog-image"><Link to="/blog-details"><img src={`images/foods/${recepie.image}`} alt={recepie.alt} className="rounded-0"/></Link></div>
                                         <div className="blog-content ps-3 bg-white">
                                             <div className="mb-3"><span className="food-tag">{recepie.tag}</span></div>
-                                            <a href="#"><h4 className="blog-title overflow-title">{recepie.name}</h4></a>
+                                            <Link to="/blog-details"><h4 className="blog-title overflow-title">{recepie.name}</h4></Link>
                                             <div className="ratings mt-3">
                                                 <span className="me-2">Rating: {recepie.rating}</span>
                                                 <span><i className="uis uis-star"></i></span>
@@ -194,10 +194,10 @@ const FoodBlogs = () => {
 
                                 <div className="col-lg-4 col-sm-6" key={recepie.id}>
                                     <div className="single-blog mb-4">
-                                        <div className="blog-image"><a href="#"><img src={`images/foods/${recepie.image}`} alt={recepie.alt} className="rounded-0"/></a></div>
+                                        <div className="blog-image"><Link to="/blog-details"><img src={`images/foods/${recepie.image}`} alt={recepie.alt} className="rounded-0"/></Link></div>
                                         <div className="blog-content ps-3 bg-white">
                                             <div className="mb-3"><span className="food-tag">{recepie.tag}</span></div>
-                                            <a href="#"><h4 className="blog-title overflow-title">{recepie.name}</h4></a>
+                                            <Link to="/blog-details"><h4 className="blog-title overflow-title">{recepie.name}</h4></Link>
                                             <div className="ratings mt-3">
                                                 <span className="me-2">Rating: {recepie.rating}</span>
                                                 <span><i className="uis uis-star"></i></span>
@@ -225,10 +225,10 @@ const FoodBlogs = () => {
 
                                 <div className="col-lg-4 col-sm-6" key={recepie.id}>
                                     <div className="single-blog mb-4">
-                                        <div className="blog-image"><a href="#"><img src={`images/foods/${recepie.image}`} alt={recepie.alt} className="rounded-0"/></a></div>
+                                        <div className="blog-image"><Link to="/blog-details"><img src={`images/foods/${recepie.image}`} alt={recepie.alt} className="rounded-0"/></Link></div>
                                         <div className="blog-content ps-3 bg-white">
                                             <div className="mb-3"><span className="food-tag">{recepie.tag}</span></div>
-                                            <a href="#"><h4 className="blog-title overflow-title">{recepie.name}</h4></a>
+                                            <Link to="/blog-details"><h4 className="blog-title overflow-title">{recepie.name}</h4></Link>
                                             <div className="ratings mt-3">
                                                 <span className="me-2">Rating: {recepie.rating}</span>
                                                 <span><i className="uis uis-star"></i></span>
