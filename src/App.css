@@ -788,6 +788,7 @@ label{
 
 .blog-content{
     padding: 24px;
+    /* direction: var(--direction); */
 }
 
 .single-blog:hover .blog-image img{

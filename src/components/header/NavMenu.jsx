@@ -1,4 +1,4 @@
-import React,{useEffect, useState, useContext} from 'react';
+import React,{useState, useContext} from 'react';
 import {NavLink , Link} from "react-router-dom";
 import { ThemeContext, themes } from '../../context/ThemeContext';
 import { LangContext } from '../../context/LangContext';
@@ -12,7 +12,7 @@ const NavMenu = () => {
     const [searchBar, setSearchBar] = useState(false);
     const [navClick, setNavClick] = useState(false);
 
-    const {langData, setLang, handleLang, langShow , setLangShow } = useContext(LangContext);
+    const {langData, handleLang, langShow , setLangShow } = useContext(LangContext);
 
     const {featureNews: news} = data.newBlogs;
 

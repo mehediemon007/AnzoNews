@@ -1,11 +1,10 @@
-import React,{ useEffect, useContext} from 'react';
+import React,{useContext} from 'react';
 import OwlCarousel from 'react-owl-carousel';
-// import Slider from "react-slick";
 import { LangContext } from '../../context/LangContext';
 
 function Toolbar(props) {
 
-    const {langData, setLang, handleLang, langShow , setLangShow} = useContext(LangContext);
+    const {langData, handleLang, langShow , setLangShow} = useContext(LangContext);
     
     const newsSliderOptions ={
         items:1,

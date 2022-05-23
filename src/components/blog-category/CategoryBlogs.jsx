@@ -93,6 +93,8 @@ const CategoryBlogs = () => {
                                             <h3 className="mb-2">ARCHIVE</h3>
                                             <form action="" className="archive-form" onSubmit={(e) => {e.preventDefault()}}>
                                                 <fieldset className="an-input position-relative" id="datePicker">
+                                                    {/* <label htmlFor="archive-input" className="visually-hidden">Archive</label>
+                                                    <input type="date" id="archive-input" autoComplete="off" placeholder="Search News"/> */}
                                                     <DatePicker selected={defaultDate} onChange={handleDatePicker} dateFormat="dd MMM yyyy"></DatePicker>
                                                     <span className="input-append"><i className="uil uil-schedule"></i></span>
                                                 </fieldset>
@@ -108,11 +110,11 @@ const CategoryBlogs = () => {
                                             <h3 className="mb-4">Social Link</h3>
                                             <ul className="widget-social-links d-flex flex-wrap">
                                                 <li><a href="https://www.facebook.com/" className="fb-link"><span><i className="uil uil-facebook-f"></i> Facebook</span><span>5K</span></a></li>
-                                                <li><a href="#" className="tweet-link"><span><i className="uil uil-twitter"></i> Twitter</span><span>6K</span></a></li>
-                                                <li><a href="#" className="insta-link"><span><i className="uil uil-instagram"></i> Instagram</span><span>7K</span></a></li>
-                                                <li><a href="#" className="youtube-link"><span><i className="uil uil-youtube"></i> Youtube</span><span>8K</span></a></li>
-                                                <li><a href="#" className="snap-link"><span><i className="uil uil-snapchat-ghost"></i> Snapchat</span><span>10K</span></a></li>
-                                                <li><a href="#" className="linkedin-link"><span><i className="uil uil-linkedin-alt"></i> Linkedin</span><span>15K</span></a></li>
+                                                <li><Link to="#" className="tweet-link"><span><i className="uil uil-twitter"></i> Twitter</span><span>6K</span></Link></li>
+                                                <li><Link to="#" className="insta-link"><span><i className="uil uil-instagram"></i> Instagram</span><span>7K</span></Link></li>
+                                                <li><Link to="#" className="youtube-link"><span><i className="uil uil-youtube"></i> Youtube</span><span>8K</span></Link></li>
+                                                <li><Link to="#" className="snap-link"><span><i className="uil uil-snapchat-ghost"></i> Snapchat</span><span>10K</span></Link></li>
+                                                <li><Link to="#" className="linkedin-link"><span><i className="uil uil-linkedin-alt"></i> Linkedin</span><span>15K</span></Link></li>
                                             </ul>
                                         </div>
                                     </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
 function Footer() {
   return (
@@ -29,11 +29,11 @@ function Footer() {
                         <div className="footer-widget mb-4 mb-sm-0">
                             <h5 className="mb-3">POPULAR POSTS</h5>
                             <ul className="footer-list">
-                                <li><Link href="#" className="pt-0">LAPTOP & ACCESSORIES</Link></li>
-                                <li><Link href="#">MOBILE PHONES</Link></li>
-                                <li><Link href="#">DESKTOP COMPUTER</Link></li>
-                                <li><Link href="#">HEADPHONES</Link></li>
-                                <li><Link href="#">SPEAKERS & SOUNDS</Link></li>
+                                <li><Link to="#" className="pt-0">LAPTOP & ACCESSORIES</Link></li>
+                                <li><Link to="#">MOBILE PHONES</Link></li>
+                                <li><Link to="#">DESKTOP COMPUTER</Link></li>
+                                <li><Link to="#">HEADPHONES</Link></li>
+                                <li><Link to="#">SPEAKERS & SOUNDS</Link></li>
                             </ul>
                         </div>
                     </div>

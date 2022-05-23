@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
 
 const SingleVote = () => {
     return (
@@ -31,7 +30,7 @@ const SingleVote = () => {
                     <span className="progress" style={{'--w':20}}></span>
                 </div>
                 <div className="text-center">
-                    <Link to="#" className="vote-btn">Chnage Vote</Link>
+                    <button className="vote-btn">Chnage Vote</button>
                 </div>
             </div>
         </>
