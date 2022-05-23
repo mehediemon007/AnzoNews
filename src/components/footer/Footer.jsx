@@ -48,7 +48,7 @@ function Footer() {
                         </form>
                         <div className="social-links">
                             <a href="https://www.facebook.com/akaaritbd/" className="social-link"><i className="uil uil-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/accounts/emailsignup/?hl=en" className="social-link"><i className="uil uil-instagram"></i></a>
+                            <a href="https://www.instagram.com/web/lite/" className="social-link"><i className="uil uil-instagram"></i></a>
                             <a href="https://www.youtube.com/channel/UC5_zUqknHg0Trch7iSnYfyQ" className="social-link"><i className="uil uil-youtube"></i></a>
                         </div>
                     </div>
