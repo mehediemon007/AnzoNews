@@ -11,7 +11,7 @@ function VideoBlogs() {
             <div className="container">
                 <div className="sec-heading d-flex justify-content-between align-items-center mb-4">
                     <h4 className="text-white">HEADPHONES</h4>
-                    <a href="#" className="more-link text-white">More <i className="uil uil-angle-right-b"></i></a>
+                    <Link to="#" className="more-link text-white">More <i className="uil uil-angle-right-b"></i></Link>
                 </div>
                 <div className="row">
                     <div className="col-xl-4">

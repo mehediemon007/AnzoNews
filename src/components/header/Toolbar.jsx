@@ -48,13 +48,6 @@ function Toolbar(props) {
                                             {langData.filter(lang => lang.selected === true).map(({img,alt})=><img src={`images/flags/${img}`} alt={alt} key={alt}/>)}
                                         </span>
                                         <span className="lang"><i className={`uil uil-angle-down ${props.dark ? 'text-yellow' : ''}`}></i></span>
-                                        {/* <ul className={`lang-list ${langShow ? "lang-list-open" : ""}`}>
-                                            <li className="single-lang"><span className="flag"><img src="images/flags/bd-flag.png" alt="bangladesh" /></span><a className="lang-text" href="#">BD</a></li>
-                                            <li className="single-lang"><span className="flag"><img src="images/flags/usa-flag.png" alt="united-states" /></span><a className="lang-text" href="#">ENG</a></li>
-                                            <li className="single-lang"><span className="flag"><img src="images/flags/china-flag.png" alt="china"/></span><a className="lang-text" href="#">CHN</a></li>
-                                            <li className="single-lang arabic"><span className="flag"><img src="images/flags/saudi-flag.png" alt="spain"/></span><a className="lang-text" href="#">ARB</a></li>
-                                            <li className="single-lang"><span className="flag"><img src="images/flags/german-flag.png" alt="german"/></span><a className="lang-text" href="#">GER</a></li>
-                                        </ul> */}
                                         <ul className = {`lang-list ${langShow ? "lang-list-open" : ""}`}>
                                             {langData.map(el =>{
                                                 return(

@@ -788,16 +788,11 @@ label{
 
 .blog-content{
     padding: 24px;
-    /* direction: var(--direction); */
 }
 
 .single-blog:hover .blog-image img{
     transform: translateX(1.2);
 }
-
-/* .video-post-info{
-    direction: var(--direction);
-} */
 
 .single-blog .blog-content p,
 .video-post-info p{
@@ -1973,43 +1968,6 @@ input[type="radio"]:checked::before{
     border-radius: 0;
     outline: none;
 }
-
-/* .single-address{
-    position: relative;
-    display: flex;
-    background-color: #F3F3F3;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.single-address .fa-map-marker-alt{
-    font-size: 1.15rem;
-    margin-right: 10px;
-}
-
-.address-tag{
-    display: inline-block;
-    min-width: 50px;
-    height: max-content;
-    font-size: .85rem;
-    color: var(--white-color);
-    background-color: #FF6D27;
-    border-radius: 4px;
-    text-align: center;
-    margin-right: 8px;
-}
-
-.address-select{
-    margin-top: 14px;
-    min-width: 100px;
-    height: 30px;
-    font-size: .9rem;
-    background-color: var(--webkit-appearance);
-    border: 1px solid var(--primary-color);
-    border-radius: 10px;
-    padding: 0 5px;
-} */
 
 .account-widget{
     height: max-content;

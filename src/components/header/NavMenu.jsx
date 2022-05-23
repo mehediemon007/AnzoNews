@@ -14,8 +14,6 @@ const NavMenu = () => {
 
     const {langData, setLang, handleLang, langShow , setLangShow } = useContext(LangContext);
 
-    // const {} = props.langProps;
-
     const {featureNews: news} = data.newBlogs;
 
     const handleSubMenu = (e) =>{
@@ -134,46 +132,6 @@ const NavMenu = () => {
                                             ))}
                                         </div>
                                     </li>
-                                    {/* <li><a href="#">Game Controller</a>
-                                        <div className="blog-mega-menu d-none d-lg-grid">
-                                            <div className="blog-menu-item">
-                                                <div className="single-blog">
-                                                    <a href="#"><img src="images/blogs/nav-blogs/nine-tendo.jpg" alt="Nine Tendo"/></a>
-                                                    <div className="">
-                                                        <a href="#"><h6 className="overflow-title">This is the title of a new tier has been the title of a news</h6></a>
-                                                        <p>November 21, 2021</p>
-                                                    </div>
-                                                </div> 
-                                            </div>
-                                            <div className="blog-menu-item">
-                                                <div className="single-blog">
-                                                    <a href="#"><img src="images/blogs/nav-blogs/sony-pad.jpg" alt="Sony Controller"/></a>
-                                                    <div className="">
-                                                        <a href="#"><h6 className="overflow-title">This is the title of a new tier has been the title of a news</h6></a>
-                                                        <p>November 21, 2021</p>
-                                                    </div>
-                                                </div> 
-                                            </div> 
-                                            <div className="blog-menu-item">
-                                                <div className="single-blog">
-                                                    <a href="#"><img src="images/blogs/nav-blogs/xbox-pad.jpg" alt="Xbox Controller"/></a>
-                                                    <div className="">
-                                                        <a href="#"><h6 className="overflow-title">This is the title of a new tier has been the title of a news</h6></a>
-                                                        <p>November 21, 2021</p>
-                                                    </div>
-                                                </div> 
-                                            </div>
-                                            <div className="blog-menu-item">
-                                                <div className="single-blog">
-                                                    <a href="#"><img src="images/blogs/nav-blogs/ps5-pad.jpg" alt="Ps5 Controller"/></a>
-                                                    <div className="">
-                                                        <a href="#"><h6 className="overflow-title">This is the title of a new tier has been the title of a news</h6></a>
-                                                        <p>November 21, 2021</p>
-                                                    </div>
-                                                </div> 
-                                            </div>
-                                        </div>
-                                    </li> */}
                                 </ul>
                             </div>
                         </ul>
@@ -186,53 +144,6 @@ const NavMenu = () => {
                             <li><NavLink to="/image-gallery">Image Gallery</NavLink></li>
                             <li className="border-bottom-0"><NavLink to="/video-gallery">Video Gallery</NavLink></li>
                         </ul>
-                        {/* <ul className="sub-menu mega-menu justify-content-around d-lg-flex">
-                            <div>
-                                <h5 className="my-3">Hp Gaming Laptop</h5>
-                                <ul>
-                                    <li><a href="#">Hp Horizon</a></li>
-                                    <li><a href="#">Hp Horizon</a></li>
-                                    <li><a href="#">Hp Horizon</a></li>
-                                    <li><a href="#">Hp Horizon</a></li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h5 className="my-3">Hp Gaming Laptop</h5>
-                                <ul>
-                                    <li><a href="#">Hp Horizon</a></li>
-                                    <li><a href="#">Hp Horizon</a></li>
-                                    <li><a href="#">Hp Horizon</a></li>
-                                    <li><a href="#">Hp Horizon</a></li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h5 className="my-3">Hp Gaming Laptop</h5>
-                                <ul>
-                                    <li><a href="#">Hp Horizon</a></li>
-                                    <li><a href="#">Hp Horizon</a></li>
-                                    <li><a href="#">Hp Horizon</a></li>
-                                    <li><a href="#">Hp Horizon</a></li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h5 className="my-3">Hp Gaming Laptop</h5>
-                                <ul>
-                                    <li><a href="#">Hp Horizon</a></li>
-                                    <li><a href="#">Hp Horizon</a></li>
-                                    <li><a href="#">Hp Horizon</a></li>
-                                    <li><a href="#">Hp Horizon</a></li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h5 className="my-3">Hp Gaming Laptop</h5>
-                                <ul>
-                                    <li><a href="#">Hp Horizon</a></li>
-                                    <li><a href="#">Hp Horizon</a></li>
-                                    <li><a href="#">Hp Horizon</a></li>
-                                    <li><a href="#">Hp Horizon</a></li>
-                                </ul>
-                            </div>
-                        </ul> */}
                     </li>
                     <li><NavLink to="/new-post">Add Blog</NavLink></li>
                     <li><Link to="#"></Link></li>
@@ -270,13 +181,6 @@ const NavMenu = () => {
                         {langData.filter(lang => lang.selected === true).map(({img,alt})=><img src={`images/flags/${img}`} alt={alt} key={alt}/>)}
                     </span>
                     <span className="lang"><i className="uil uil-angle-down"></i></span>
-                    {/* <ul className={`lang-list ${langShow ? "lang-list-open" : ""}`}>
-                        <li className="single-lang"><span className="flag"><img src="images/flags/bd-flag.png" alt="bangladesh" /></span><a className="lang-text" href="#">BD</a></li>
-                        <li className="single-lang"><span className="flag"><img src="images/flags/usa-flag.png" alt="united-states" /></span><a className="lang-text" href="#">ENG</a></li>
-                        <li className="single-lang"><span className="flag"><img src="images/flags/china-flag.png" alt="china"/></span><a className="lang-text" href="#">CHN</a></li>
-                        <li className="single-lang arabic"><span className="flag"><img src="images/flags/saudi-flag.png" alt="spain"/></span><a className="lang-text" href="#">ARB</a></li>
-                        <li className="single-lang"><span className="flag"><img src="images/flags/german-flag.png" alt="german"/></span><a className="lang-text" href="#">GER</a></li>
-                    </ul> */}
                     <ul className = {`lang-list ${langShow ? "lang-list-open" : ""}`}>
                         {langData.map(el =>{
                             return(

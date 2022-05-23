@@ -14,7 +14,6 @@ const NewsBanner = () => {
                         <div className="col-xl-6 mb-4 mb-xl-0">
                             <div className="single-blog overlay-blog h-100">
                                 <div className="blog-image rounded-2 bg-image">
-                                    {/* <img src="images/news/biden.jpg" alt="Biden"/> */}
                                     <div className="image-overlay"></div>
                                 </div>
                                 <div className="blog-content">
