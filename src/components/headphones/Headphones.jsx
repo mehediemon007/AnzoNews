@@ -11,7 +11,7 @@ const Headphones = () => {
                 <div className="container">
                     <div className="sec-heading d-flex justify-content-between align-items-center mb-4">
                         <h4>HEADPHONES</h4>
-                        <a href="#" className="more-link">More <i className="uil uil-angle-right-b"></i></a>
+                        <Link to="#" className="more-link">More <i className="uil uil-angle-right-b"></i></Link>
                     </div>
                     <div className="row">
                         <div className="col-lg-8">
@@ -40,14 +40,14 @@ const Headphones = () => {
                                         </div>
                                         <div className="blog-content">
                                             <Link to="/category-three-grid"><h3 className="blog-title text-white overflow-title">{data[2].title}</h3></Link>
-                                            <a href="#"><p className="blog-date mt-2"><img src="images/man-avatar.png" alt="user-avatar"/> {data[2].name}</p></a>
+                                            <Link to="#"><p className="blog-date mt-2"><img src="images/man-avatar.png" alt="user-avatar"/> {data[2].name}</p></Link>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="col-lg-4">
-                            <div className="single-blog"><a href="#"><img src="images/blogs/normal-headset.jpg" alt="Normal Headset" className="mb-4"/></a></div>
+                            <div className="single-blog"><Link to="#"><img src="images/blogs/normal-headset.jpg" alt="Normal Headset" className="mb-4"/></Link></div>
                             {data.slice(3,6).map((blog,index)=> (<Headphone blog={blog} key={blog.id}/>))}
                         </div>
                     </div>

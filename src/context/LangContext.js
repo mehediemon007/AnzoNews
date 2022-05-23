@@ -57,11 +57,7 @@ const LangContextWrapper = (props) => {
         langData[currLang].selected = true;
         setLang(langData);
     }
-
-    // useEffect(()=>{
-    //     langChange()
-    // },[langShow])
-
+    
     return (
         <LangContext.Provider value={{langShow , setLangShow, langData, setLang, handleLang}}>
             {props.children}

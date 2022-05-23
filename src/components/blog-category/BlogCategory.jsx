@@ -14,11 +14,11 @@ function BlogCategory() {
                             <div className="blog-list mb-2">
                                 <div className="single-blog">
                                     <img src={`images/blogs/${cat.image}`} alt={cat.alt}/>
-                                    <a to="/category-list"><h4 className="blog-title">{cat.title}</h4></a>
+                                    <Link to="/category-list"><h4 className="blog-title">{cat.title}</h4></Link>
                                 </div>
                                 {cat.subBlog.map((blog,index) => (
                                     <div className="single-blog" key={index}>
-                                        <a href="#">{blog}</a>
+                                        <Link to="#">{blog}</Link>
                                     </div>
                                 ))}
                             </div>

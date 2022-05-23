@@ -74,9 +74,6 @@ const SignUp = () => {
                             <fieldset className="an-input position-relative mt-4">
                                     <label htmlFor="user-password" className="visually-hidden"></label>
                                     <input type="text" value={signUpData.password} placeholder="Password" id="user-password" name='password' onChange={(e) => inputChange(e)}/>
-                                    {/* <div className="pass-input">
-                                        <i className="uil uil-eye"></i>
-                                    </div> */}
                             </fieldset>
                             <p className='err-msg'>{errors["password"]?.message}</p>
                             <fieldset className="policy-checkbox mt-4">
@@ -96,9 +93,6 @@ const SignUp = () => {
                             <fieldset className="an-input position-relative mt-4">
                                     <label htmlFor="user-mail-pass" className="visually-hidden"></label>
                                     <input type="text" value={signUpData.password} placeholder="Password" id="user-mail-pass" name='password' onChange={(e) => inputChange(e)}/>
-                                    {/* <div className="pass-input">
-                                        <i className="uil uil-eye"></i>
-                                    </div> */}
                             </fieldset>
                             <p className='err-msg'>{errors["password"]?.message}</p>
                             <fieldset className="policy-checkbox mt-4">

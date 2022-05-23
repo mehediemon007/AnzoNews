@@ -1,5 +1,6 @@
 import React from 'react';
 import Data from "../../apis/like-post";
+import { Link } from 'react-router-dom';
 
 const RelatedBlogs = () => {
 
@@ -15,7 +16,7 @@ const RelatedBlogs = () => {
                             <div className="col-xl-4 col-md-6" key={index}>
                                 <div className="single-blog mb-4">
                                     <div className="blog-image">
-                                        <a href="#"><img src={`images/blogs/${blog.image}`} alt={blog.alt}/></a>
+                                        <Link to="#"><img src={`images/blogs/${blog.image}`} alt={blog.alt}/></Link>
                                     </div>
                                     <div className="blog-content bg-white">
                                         <a href="blog-details.html"><h4 className="blog-title overflow-title">{blog.title}</h4></a>

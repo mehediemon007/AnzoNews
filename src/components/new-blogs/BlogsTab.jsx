@@ -28,7 +28,7 @@ const BlogsTab = (props) => {
                         </div>
                         <div className="blog-content bg-white py-3">
                             <Link to="/blog-details"><h5 className="blog-title">{blog.title}</h5></Link>
-                            <a href="#"><p className="blog-date mt-1"><img src="images/man-avatar.png" alt="user-avatar"/> {blog.name}</p></a>
+                            <Link to="#"><p className="blog-date mt-1"><img src="images/man-avatar.png" alt="user-avatar"/> {blog.name}</p></Link>
                             <p className="blog-date mt-1"><img src="images/clock-avatar.png" alt="Clock Avatar"/> {blog.date}</p>
                         </div>
                     </div> 

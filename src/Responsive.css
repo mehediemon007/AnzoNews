@@ -686,11 +686,7 @@
         -webkit-line-clamp: 2;
         font-size: 1.90rem;
     }
-
-    /* .lang-switcher > .flag img{
-        width: 100px;
-    } */
-
+    
     .otp-number input{
         width: 33px;
         height: 40px
