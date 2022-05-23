@@ -93,9 +93,8 @@ const CategoryBlogs = () => {
                                             <h3 className="mb-2">ARCHIVE</h3>
                                             <form action="" className="archive-form" onSubmit={(e) => {e.preventDefault()}}>
                                                 <fieldset className="an-input position-relative" id="datePicker">
-                                                    {/* <label htmlFor="archive-input" className="visually-hidden">Archive</label>
-                                                    <input type="date" id="archive-input" autoComplete="off" placeholder="Search News"/> */}
-                                                    <DatePicker selected={defaultDate} onChange={handleDatePicker} dateFormat="dd MMM yyyy"></DatePicker>
+                                                    <label htmlFor="archive-input" className="visually-hidden">Archive</label>
+                                                    <DatePicker id='archive-input' selected={defaultDate} onChange={handleDatePicker} dateFormat="dd MMM yyyy"></DatePicker>
                                                     <span className="input-append"><i className="uil uil-schedule"></i></span>
                                                 </fieldset>
                                                 <button className="archive-search">Search</button>
