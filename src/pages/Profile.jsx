@@ -76,7 +76,7 @@ const Profile = () => {
             })
         }
 
-    },[user,userAuth])
+    },[user,userAuth,userData])
 
     return (
         <>

@@ -4,7 +4,7 @@ import Footer from '../components/footer/Footer';
 import ProfileSidebar from '../components/sidebar/ProfileSidebar';
 import Toolbar from '../components/header/Toolbar';
 import Navbar from '../components/header/Navbar';
-import {Link, useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
 import {addPost} from '../redux/actions';
 import { useDispatch } from 'react-redux';
 import {toast} from 'react-toastify';
@@ -12,7 +12,6 @@ import {toast} from 'react-toastify';
 const NewPost = () => {
 
     const dispatch = useDispatch();
-    const navigate = useNavigate();
 
     const [post , setPost] = useState({
         image: "",
